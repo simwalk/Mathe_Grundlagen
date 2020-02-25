@@ -1,0 +1,54 @@
+\documentclass[10pt, a4paper]{article}
+\title{\fontsize{60}{20} \textbf{Mathe Grundlagen}}
+\newcommand{\versioninfo}{v1.0}
+\author{P.Häusermann, J.Hösli, N.Selvarajah, S.Walker}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Kopf und Fusszeile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[left=20mm,right=20mm,top=20mm,bottom=15mm,includeheadfoot]{geometry}
+
+\usepackage{fancyhdr}	%Fancyhdr ist ein eingeführtes, eigenständiges Paket zur einfacheren Manipulation von Kopf- und Fußzeile. Es definiert Befehle für den Seitenstil fancy
+\usepackage{lastpage}	%Ref­er­ence the num­ber of pages in your LaTeX doc­u­ment through the in­tro­duc­tion of a new la­bel which can be ref­er­enced like \pageref{LastPage} to give a ref­er­ence to the last page of a doc­u­ment. It is par­tic­u­larly use­ful in the page footer that says: Page N of M. 	
+\renewcommand{\headrulewidth}{0.25pt} 
+\renewcommand{\footrulewidth}{0.25pt}
+
+\fancyhf{}
+\fancyhead[L]{Mathe Grundlagen  \tiny{\textit{\versioninfo}}}
+\fancyhead[R]{\leftmark}
+
+\fancyfoot[L]{\today}
+\fancyfoot[R]{Seite \thepage { }von \pageref{LastPage}}
+
+\usepackage[ngerman]{babel}	
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\thispagestyle{empty}
+	\newpage
+	\pagestyle{fancy}
+	
+	\input{section/Trigo.tex} %Pascal
+	\newpage
+	\input{section/Differenzieren.tex} %Jonas
+	\newpage
+	\input{section/Integrieren.tex} %Jonas
+	\newpage
+	\input{section/Potenzgesetze.tex} %Pascal
+	\newpage
+	\input{section/KomplexeZahlen.tex} %Nithu
+	\newpage
+	\input{section/LinAlg.tex} %Simon
+	\newpage
+	\input{section/WarStat.tex} %Simon
+	\newpage
+	\input{section/Fourier.tex} %Nithu
+	\newpage
+	\input{section/InTra.tex} %Nithu
+	%Erst später
+	%\newpage
+	%\input{section/FuVar.tex} 
+	
+\end{document}
