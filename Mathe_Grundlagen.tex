@@ -4,9 +4,9 @@
 \author{P.Häusermann, J.Hösli, N.Selvarajah, S.Walker}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Kopf und Fusszeile
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Kopf und Fusszeile und Weiter Designeinstellungen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[left=20mm,right=20mm,top=20mm,bottom=15mm,includeheadfoot]{geometry}
 
 \usepackage{fancyhdr}	%Fancyhdr ist ein eingeführtes, eigenständiges Paket zur einfacheren Manipulation von Kopf- und Fußzeile. Es definiert Befehle für den Seitenstil fancy
@@ -21,22 +21,43 @@
 \fancyfoot[L]{\today}
 \fancyfoot[R]{Seite \thepage { }von \pageref{LastPage}}
 
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt} %Einrücken von Absätzen verhindern
 
-\usepackage{amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Verwendete Packete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb} %Mathematische Bibliotheken
 \usepackage{amsmath}
 \usepackage{bm}
-\usepackage{tikz}
-\usepackage{multicol}
 
-\usepackage[ngerman]{babel}	
+\usepackage{tikz}
+
+\usepackage{multicol} % für \multicols
+\usepackage{paralist} % für \compactitem und \compactenum
+\usepackage{hyperref} % Erstellt Verweise innerhalb und nach außerhalb eines PDF
+\usepackage[ngerman]{babel}	%Deutsches Sprachpaket
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Eigene Befehle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Verweis auf Bronstein
+\newcommand{\bronstein}[1]{\scriptsize{\textcolor{red}{\mbox{Bronstein s.#1}}}}
+
+%Verweis innerhalb des Dokuments
+\newcommand{\verweis}[2]{\small{(siehe auch \ref{#1}, #2 (S. \pageref{#1}))}}
+
 
 \begin{document}
+	%Titel mit Inhaltsverzeichniss
 	\maketitle
 	\tableofcontents
-	\thispagestyle{empty}
+	\thispagestyle{empty} %Auf der ersten Seite keine kopf und Fusszeilen
 	\newpage
 	\pagestyle{fancy}
+	
+	\raggedbottom %Inhalt nicht auf ganze seite verteilen
 	
 	\input{section/Trigo.tex} %Pascal
 	\newpage
