@@ -48,6 +48,22 @@
 %Verweis innerhalb des Dokuments
 \newcommand{\verweis}[2]{\small{(siehe auch \ref{#1}, #2 (S. \pageref{#1}))}}
 
+%Eingekreiste Zeichen für LinAlg (Benötigt Tikz)
+\newcommand*\circledr[1]
+{
+	\tikz [baseline = (char.base)]	
+	{
+		\node [shape = circle, draw = red, inner sep = 2pt, text = black] (char) {#1};
+	}
+}
+\newcommand*\circledb[1]
+{
+	\tikz [baseline = (char.base)]	
+	{
+		\node [shape = circle, draw = blue, inner sep = 2pt, text = black] (char) {#1};
+	}
+}
+
 
 \begin{document}
 	%Titel mit Inhaltsverzeichniss
@@ -57,7 +73,7 @@
 	\newpage
 	\pagestyle{fancy}
 	
-	\raggedbottom %Inhalt nicht auf ganze seite verteilen
+	%\raggedbottom %Inhalt nicht auf ganze seite verteilen
 	
 	\input{section/Trigo.tex} %Pascal
 	\newpage
