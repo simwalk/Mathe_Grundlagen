@@ -226,6 +226,71 @@ Eine Matrix kann nur Invertiert werden wenn $\operatorname{det}(A) \ne 0$.
 		$
 \end{tabular}
 
+\subsection{Eigenwerte und Eigenvektoren}
+Wenn eine Abbildung auf denselben Punkt fällt ($\vec{v}={\vec{v}}'$), nennt man dies Eigenfixpunkt. Der Eigenvektor $\vec{v}$ zeigt nun in
+diese Richtung (als Gerade) und der Eigenwert $\lambda$ gibt den Faktor an, mit der in diese Richtung gezeigt wird.
+
+\subsubsection{Eigenwerte berechnen}
+Um die Eigenwerte zu berechnen muss die folgende Gleichung gelöst werden: $det(A-\lambda E) = 0$.\\
+Die Lösung der Gleichung ($\lambda$) sind die Eigenwerte.
+
+\textbf{Beispiel:}\\
+\begin{tabular}{lcl}
+	$A=\left(\begin{array}{ll}
+	3 & 2 \\
+	1 & 2
+	\end{array}\right)$ & \quad &
+	$det(A-\lambda E) = 
+	\left|\begin{array}{cc}
+	3-\lambda & 2 \\
+	1 & 2-\lambda
+	\end{array}\right| = 
+	(3-\lambda)(2-\lambda)-1 \cdot 2=0$\\
+	&& $=\lambda^{2}-5 \lambda+4=0 \rightarrow(\lambda-1)(\lambda-4)=0 \rightarrow \lambda_{1}=1 \rightarrow \lambda_{2}=4$
+	
+\end{tabular}
+
+\subsubsection{Eigenvektoren berechnen}
+Für jeden Eigenwert $\lambda_{i}$ Gleichungssystem aufstellen ($(A-\lambda_{i} E) \vec{v}_{i}=0$) und mit Gauss auflösen $\Rightarrow$ eine Zeile verschwindet $\Rightarrow \infty$ Lösungen $\Rightarrow$ Wert von verschwundener Zeile frei wählbar.\\
+\textbf{Beispiel:}\\
+$A=\left(\begin{array}{ll}
+3 & 2 \\
+1 & 2
+\end{array}\right)$
+\qquad
+$\lambda_{1} = 1 \quad \lambda_{2} = 4$\\[5pt]
+
+$\left( \begin{array}{cc}
+	3-1 & 2\\
+	1 & 2-1
+\end{array} \right) \vec{v_1} = \vec{0}
+\quad \rightarrow \quad
+\left| \begin{array}{ccccc}
+2 \cdot x_1 & + & 2 \cdot y_1 & = & 0 \\
+1 \cdot x_1 & + & 1 \cdot y_1 & = & 0
+\end{array} \right|
+\quad \rightarrow \quad
+\vec{v_1} = \left(\begin{array}{c}
+	-1\\
+	1
+\end{array}\right)$\\[5pt]
+
+$\left( \begin{array}{cc}
+3-4 & 2\\
+1 & 2-4
+\end{array} \right) \vec{v_2} = \vec{0}
+\quad \rightarrow \quad
+\left| \begin{array}{ccccc}
+-1 \cdot x_2 & + & 2 \cdot y_2 & = & 0 \\
+1 \cdot x_2 & + & -2 \cdot y_2 & = & 0
+\end{array} \right|
+\quad \rightarrow \quad
+\vec{v_2} = \left(\begin{array}{c}
+2\\
+1
+\end{array}\right)$\\
+
+
 
 
 
