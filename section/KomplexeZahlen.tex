@@ -1,1 +1,117 @@
 \section{Komplexe Zahlen}
+\subsection{Definition}
+	Die Menge der reellen Zahlen wird auf die Menge der komplexen Zahlen erweitert. $\Rightarrow \mathbb{R} \subset \mathbb{C}$\\
+	
+	\begin{minipage}[t]{0.5\textwidth}
+		\textbf{Komplexe Zahl in Normalform:}\\[3pt]
+		\fbox{$z = \underbrace{z_{1}}_{\text{Realteil}} + \underbrace{z_{2}}_{\text{Imaginärteil}} \cdot j$}\\
+		$j = \text{imaginäre Einheit}$
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\textbf{Komplexe Zahl in Normalform:}\\[3pt]
+		\fbox{$z = \underbrace{\left| z \right|}_{Betrag} \cdot \underbrace{[cos(\varphi) + j \cdot sin(\varphi)]}_{Winkel} = r \cdot cjs(\varphi)$}
+		$\varphi = \text{Argument } arg(z) \quad\qquad r = \left| z \right| = \text{Betrag}$
+	\end{minipage}\\[3pt]
+	\textbf{Umrechnung Normal $\rightarrow$ Polar:}\\[3pt]
+	\fbox{$r = \sqrt{z_{1}^2 + z_{2}^2}$}
+	\fbox{$\varphi = \left\{
+			\begin{array}{ll}
+				arctan\left(\dfrac{z_{2}}{z_{1}}\right) & \text{für: } z_{1} \geq 0\\
+				arctan\left(\dfrac{z_{2}}{z_{1}}\right) + \pi & \text{für: } z_{1} < 0
+			\end{array}
+			\right. = \left\{
+				\begin{array}{ll}
+					\; \; \: arctan\left(\dfrac{z_{1}}{r}\right) & \text{für: } z_{2} \geq 0\\
+					-arctan\left(\dfrac{z_{1}}{r}\right) & \text{für: } z_{2} < 0
+				\end{array}
+			\right.
+		$}\\[3pt]
+	\textbf{Umrechnung Polar $\rightarrow$ Normal:}\\[3pt]
+	\fbox{$z_{1} = r \cdot cos(\varphi)$}
+	\fbox{$z_{2} = r \cdot sin(\varphi)$}\\[3pt]
+	\textbf{Sonstige Formeln:}\\[3pt]
+	\begin{tabular}{|l|l|}
+		\hline
+		Moivre'sche Formel & $cjs^n(\varphi) = (cos(\varphi) + j \cdot sin(\varphi))^n = cos(n\varphi) + j \cdot sin(n\varphi) \quad (n \in \mathbb{R})$\\
+		\hline
+	\end{tabular}\\
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Konjugierte-komplexe Zahlen}
+		\begin{tabular}{c}
+			$z = z_{1} + j \cdot z_{2} \xrightarrow[]{konjugieren} \bar{z} = z_{1} - j \cdot z_{2}$
+		\end{tabular}
+		\begin{tabular}{|lcl|lcl|}
+			\hline
+			$\overline{\overline{a}}$ & $=$ & $a$ & $\overline{-a}$ & $=$ & $-\overline{a}$\\
+			\hline
+			$\overline{a + b}$ & $=$ & $\overline{a} + \overline{b}$ & $\overline{a - b}$ & $=$ & $\overline{a} - \overline{b}$\\
+			\hline
+			$\overline{a \cdot+ b}$ & $=$ & $\overline{a} \cdot \overline{b}$ & $\overline{a : b}$ & $=$ & $\overline{a} : \overline{b}$\\
+			\hline
+			$\frac{a + \overline{a}}{2}$ & $=$ & $ Re(a)$ & $\frac{a - \overline{a}}{2j}$ & $=$ & $Im(a)$\\
+			\hline
+		\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Addition, Subtraktion}
+		\textbf{Normalform:}\\[3pt]
+		\fbox{$a + b = (a_{1} + b_{1}) + j \cdot (a_{2} + b_{2})$}\\[3pt]
+		\fbox{$a - b = (a_{1} - b_{1}) + j \cdot (a_{2} - b_{2})$}\\[3pt]
+	\subsection{Multiplikation, Division}
+		\textbf{Normalform:}\\[3pt]
+		\fbox{$a \cdot b = (a_{1} \cdot b_{1} - a_{2} \cdot b_{2}) + j \cdot (a_{1} \cdot b_{2} + a_{2} \cdot b_{1})$}\\[3pt]
+		\fbox{$a : b = \dfrac{(a_{1} \cdot b_{1} - a_{2} \cdot b_{2})}{b_{1}^2 + b_{2}^2} + j \cdot \dfrac{(a_{1} \cdot b_{2} + a_{2} \cdot b_{1})}{b_{1}^2 + b_{2}^2}$}\\[3pt]
+\end{minipage}
+
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Multiplikation in Polarform}
+		\begin{tabular}{l}
+			$c = a \cdot b = \left| c \right| \cdot cjs(\varphi_{c})$
+		\end{tabular}\\[3pt]
+		\begin{tabular}{lcl}
+			\fbox{$\left| c \right| = \left| a \right| \cdot \left|b\right| = \left| a \cdot b \right|$} & \fbox{$\varphi_{c} = \varphi_{a} + \varphi_{b}$}
+		\end{tabular}\\[3pt]
+		\begin{tabular}{l}
+			\fbox{$arg(c) = arg(a \cdot b) = arg(a) + arg(b)$}
+		\end{tabular}\\[3pt]
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Division in Polarform}
+		\begin{tabular}{l}
+			$c = \dfrac{a}{b} = \left| c \right| \cdot cjs(\varphi_{c})$
+		\end{tabular}\\[3pt]
+		\begin{tabular}{lcl}
+			\fbox{$\left| c \right| = \dfrac{\left| a \right|}{\left|b\right|} = \left| \dfrac{a}{b} \right|$} & \fbox{$\varphi_{c} = \varphi_{a} - \varphi_{b}$}
+		\end{tabular}\\[3pt]
+		\begin{tabular}{l}
+			\fbox{$arg(c) = arg\left(\dfrac{a}{b}\right) = arg(a) - arg(b)$}
+		\end{tabular}\\[3pt]
+\end{minipage}
+
+\subsection{Planare Geometrie mit komplexen Zahlen}
+	\textbf{Gerade:}
+	\textbf{Kreis:}
+
+\subsection{Potenzen und n-te (Einheits-)Wurzeln}
+	\subsubsection{Potenzen}
+		\fbox{$z^n = \underbrace{z \cdot z \cdot ... \cdot z}_{\text{n-Faktoren}}, \quad z^0 = 1, \quad z^-n = \dfrac{1}{z^n}$}
+		\fbox{$
+			\begin{array}{lll}
+				z^n & = & \left| z \right|^n \cdot \left[ cos(\varphi) + j \cdot sin(\varphi) \right]^n\\[3pt]
+				& = & r^n \cdot \left[ cos(n\varphi) + j \cdot sin(n\varphi) \right]
+			\end{array}
+		$}
+	\subsubsection{n-te Wurzeln}
+		\fbox{Di herkömmlichen Wurzelgesetze wie z.B. $\sqrt{a} \cdot \sqrt{b} = \sqrt{a \cdot b}$ gelten nicht mehr!}
+		\begin{minipage}[t]{0.3\textwidth}
+			
+		\end{minipage}
+		\begin{minipage}[t]{0.3\textwidth}
+			
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			
+		\end{minipage}
+		\begin{minipage}[t]{0.3\textwidth}
+			
+		\end{minipage}
