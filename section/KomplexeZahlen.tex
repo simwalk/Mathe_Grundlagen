@@ -12,7 +12,7 @@
 		\fbox{$z = \underbrace{\left| z \right|}_{Betrag} \cdot \underbrace{[cos(\varphi) + j \cdot sin(\varphi)]}_{Winkel} = r \cdot cjs(\varphi)$}
 		$\varphi = \text{Argument } arg(z) \quad\qquad r = \left| z \right| = \text{Betrag}$
 	\end{minipage}\\[3pt]
-	\textbf{Umrechnung Normal $\rightarrow$ Polar:}\\[3pt]
+	\textbf{Umrechnung Normal $\rightarrow$ Polar:}\\
 	\fbox{$r = \sqrt{z_{1}^2 + z_{2}^2}$}
 	\fbox{$\varphi = \left\{
 			\begin{array}{ll}
@@ -26,6 +26,7 @@
 				\end{array}
 			\right.
 		$}\\[3pt]
+	\scalebox{1}{\input{tikz/KomplexeZahlen/Polar.tex}}\\[3pt]
 	\textbf{Umrechnung Polar $\rightarrow$ Normal:}\\[3pt]
 	\fbox{$z_{1} = r \cdot cos(\varphi)$}
 	\fbox{$z_{2} = r \cdot sin(\varphi)$}\\[3pt]
@@ -38,7 +39,7 @@
 \begin{minipage}[t]{0.5\textwidth}
 	\subsection{Konjugierte-komplexe Zahlen}
 		\begin{tabular}{c}
-			$z = z_{1} + j \cdot z_{2} \xrightarrow[]{konjugieren} \bar{z} = z_{1} - j \cdot z_{2}$
+			$z = z_{1} + j \cdot z_{2} \xrightarrow[]{konjugieren} \overline{z} = z_{1} - j \cdot z_{2}$
 		\end{tabular}
 		\begin{tabular}{|lcl|lcl|}
 			\hline
@@ -50,6 +51,9 @@
 			\hline
 			$\frac{a + \overline{a}}{2}$ & $=$ & $ Re(a)$ & $\frac{a - \overline{a}}{2j}$ & $=$ & $Im(a)$\\
 			\hline
+		\end{tabular}
+		\begin{tabular}{c}
+			\scalebox{1}{\input{tikz/KomplexeZahlen/KonjugiertKomplex.tex}}\\[3pt]
 		\end{tabular}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
@@ -94,24 +98,223 @@
 
 \subsection{Potenzen und n-te (Einheits-)Wurzeln}
 	\subsubsection{Potenzen}
-		\fbox{$z^n = \underbrace{z \cdot z \cdot ... \cdot z}_{\text{n-Faktoren}}, \quad z^0 = 1, \quad z^-n = \dfrac{1}{z^n}$}
-		\fbox{$
-			\begin{array}{lll}
-				z^n & = & \left| z \right|^n \cdot \left[ cos(\varphi) + j \cdot sin(\varphi) \right]^n\\[3pt]
-				& = & r^n \cdot \left[ cos(n\varphi) + j \cdot sin(n\varphi) \right]
-			\end{array}
-		$}
+		\begin{tabular}{m{7cm}m{7cm}}
+			\fbox{$z^n = \underbrace{z \cdot z \cdot \cdots \cdot z}_{\text{n-Faktoren}}, \quad z^0 = 1, \quad z^-n = \dfrac{1}{z^n}$}
+			&
+			\fbox{$
+				\begin{array}{lll}
+					z^n & = & \left| z \right|^n \cdot \left[ cos(\varphi) + j \cdot sin(\varphi) \right]^n\\[3pt]
+					& = & r^n \cdot \left[ cos(n\varphi) + j \cdot sin(n\varphi) \right]
+				\end{array}
+			$}
+		\end{tabular}
+		
 	\subsubsection{n-te Wurzeln}
-		\fbox{Di herkömmlichen Wurzelgesetze wie z.B. $\sqrt{a} \cdot \sqrt{b} = \sqrt{a \cdot b}$ gelten nicht mehr!}
-		\begin{minipage}[t]{0.3\textwidth}
+		\fbox{Di herkömmlichen Wurzelgesetze wie z.B. $\sqrt{a} \cdot \sqrt{b} = \sqrt{a \cdot b}$ gelten nicht mehr!}\\
+		\begin{minipage}[c]{0.2\textwidth}
+			$z = \sqrt[n]{a} = \left| z \right| \cdot cjs(\varphi)$\\[3pt]
+			\fbox{$|z|=\sqrt[n]{|a|}$}\\[3pt]
+			\fbox{$\varphi_{z}=\frac{\varphi_{a}}{n}$}\\[3pt]
+			\fbox{$\arg (z)=\frac{\arg (a)}{n}$}
+		\end{minipage}
+		\begin{minipage}[c]{0.2\textwidth}
+			$\Rightarrow$ \textbf{n-Lösungen!}
+		\end{minipage}
+		\begin{minipage}[c]{0.3\textwidth}
+			$\left\{
+				\begin{array}{l}
+					z_{1}=\sqrt[n]{r} \cdot \operatorname{cjs}\left(\dfrac{\varphi_{a}}{n}\right) \\[6pt] 
+					z_{2}=\sqrt[n]{r} \cdot \operatorname{cjs}\left(\dfrac{\varphi_{a}}{n}+\frac{2 \pi}{n}\right) \\[6pt]
+					z_{3}=\sqrt[n]{r} \cdot \operatorname{cjs}\left(\dfrac{\varphi_{a}}{n}+2 \frac{2 \pi}{n}\right) \\[6pt]
+					\cdots \\ 
+					z_{n}=\sqrt[n]{r} \cdot \operatorname{cjs}\left(\dfrac{\varphi_{a}}{n}+(n-1) \frac{2 \pi}{n}\right)
+				\end{array}
+			\right.$
+		\end{minipage}
+		\begin{minipage}[c]{0.2\textwidth}
 			
 		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			
+	\subsubsection{n-te Einheitswurzel}
+		\begin{minipage}[t]{0.4\textwidth}
+			\fbox{$z = \sqrt[n]{1} = \left| z \right| \cdot \operatorname{\varphi_z}$}\\[3pt]
+			$\Rightarrow$ \textbf{n-Lösungen!}\\[3pt]
+			\fbox{$z_n = e_{k}^{(n)} = 1 \cdot \operatorname{cjs\left((k - 1) \cdot \dfrac{2\pi}{n}\right)}$}\\[3pt]
+			mit $k = 1, 2, \cdots, n$
 		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
-			
+		\begin{minipage}[t]{0.6\textwidth}
+			\textbf{Es gilt:}\\[3pt]
+			$e_{1}^{(n)}=1$\\
+			$e_{2}^{(n)}=e_{n}^{(n)}$\\
+			$e_{3}^{(n)}=e_{n-1}^{(n)}$\\
+			$\cdots$
 		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
+	
+	\subsection{Nullstellen von Polynomen}
+		\begin{tabular}{|m{13cm}|}
+			\hline
+			Ein komplexes Polynom $\operatorname{p}\left(z\right)$ vom Grad $n$ hat 	in $\mathbb{C}$ genau $n$ Nullstellen, wenn diese in ihrem Vielfachen gezählt werden.\\
+			$\Rightarrow \quad p_{n}(z)=a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{0}=a_{n} \cdot\left(z-z_{1}\right) \cdot\left(z-z_{2}\right) \cdot\left(z-z_{3}\right) \cdot \ldots \cdot\left(z-z_{n}\right)$\\
+			mit: $z_{1}, z_{2}, z_{3}, \dots, z_{n} \in \mathbb{C}$\\
+			\hline
+		\end{tabular}
+		
+		\subsubsection{Polynome mit reellen Koeffizienten}
+			\begin{tabular}{|m{13cm}|}
+				\hline
+				\begin{itemize}
+					\item komplexe Nullstellen treten immer als konjugiert-komplexe Paare $(z_0; \overline{z_0})$ mit gleichem Vielfache $k$ auf.
+					\item Für die zwei Faktoren gilt $\Rightarrow \quad\left(z-z_{0}\right)(z-\overline{z_{0}})=z^{2}-2 \operatorname{Re}\left(z_{0}\right) \cdot z+\left|z_{0}\right|^{2}$
+					\item Im reellen zerfällt $\operatorname{p(z)}$ in \textbf{reelle Linear- und Quadratfunktionen}.
+					\item Ist das Polynom von \textbf{ungeradem Grad} $\Rightarrow$ hat es \textbf{mindestens eine reelle Nullstelle}.
+				\end{itemize}\\
+				\hline
+			\end{tabular}
+	
+		\subsubsection{Berechnung der Nullstellen}
+			\begin{tabular}{|l|}
+				\hline
+				Alle Nullstellen des Polynoms $p_{n}(z)=a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{0}$\\
+				liegen in der Gauss’schen Zahlenebene in einer Kreisscheibe\\
+				um den Ursprung mit Radius:\\
+				$\displaystyle r=\sum_{k=0}^{n}\left|\frac{a_{k}}{a_{n}}\right|=\left|\frac{a_{0}}{a_{n}}\right|+\left|\frac{a_{1}}{a_{n}}\right|+\ldots+\left|\frac{a_{n}}{a_{n}}\right|$\\
+				\hline
+			\end{tabular}\\[6pt]
+			\begin{minipage}[t]{0.3\textwidth}
+				\textbf{Quadratische Polynome:}\\[3pt]
+				$p(z)=a z^{2}+b z+c=0$\\[3pt]
+				\fbox{$\displaystyle z_{1,2}=\frac{-b \pm \sqrt{b^{2}-4 a c}}{2 a}$}
+			\end{minipage}
+			\begin{minipage}[t]{0.5\textwidth}
+				\textbf{Polynome mit $a_{n}=1, a_{n-1}=\ldots=a_{1}=0, a_{0}=a$:}\\[3pt]
+				$p(z)=z^{n}+a=0$\\[3pt]
+				\fbox{$z_{k}=\sqrt[n]{|a|} \cdot \operatorname{cjs}\left(\frac{\varphi_{a}+\pi}{n}+(k-1) \cdot \frac{2 \pi}{n}\right)$}\\[3pt]
+				$\operatorname{mit} k=1,2, \ldots, n$
+			\end{minipage}
+			\begin{minipage}[t]{0.2\textwidth}
+				\textbf{pq-Formel:}\\[3pt]
+				$x^{2}+p x+q=0$\\[3pt]
+				\fbox{$x_{1,2}=-\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^{2}-q}$}
+			\end{minipage}
+		
+		\subsection{Komplexe Exponential- und Logarithmusfunktionen}
+			\subsubsection{$\mathrm{e}$-Funktion}
+				\begin{tabular}{cccccc}
+					\fbox{$\mathrm{e}^{\mathrm{j} \varphi}=\cos (\varphi)+\mathrm{j} \sin (\varphi)=\operatorname{cjs}(\varphi)$} 
+					&
+					$\Rightarrow$
+					&
+					\fbox{$\begin{aligned} \mathrm{e}^{z} &=\mathrm{e}^{z_{1}+\mathrm{j} z_{2}} \\ &=\mathrm{e}^{z_{1}} \cdot \mathrm{e}^{\mathrm{j} z_{2}} \\ &=\mathrm{e}^{z_{1}} \cdot \mathrm{c} \mathrm{j} \mathrm{s}\left(z_{2}\right) \end{aligned}$}
+					&
+					$\Rightarrow$
+					&
+					$\begin{array}{l}
+						\text{Betrag:}\\
+						\text{Argument}:
+					\end{array}$
+					&
+					$\begin{array}{l}
+						\left|\mathrm{e}^{z}\right|=\mathrm{e}^{z_{1}}\\
+						\arg \left(e^{z}\right)=z_{2}
+					\end{array}$
+				\end{tabular}\\
+				$\Rightarrow$ \textbf{Potenzgesetze gelten weiterhin!}\\[3pt]
+				$\mathrm{e}^{a} \cdot \mathrm{e}^{b}=\mathrm{e}^{a+b} \quad\left|\quad \mathrm{e}^{a}: \mathrm{e}^{b}=\mathrm{e}^{a-b} \quad\right| \quad\left(\mathrm{e}^{a}\right)^{k}=\mathrm{e}^{a \cdot k}$
 			
-		\end{minipage}
+			\subsubsection{Logarithmusfunktionen $\operatorname{Ln}$}
+				\begin{minipage}[t]{0.4\textwidth}
+					$z=\operatorname{Ln}(a)=z_{1}+\mathbf{j} z_{2}$\\[3pt]
+					\fbox{$z_{1}=\ln (|a|)$}
+					\fbox{$z_{2}=\varphi_{a}=\arg (a)$}\\[3pt]
+					$\Rightarrow \quad \operatorname{Ln}(a)=\ln (|a|)+j \arg (a)$
+				\end{minipage}
+				\begin{minipage}[t]{0.6\textwidth}
+					\textbf{Lösungen von $\operatorname{Ln}$ sind $\infty$-wertig:}\\[3pt]
+					\fbox{$\operatorname{Ln}(a)=\ln (|a|)+\mathbf{j}(\arg (a)+2 k \pi)$}
+					mit $k \in \mathbb{Z}$
+				\end{minipage}
+				$\Rightarrow$ \textbf{Logarithmusgesetze sind problematisch, da es 1-viele Lösungen gibt!}\\[3pt]
+				Es können nur noch Kongruenzen aufgestellt werden (stimmen bis auf ganzzahlige Vielfache von $2 \pi \mathbf{j}$\\[3pt]
+				$\operatorname{Ln}(a \cdot b) \stackrel{\bmod 2 \pi \mathrm{j}}{\equiv} \operatorname{Ln}(a)+\operatorname{Ln}(b) \quad|\quad \operatorname{Ln}(a: b) \stackrel{\bmod 2 \pi \mathrm{j}}{=} \operatorname{Ln}(a)-\operatorname{Ln}(b) \quad| \quad \operatorname{Ln}\left(a^{k}\right) \stackrel{\bmod 2 \pi \mathrm{j}}{=} k \cdot \operatorname{Ln}(a)$
+			
+			\subsubsection{Allgemeine Potenzen}
+				\begin{tabular}{cccccc}
+					\fbox{$a^{b}=\mathrm{e}^{b \cdot \ln (a)}$}
+					&
+					$\Rightarrow$
+					&
+					\textbf{ebenfalls $\infty$-wertige Lösungen!}
+					&
+					$D = b^2 - 4ac$
+					&
+					$\Rightarrow$
+					&
+					$\left\{
+						\begin{array}{ll}
+							D>0: 
+							& 
+							2 \text { Lösungen }\\ 
+							D=0: 
+							& 
+							1 \text { Lösung }\\ 
+							D<0: 
+							& 
+							\!\! \text { keine Lösung }
+						\end{array}
+					\right.$\\
+				\end{tabular}
+			
+			\subsection{Komplexe Trigonometrische-Funktionen}
+				\begin{tabular}{cccc}
+					\textbf{Trigo:} & \fbox{$\sin (\alpha)=\frac{\mathrm{e}^{\mathrm{j} \alpha}-\mathrm{e}^{-\mathrm{j} \alpha}}{2 \mathrm{j}}$} & \fbox{$\cos (\alpha)=\frac{e^{j \alpha}+e^{-j \alpha}}{2}$} & \fbox{$\tan \alpha=\frac{\sin \alpha}{\cos \alpha}=-j \frac{e^{j \alpha}-e^{-j \alpha}}{e^{j \alpha}+e^{-j \alpha}}$}\\
+					&&&\\
+					\textbf{Hyperbel:} & \fbox{$\sinh (\alpha)=\frac{\mathrm{e}^{\alpha}-\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\cosh (\alpha)=\frac{\mathrm{e}^{\alpha}+\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\tanh (\alpha)=\frac{\sinh (\alpha)}{\cosh (\alpha)}$}\\
+				\end{tabular}
+			\subsection{Komplexe Sinus-Schwingung}
+				\begin{tabular}{ll|ll}
+					\textbf{Reelle Schwingung:} & & \textbf{Komplexe Schwingung} & \\[3pt]
+					\fbox{$z(t)=A \cdot \sin (\omega t+\varphi)$} & & \fbox{$z(t)=\operatorname{Im}\left[A \cdot \mathrm{e}^{\mathrm{j}(\omega t+\varphi)}\right]=\operatorname{Im}\left[A \cdot \mathrm{e}^{\mathrm{j} \varphi} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right]$} & \\[5pt]
+					Amplitude: & $A$ & Komplexe Amplitude (zeitunabhängig): & $A \cdot \mathrm{e}^{\mathrm{j} \varphi}$\\[5pt]
+					Nullphasenwinkel: & $\varphi$ & Zeitfunktion (zeitabhängig): & $\left|e^{j \omega t}\right|=1$\\[5pt]
+					Kreisfrequenz: & $\omega=2 \pi f$ & & \\[5pt]
+					Periodendauer: & $T=\frac{2 \pi}{\omega}$ & & \\[5pt]
+				\end{tabular}
+			\subsubsection{Überlagerung von zwei Seiten}
+				$\begin{aligned} 
+					z(t) &=z_{1}(t)+z_{2}(t) \\ &=A_{1} \cdot \sin \left(\omega t+\varphi_{1}\right)+A_{2} \cdot \sin \left(\omega t+\varphi_{2}\right) \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{j\left(\omega t+\varphi_{1}\right)}\right]+\operatorname{Im}\left[A_{2} \cdot \mathrm{e}^{\mathrm{j}\left(\omega t+\varphi_{2}\right)}\right] \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}} \cdot \mathrm{e}^{\mathrm{j} \omega t}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] \\ &=\operatorname{Im}\left[\left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right) \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] 
+				\end{aligned}$
+				\medskip
+				\hrule
+				\medskip
+				\fbox{$\begin{array}{ll}
+						\text { reelle Amplitude } & A=\left|A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right| \\ \text { Nullphasenwinkel } & \varphi=\arg \left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right)
+					\end{array}$}
+				
+		\section{Komplexe Funktion, Ableitung}
+			\begin{minipage}[t]{0.5\textwidth}
+				\subsection{Definition}
+					
+			\end{minipage}
+			\begin{minipage}[t]{0.5\textwidth}
+				\subsection{Winkeltreue}
+					Komplexe Funktion $\operatorname{f}\left( z \right)$ ist in allen Punkten winkeltreu, wo gibt: \fbox{$\operatorname{f}^{\prime}\left( z \right) \neq 0$}\\[6pt]
+					Sie bewirkt \textbf{lokal eine Drehstreckung:}\\[3pt]
+					\begin{tabular}{ll}
+						Streckungsfaktor: & \fbox{$\left|f^{\prime}(z)\right|$}\\[3pt]
+						Drehwinkel: & \fbox{$\operatorname{\arg}\left( z \right)$}\\[3pt]
+					\end{tabular}
+			\end{minipage}
+		\subsection{Parameter- und Koordinatengleichung}
+			\begin{minipage}[t]{0.2\textwidth}
+				
+			\end{minipage}
+			\begin{minipage}[t]{0.8\textwidth}
+				\textbf{waagrechte Gitternetzlinien durch Punkt $(0; c_2)$:}
+				\begin{tabular}{llll}
+					\fbox{$z = \operatorname{z}\left( r \right) = r + \mathrm{j} c_2$} & $\Rightarrow[]{\operatorname{f}\left( z \right)}$ & \fbox{$w = \operatorname{w}\left( r \right) = \operatorname{f}\left( \operatorname{z}\left( r \right) \right) = \operatorname{f}\left( r + \mathrm{j} c_2 \right)$}\\
+				\end{tabular}
+				\textbf{senkrechte Gitternetzlinien durch Punkt $(c_1; 0)$:}
+				\begin{tabular}{llll}
+					\fbox{$z = \operatorname{z}\left( r \right) = c_1 + \mathrm{j} r$} & $\Rightarrow[]{\operatorname{f}\left( z \right)}$ & \fbox{$w = \operatorname{w}\left( r \right) = \operatorname{f}\left( \operatorname{z}\left( r \right) \right) = \operatorname{f}\left( c_1 + \mathrm{j} r \right)$}\\
+				\end{tabular}
+			\end{minipage}
+		

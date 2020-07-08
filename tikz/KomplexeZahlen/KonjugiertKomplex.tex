@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	%\draw[help lines] (0,0) grid (6,4);
+	\begin{axis}[axis lines=middle, axis equal, grid=both]
+		\addplot[dashed, blue, very thick, mark=*] coordinates{(-2, 2) (2, 2)} node[above] at (80, 350) {$\left| -z \right| = -\left| z \right|$};
+		\addplot[dashed, blue, very thick, mark=*] coordinates{(-2, -2) (2, -2)} node[above] at (375, 350) {$z$};
+		\addplot[dashed, blue, very thick, mark=*] coordinates{(-2, 2) (-2, -2)} node[above] at (30, 2) {$-z$};
+		\addplot[dashed, blue, very thick, mark=*] coordinates{(2, 2) (2, -2)} node[above] at (375, 2) {$\left| z \right|$};
+	\end{axis}
+\end{tikzpicture}
