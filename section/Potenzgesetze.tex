@@ -1,1 +1,29 @@
-\section{Potenzgesetz}
+\section[Potenzen und Logarithmen]{Potenzen und Logarithmen \bronstein{8}}
+%Rechenregeln
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Potenzen}
+	\begin{tabular}{ll}
+		$a^{0}=1$ & $a^{-n}=\frac{1}{a^{n}}$\\
+		$a^{\frac{m}{n}}=\sqrt[n]{a^{m}}$ & $\left(a^{r}\right)^{s}=a^{r \cdot s}$\\
+		$a^{r+s}=a^{r} \cdot a^{s}$ & $a^{r-s}=\frac{a^{r}}{a^{s}}$\\
+		$(a \cdot b)^{r}=a^{r} \cdot b^{r}$ & $\left(\frac{a}{b}\right)^{r}=\frac{a^{r}}{b^{r}}$\\
+	\end{tabular}
+%
+	\subsection{Logarithmen}
+	\begin{tabular}{ll}
+		$a^x = b \rightarrow x = \log_{a}(b)$				&\\
+															&\\
+		$\log _{b}(x \cdot y)=\log _{b} (x)+\log _{b} (y)$ 	& $\log _{b} (\frac{x}{y})=\log _{b} (x)-\log _{b} (y)$\\
+		$\log _{b} (\frac{1}{x})=-\log _{b} (x)$ 			& $\log _{b} (\frac{x}{y})=-\log _{b} (\frac{y}{x})$\\
+		$\log _{b}\left(x^{r}\right)=r \log _{b} (x)$ 		& $\log _{b} (\sqrt[n]{x})=\frac{1}{n} \log _{b} (x)$\\
+		$\log _{b} (x)=\frac{\log _{a} (x)}{\log _{a} (b)}$ & $\log _{e} (x)=\ln(x)$
+	\end{tabular}
+\end{minipage}
+%
+% Grafik
+\begin{minipage}[t]{0.5\textwidth}
+	\begin{flushright}
+		\strut\vspace*{-\baselineskip}\newline
+		\input{tikz/Potenzgesetze/Plot1.tex}
+	\end{flushright}
+\end{minipage}
