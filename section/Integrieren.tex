@@ -1,1 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Integral 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Integrieren}
+
+\subsection{Wozu brauche ich die Integralrechnung?}
+Die Integralrechnung ist neben der Differentialgleichung der wichtigste Zweig der mathematischen Disziplin Analysis. Sie ist aus dem Problem der Flächen- und Volumenberechnung entstanden. (Quelle Wikipedia)
+
+\subsection{Stammfunktion}
+Jede auf $[a,b]$ differenzierbare Funktion $F$ nennt man Stammfunktion, wenn $F'= f$.\\
+Umgangssprachlich nennt man dies \textbf{\grqq aufleiten\grqq} (Gegenteil von ableiten)
+
+\subsection{Leibniz- oder Integralschreibweise}
+\label{Leibniz}
+$\displaystyle I = \int\limits_{a}^{b}{f(x)}d{x} = \bigl[F(x)\bigr]_a^b = F(b)-F(a)$
+
+\subsection{Bestimmtes Integral}
+Ein bestimmtes Integral besitzt obere und untere Grenzen. Die Integrationskonstante $C$ verschwindet.\\
+\verweis{Leibniz}{Leibniz- oder Integralschreibweise}
+
+\subsection{Unbestimmtes Integral}
+Im Unterschied zu einem bestimmten Integral besitzt ein unbestimmtes Integral \textbf{keine} Grenzen.\\\\
+$\displaystyle I = \int{f(x)}d{x} = F(x) + C$
+
+\subsection{Wie löse ich ein Integral?}
+Sobald das Integral in der Leibnizform steht, gehe ich wie folgt vor:
+\subsubsection{Bestimmtes Integral}
+\begin{compactenum}
+	\item Stammfunktion der Funktion $f(x)$ bilden
+	\item Nacheinander die beiden Grenzen $b$ und $a$ in die Stammfunktion einsetzen
+	\item Lösung des Integrals: Die beiden eingesetzten Grenzen voneinander subtrahieren. $I=F(b)-F(a)$
+\end{compactenum}
+\subsubsection{Unbestimmtes Integral}
+\begin{compactenum}
+	\item Stammfunktion der Funktion $f(x)$ bilden
+	\item Lösung des Integrals: Stammfunktion + Integrationskonstante $C$
+\end{compactenum}
+
+\subsection{Wichtige Integrale}
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	\boldmath${f(x)}$ & \boldmath${F(x)}$ &\qquad\qquad\qquad& \boldmath${f(x)}$ & \boldmath${F(x)}$ &\qquad\qquad\qquad& \boldmath${f(x)}$ & \boldmath${F(x)}$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	$\displaystyle \int{0}dx$ & $C$ && $\displaystyle \int{x^n}d{x}$ & $\dfrac{x^{n+1}}{n+1}+C \qquad (n\ne-1)$ && $\displaystyle \int{sin(x)}dx$ & $-cos(x)+C$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	$\displaystyle \int{1}dx$ & $x+C$ && $\displaystyle \int{\dfrac{1}{x}}dx$ & $ln|x|+C$ && $\displaystyle \int{cos(x)}dx$ & $sin(x)+C$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	$\displaystyle \int{e^x}dx$ & $e^x+C$ && $\displaystyle \int{ln(x)}dx$ & $-x+x\cdot ln(x)+C$ && $\displaystyle \int{tan(x)}dx$ & $-ln(|cos(x)|)+C$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+\end{tabular}
+
+\subsection{Rechenregeln}
+\begin{tabular}{l c}
+	$\int\limits_a^b f({x}) d{x} = F(b) - F(a)$ & $|\int\limits_a^b f(x) dx| \leq \int\limits_a^b |f({x})| d{x}$\\
+	$\int\limits_a^b f({x}) d{x} = \int\limits_0^b f({x}) d{x} - \int\limits_0^a f({x})d{x} = \int\limits_0^b f({x}) d{x} - (-1) \cdot \int\limits_a^0 f({x})d{x}$
+\end{tabular}
+
+\subsection{Partielle Integration}
+Sobald ich ein Produkt zweier Funktionen habe und davon das Integral berechnen möchte, bietet sich die \textbf{\grqq Partielle Integration\grqq} an.\\
+Wie gehe ich vor:
+\begin{compactenum}
+	\item Von der einen Funktion die Stammfunktion bilden
+	\item Multiplikation mit der anderen Funktion
+	\item Das Produkt wird subtrahiert mit dem Integral von der Stammfunktion mal die Ableitung der anderen Funktion\\
+\end{compactenum}
+\begin{minipage}[t]{1cm}
+	\textbf{Bsp.:}
+\end{minipage}
+\begin{minipage}[t]{16cm}
+	$\displaystyle \int x\cdot sin(x) dx = \int f(x) \cdot g'(x) dx = f(x) \cdot g(x) - \int f'(x) \cdot g(x) dx = -x \cdot cos(x) - \int 1 \cdot (-cos(x)) dx = \underline{\underline{-x \cdot cos(x) + sin(x) + C}}$
+\end{minipage}
+
+\subsection{Substitution}
+Hierzu ein erklärendes Beispiel:\\\\
+\begin{minipage}[t]{1cm}
+	\textbf{Bsp.:}
+\end{minipage}
+\begin{minipage}[t]{16cm}
+	$\displaystyle f(x) = 2x \cdot ln(x^2) \Rightarrow F(x) = \int_{1}^{2} 2x \cdot ln(x^2) dx$\\
+	Lösung des Integrals durch Substitution:
+	\begin{compactenum}
+		\item Substitution \qquad $\displaystyle u(x) = x^2$
+		\item $dx$ ersetzen \qquad $\displaystyle u'(x) = \dfrac{du}{dx}=2x \Rightarrow dx = \dfrac{1}{2x}du$
+		\item Substitution der Grenzen:\\
+		- untere Grenze: \qquad $u(1) = 1$\\
+		- obere Grenze: \qquad $u(2) = 4$
+		\item In das Integral einsetzen und auflösen:\\
+		$\displaystyle \int_{1}^{4} 2x \cdot ln(u) \cdot \dfrac{1}{2x}du = \int_{1}^{4} ln(u) du= \bigl[u \cdot ln(u)-u\bigr]_1^4 = \bigl[4 \cdot ln(4)-4\bigr] - \bigl[1 \cdot ln(1)-1\bigr] \approx \underline{\underline{2.545}}$
+	\end{compactenum}
+\end{minipage}
+
+\subsection{Mittelwerte mittels Integral berechnen}
+\begin{tabular}{ll}
+	\textbf{Linearer Mittelwert} &
+	\textbf{Quadratischer Mittelwert}\\
+	$\bar{f} = \frac{1}{b-a} \int\limits_{a}^{b} f(x)dx$ &
+	$\bar{f} = \sqrt{\frac{1}{b-a} \int\limits_{a}^{b} f(x)^2dx}$
+\end{tabular}
+
+\input{tabellen/Integrale.tex}
+
