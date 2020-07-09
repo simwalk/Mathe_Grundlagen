@@ -33,6 +33,11 @@
 
 \usepackage{tikz}
 
+\usepackage{array} % für m-Spalten
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl} %Für \rowcolor
+
 \usepackage{multicol} % für \multicols
 \usepackage{paralist} % für \compactitem und \compactenum
 \usepackage{hyperref} % Erstellt Verweise innerhalb und nach außerhalb eines PDF
@@ -46,7 +51,7 @@
 \newcommand{\bronstein}[1]{\scriptsize{\textcolor{red}{\mbox{Bronstein s.#1}}}}
 
 %Verweis innerhalb des Dokuments
-\newcommand{\verweis}[2]{\small{(siehe auch \ref{#1}, #2 (S. \pageref{#1}))}}
+\newcommand{\verweis}[2]{\small{(siehe auch \ref{#1}, #2 (S. \pageref{#1}))}} %Verwendung: \verweis{label}{Bezeichnung}
 
 %Eingekreiste Zeichen für LinAlg (Benötigt Tikz)
 \newcommand*\circledr[1]

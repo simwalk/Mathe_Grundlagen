@@ -1,1 +1,328 @@
 \section{Wahrscheinlichkeit und Statistik}
+
+\subsection{Zufallsexperiment}
+\begin{tabular}{|l|l|}
+	\hline
+	Experiment & Beobachtungsprozess, Ergebnis anschliessend ausgewertet. Ergebnis zuvor unbestimmt\\
+	\hline
+	Elementarereignis ($\lambda$) & Einzelne Resultate des Experiments\\
+	\hline
+	Ereignis & Einzelne Versuchsausgänge zusammengefasst (Beispiel Gerade Zahlen)\\
+	\hline
+	Ergebnisraum ($S$) & Alle möglichen Versuchsausgänge\\
+	\hline
+	Disjunkt & Ereignisse sind disjunkt, wenn sie keine gemeinsame Elemente beinhalten.\\
+	\hline
+\end{tabular}
+
+\subsection{Verknüpfung von Ereignissen}
+
+\begin{minipage}[t]{0.85\textwidth}
+	%{m{2cm}m{1cm}c} {|l|l|c|c|}
+	\begin{tabular}[t]{|m{3.4cm}|m{4.5cm}|m{2.5cm}|m{1.8cm}|}
+		\hline
+		Begriff & Beschreibung & Bild & Modell\\
+		\hline
+		Sicheres Ereignis & tritt immer ein & \input{tikz/WarStat/SicheresEreignis.tex} & $S$\\
+		\hline
+		Unmögliches Ereignis & kann nicht eintreten & \input{tikz/WarStat/UnmoglichesEreignis.tex} & $\emptyset = \{\}$\\
+		\hline
+		Disjunkte Ereignisse & Keine gemeinsame Elemente & \input{tikz/WarStat/disjunkt.tex} & $A \cap B = \emptyset$\\
+		\hline
+		$A$ und $B$ & Schnittmenge & \input{tikz/WarStat/AundB1.tex} & $A \cap B$\\
+		\hline
+		$A$ oder $B$ & Vereinigung & \input{tikz/WarStat/AoderB1.tex} & $A \cup B$\\
+		\hline
+		$A$ hat $B$ zur folge & A ist in B enthalten & \input{tikz/WarStat/AhatBzurfolge.tex} & $A \subset B$ \\
+		\hline
+		nicht $A$ & Komplementär Ereignis & \input{tikz/WarStat/NichtA.tex} & $\bar{A} = S\setminus A$\\
+		\hline
+	\end{tabular}
+\end{minipage} %
+\begin{minipage}[t]{0.15\textwidth}
+	\vspace{10pt}
+	$\bar{S} = \emptyset$\\
+	$\bar{\emptyset} = S$\\
+	$S \cup A = S$\\
+	$S \cap A = A$\\
+	$A \cup \bar{A} = S$\\
+	$A \cap \bar{A} = S$\\
+	$\bar{\bar{A}} = A$\\
+\end{minipage}
+
+\subsection{Wahrscheinlichkeit von Ereignissen}
+\begin{minipage}{0.7\textwidth}
+	Bei der Wahrscheinlichkeit von Ereignissen handelt sich um eine Funktion $P(A)$ welche jedem Ereignis $A \subset S$ eine reelle Zahl zuweist.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\begin{center}
+		\fbox{$P(A) = \lim\limits_{n\rightarrow \infty} \dfrac{n_A}{n}$}
+	\end{center}
+\end{minipage}
+
+\subsubsection{Axiomen}
+\begin{minipage}[t]{0.32\textwidth}
+	$P(A)\ge 0$\\
+	$P(S) = 1$\\[4pt]
+	falls $A$ und $B$ disjunkt\\
+	$P(A \cup B) = P(A) + P(B)$ 
+\end{minipage}
+\begin{minipage}[t]{0.32\textwidth}
+	$P(\bar{A}) = 1 - P(A)$\\
+	$P(\emptyset) = 0$\\
+	$B \subset A \rightarrow P(B) \le P(A)$
+\end{minipage}
+\begin{minipage}[t]{0.35\textwidth}
+	$P(A) \le 1$\\[4pt]
+	falls $A$ und $B$ nicht disjunkt\\
+	$P(A \cup B) = P(A) + P(B) - P(A \cap B)$ 
+\end{minipage}
+
+\subsubsection{Laplace-Experiment}
+\begin{multicols}{2}
+	Ein Laplace-Experiment ist ein Zufallsexperiment bei welchem die endliche Anzahl von mögliche Ausgänge alle gleich häufig vorkommen.\\
+	\columnbreak
+	\begin{center}
+		\fbox{$P(\lambda_i) = \dfrac{1}{n}$ \quad für alle $1 \le i \le n$}
+	\end{center}
+\end{multicols}
+
+
+\subsubsection{Bedingte Wahrscheinlichkeit}
+\begin{multicols}{2}
+	\fbox{$ P(B|A) = \dfrac{P(B \cap A)}{P(A)} $} $=\underbrace{\frac{P(A) \cdot P(B)}{P(B)}=P(A)}_{\text{nur wenn unabhängig}}$
+	\columnbreak\\
+	$P(B|A)$ ist die Wahrscheinlichkeit das ein das Ereignis $B$ eintritt unter der Voraussetzung das $A$ bereits eingetroffen ist.
+\end{multicols}
+
+\subsubsection{Satz von Bayes}
+\begin{minipage}{0.58\textwidth}
+Tauscht die Ereignisse der Bedingten Wahrscheinlichkeit.
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}{0.38\textwidth}
+	\begin{center}
+		\fbox{$P(B \mid A)=P(A \mid B) \cdot \dfrac{P(B)}{P(A)}$}
+	\end{center}
+\end{minipage}
+
+\subsubsection{Unabhängige Ereignisse}
+Für sie gilt: \fbox{$P(A \cap B)=P(A) P(B)$}\\[5pt]
+Die Tatsache, dass $A$ eingetreten ist, hat keinen Einfluss auf die Wahrscheinlichkeit von $B$.\\
+Wenn Ereignisse nicht gleichzeitig eintreten können, so sind sie abhängig.
+
+\subsubsection{Satz von der totalen Wahrscheinlichkeit}
+\fbox{$\displaystyle P(A)=\sum_{i=1}^{n} P(A | B_i) \cdot P(B_i)$} \qquad
+Die Ereignisse $B_i$ müssen disjunkt sein.
+
+\subsection{Zufallsvariable}
+Eine Zufallsvariable $X(\lambda)$ ist eine Funktion die jedem Ergebnis $\lambda_i$ eine reelle Zahl zuweist.
+
+\subsubsection{Zweidimensionale Zufallsvariable}
+Die zwei Zufallsvariablen $X(\lambda)$ und $Y(\lambda)$ weisen jedem Ergebnis $\lambda_i$ des Ergebnisraums $S$ zwei reelle Zahlen zu. Diese zwei Zufallsvariablen können voneinander abhängig oder unabhängig sein.
+Bsp: Prüfungsnote und Erfolgserlebnis der Studenten.
+
+\subsubsection{Verteilungsfunktion}
+Die Verteilungsfunktion $F_X(x)$ gibt an, welcher statistische Anteil von Ergebnissen der Zufallsvariable $X(\lambda)$ einen kleineren Wert als $x$ aufweist.
+\begin{center}
+	\fbox{$F_X(x) = P(X \le x)$} \qquad für $-\infty < x < \infty$
+\end{center}
+
+\textbf{Eigenschaften:}
+\begin{multicols}{2}
+	$0 \le F_X(x) \le 1$\\
+	$F_X(x_1) \le F_X(x_2)$ für $x_1 < x_2$
+	\columnbreak\\
+	$F_X(-\infty) = 0$\\
+	$F_X(+\infty) = 1$
+\end{multicols}
+
+\subsubsection{Wahrscheinlichkeitsdichtefunktion}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Stetige Zufallsvariable:}\\
+	Die Dichtefunktion für eine Stetige Zufallsvariable ist die Ableitung der Verteilungsfunktion $F_X(x)$.
+	\begin{center}
+		\fbox{$f_X(x)=\dfrac{dF_X(x)}{dx}$}
+	\end{center}
+\textbf{Eigenschaften:}\\
+$f_X(x)$ ist stückweise Stetig\\
+$f_X(x) \ge 0$\\
+$\int\limits_{-\infty}^{\infty} f_X(x) dx = 1$\\
+$P(a < X \le b) = \int\limits_{a^+}^{b} f_X(x) dx$
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskrete Zufallsvariable:}\\
+	Die Verteilungsfunktion $F_X(x)$ von diskreten Zufallsvariablen weist Sprungstellen auf für diese Stellen existiert dann keine Ableitung. Dieses Problem wird mit Dirac-Implusen welche gerade mit der Sprunghöhe von $F_X(x)$ gewichtet wird.
+	\begin{center}
+		\fbox{$f_X(x) = \sum\limits_{1}^{n} (F_X(x_{i+1}) - F_X(x_i)) \cdot \delta(x-x_i)$}
+	\end{center}
+\end{minipage}
+
+\subsubsection{Erwartungswert}
+Der Erwartungswert $\mu_X$ gibt den Mittelwert der Zufallsvariable $X(\lambda)$ wieder wobei die Werte $X(\lambda) = x$ mit den Auftretungswahrscheinlichkeit $p_X(x) = P(X=x)$ gewichtet werden.\\[3pt]
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskret}\\
+	\fbox{$\mu_X = E[X] = \sum\limits_{i}^{\quad}x_i \cdot p_X(x_i)$}
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Stetig}\\
+	\fbox{$\mu_X = E[X] = \int\limits_{-\infty}^{\infty} x \cdot f_X(x) \: dx$}
+\end{minipage}
+
+\subsubsection{Zweites und n-tes Moment}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskret}\\
+	\fbox{$E[X^2] = \sum\limits_{i}^{\quad}{x_i}^2 \cdot p_X(x_i)$}\\[3pt]
+	$E[X^n] = \sum\limits_{i}^{\quad}{x_i}^n \cdot p_X(x_i)$
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Stetig}\\
+	\fbox{$E[X^2] = \int\limits_{-\infty}^{\infty} x^2 \cdot f_X(x) \: dx$}\\[3pt]
+	$E[X^n] = \int\limits_{-\infty}^{\infty} x^n \cdot f_X(x) \: dx$
+\end{minipage}
+
+\subsubsection{Varianz und Standartabweichung}
+Bei der Varianz handelt es sich um ein statistisches Leistungsmass, welche die mittlere Abweichung vom Erwartungswert ausdrückt.\\[3pt]
+\fbox{$\sigma^2 = Var[X] = E[(X-\mu_X)^2]$}\\[5pt]
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskret}\\
+	$Var[X] = \sum\limits_{i}^{\,} (x_i -\mu_X)^2 \cdot p_X(x_i)$\\
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Stetig}\\
+	$Var[X] = \int\limits_{-\infty}^{\infty} (x -\mu_X)^2 \cdot f_X(x) \: dx$
+\end{minipage}
+\textbf{Standartabweichung:}\\
+\fbox{$\sigma = \sqrt{Var[X]}$}
+
+\subsubsection{Korrelation}
+Korrelation ist ein statistische Kennwert zweier Zufallsvariablen $X$ und $Y$, welcher einen allfälligen linearen Zusammenhang ausdrückt. Die Korrelation ist eine statistische Kreuzleistung.\\
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskret}\\
+	\fbox{$m_{11} = E[X \cdot Y] = \sum\limits_{i}^{\quad}\sum\limits_{k}^{\quad}x_i\cdot y_k \cdot p_{XY}(x_i, y_k)$}\\
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Stetig}\\
+	\fbox{$m_{11} = E[X \cdot Y] = \int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty} x\cdot y \cdot f_XY(x, y) \: dx \: dy$}
+\end{minipage}
+\textbf{Eigenschaften:}\\
+Zwei Zufallsvariablen $X$ und $Y$ sind zueinander orthogonal falls $m_{11} = 0$ ist\\
+Wenn $X$ und $Y$ beide Mehrheitlich das gleiche Vorzeichen haben, dann ist $m_{11}$ positiv. Ist das Vorzeichen mehrheitlich verschieden, dann ist $m_{11}$ negativ.
+ 
+\subsubsection{Kovarianz}
+Die Kovarianz ist grundsätzlich das selbe wie bei der Korrelation. Nur werden die Zufallszahlen durch ihren Erwartungswert bereinigt\\
+\fbox{$\sigma_{XY} = E[(X-\mu_X) \cdot (Y-\mu_Y)]$}\\[5pt]
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskret}\\
+	$\sigma_{XY} = \sum\limits_{k}\sum\limits_{i} (x_i-\mu_X)\cdot (y_K - \mu_Y)\cdot p_{XY}(x_i,y_k)$
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Stetig}\\
+	$\sigma_{XY} = \int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty} (x-\mu_X)\cdot (y - \mu_Y)\cdot f_{XY}(x,y) \: dx \: dy$
+\end{minipage}
+
+\subsection{Wahrscheinlichkeitsverteilung}
+\subsubsection{Gleichverteilung}
+\begin{minipage}[t]{0.48\textwidth}
+	\textbf{Diskret}\\
+	\fbox{$p_X(x_i) = \dfrac{1}{n}$}\\[3pt]
+	
+\end{minipage} \hspace{0.04\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\textbf{Stetig}\\
+	\fbox{$f_X(x) = \dfrac{1}{b-a}$}
+\end{minipage}
+
+\subsubsection{Binomialverteilung}
+Wird angewendet bei einem Experiment mit nur zwei Ausgängen (Ereignis mit Wahrscheinlichkeit $p$ tritt ein, Ereignis tritt nicht ein) zu beschreiben. Die Binomialverteilung gibt an wie Wahrscheindlich es ist, mit $n$ Versuche $k$-mal erfolgreich zu sein. \\
+\vrule \begin{minipage}{0.41\textwidth}
+	\hrule
+	\vspace{5pt}
+	\leftskip8pt $p_X(k)=P(X=k)=\left(\begin{array}{l}
+	n \\
+	k
+	\end{array}\right) p^{k}(1-p)^{n-k}$\\
+	$\mu_X=n \cdot p$\\
+	$\sigma^{2}=\operatorname{var}(X)=n \cdot p(1-p)$
+	\vspace{5pt}
+	\hrule
+\end{minipage}\vrule \hspace{0.04\textwidth}
+\begin{minipage}{0.55\textwidth}
+	$n$: Versuche \quad $k$: k-mal erfolgreich \quad $p$: Wahrscheinlichkeit
+\end{minipage}\\[5pt]
+\color{red} \textbf{Achtung!:} \color{black} Für seltene Ereignisse Poissonverteilung verwenden!
+
+\subsubsection{Poissonverteilung}
+Die Poissonverteilung entspricht der Binomialverteilung für seltene Ereignisse ($n$ sehr gross und die Wahrscheinlichkeit $p$ sehr klein).\\
+\fbox{$p_X(k) = P(X=k) = e^{-n\cdot p} \cdot \dfrac{(n\cdot p)^k}{k!}$} \qquad $E(X)=\mu_X = n \cdot p$ \qquad $var(X)=\sigma^2 = n \cdot p$
+
+\subsubsection{Gaussverteilung}
+Gaussverteilung oder Normalverteilung\\
+\fbox{$f_X(x)=\dfrac{1}{\sqrt{2 \pi}\cdot \sigma}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$}\\
+Die Verteilungsfunktion $F(x)=\frac{1}{\sqrt{2 \pi} \sigma} \cdot \int_{-\infty}^{x} e^{-\frac{(\tilde{x}-\mu)^{2}}{2 \sigma^{2}}} d \tilde{x}$ lässt sich nicht analytisch berechnen. Deshalb muss dies numerisch über Tabellen ausgelesen werden.\\
+In Nat2 wird dies über die Fehlerfunktion oder über die Q-Funktion gelöst (siehe Skript Nat1\&2 s137-140)\\
+Ansonsten muss die Verteilung standardisiert werden $\sigma^2 = 1$ \& $\mu = 0$. Dies geschieht mit folgender Formel: $\frac{x-\mu}{\sigma}$\\
+Danach kann man den Wert aus der Tabelle auslesen\\
+\input{tabellen/Gaussverteilung.tex}
+
+
+%%%%Grundlagen
+%%%Begriffe
+%%%Zufallsexperiment
+%%%Wahrscheindlichkeiten von Ereignissen
+%%Laplace Experiment
+%%Bedingte W'keit
+%% A-priori A-Posteriorie
+%% Statisch unabhänige Ereignisse
+%%Satz von der Totalen W'keit
+%%Satz von Bayes
+
+%%%%Zufallsvariablen
+%%%Diskrete/stetige Zufallsvariable
+%%%Verteilungsfunktionen
+%%%Wahrscheindlichkeitsfunktion
+%%%Wahrscheindlichkeitsdichtefunktion
+
+%%%%Zweidimensionale und n-dimensionale Zufallsvariablen
+%%%Verbundverteilungsfunktion
+%%%Randverteulung
+%%%Verbundsw'keti Funktion
+%%%Verbundsw'keitdichte Funktion
+
+%%%%Statistische Kennwerte
+%%%Erwartungswert
+%%%Zweites Moment
+%%%Varianz / Standartabweichung
+%%%Korrekation
+%%%Kovarianz
+
+%%%%Verteilungen
+%%%Gleichverteilung
+%%%Binominalverteilung
+%%%Poissonverteilung
+%%%Gaussverteilung
+%%%Q-Funktion
+%%%Rayleigh-Verteilung
+
+
+%-------------------------------------------------------------------
+
+
+%%%%Zufallsprozess
+%%%Grundlage
+%%%Statistische Eigenaschaften
+%%Verteilungsfunktion und W'keit(dichte)Funktion
+%%Statistische Kennwerte
+%Erwartungswert
+%Autokorrelation
+%Autokovarianz
+%%%Stationarität
+%%%Zeitmittelwert, Ergodizität
+%%Linearer zeitlicher Mittelwert
+%%Zeitliche Autokorrealation
+%%Ergozität von stationären Prozessen
+%%%Eigenschaften von Stationären Zufallsprozessen
+%%%Spektrale Leisungsdichten
+%%%Übertragung von Zufallsprozessen über LTI-Systeme
+
+%%%%Rauschen
