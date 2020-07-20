@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+	%\draw[help lines] (0,0) grid (6,4);
+	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
+		\addplot[->, red, very thick] coordinates{(0, 0) (1, 3)} node[above, red] at (350, 400) {$a-b$};
+		\addplot[->, black!50!green, very thick] coordinates{(0, 0) (3, 2)} node[above, black!50!green] at (500, 300) {$a=3+2\mathrm{j}$};
+		\addplot[->, red, very thick] coordinates{(0, 0) (5, 1)} node[above, red] at (650, 200) {$a+b$};
+		\addplot[->, blue, very thick] coordinates{(0, 0) (2, -1)} node[above, blue] at (500, -70) {$b=2-\mathrm{j}$};
+		\addplot[->, dashed, blue, very thick] coordinates{(0, 0) (-2, 1)} node[above, blue] at (25, 200) {$-b$};
+	\end{axis}
+\end{tikzpicture}

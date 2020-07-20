@@ -65,6 +65,7 @@
 		\textbf{Normalform:}\\[3pt]
 		\fbox{$a \cdot b = (a_{1} \cdot b_{1} - a_{2} \cdot b_{2}) + j \cdot (a_{1} \cdot b_{2} + a_{2} \cdot b_{1})$}\\[3pt]
 		\fbox{$a : b = \dfrac{(a_{1} \cdot b_{1} - a_{2} \cdot b_{2})}{b_{1}^2 + b_{2}^2} + j \cdot \dfrac{(a_{1} \cdot b_{2} + a_{2} \cdot b_{1})}{b_{1}^2 + b_{2}^2}$}\\[3pt]
+		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexAddSub.tex}}\\[3pt]
 \end{minipage}
 
 \begin{minipage}[t]{0.5\textwidth}
@@ -78,6 +79,7 @@
 		\begin{tabular}{l}
 			\fbox{$arg(c) = arg(a \cdot b) = arg(a) + arg(b)$}
 		\end{tabular}\\[3pt]
+		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexMul.tex}}\\[3pt]
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
 	\subsection{Division in Polarform}
@@ -90,12 +92,19 @@
 		\begin{tabular}{l}
 			\fbox{$arg(c) = arg\left(\dfrac{a}{b}\right) = arg(a) - arg(b)$}
 		\end{tabular}\\[3pt]
+		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexDiv.tex}}\\[3pt]
 \end{minipage}
 
 \subsection{Planare Geometrie mit komplexen Zahlen}
-	\textbf{Gerade:}
-	\textbf{Kreis:}
-
+	\begin{minipage}[c]{0.5\textwidth}
+		\textbf{Gerade:}\\[3pt]
+		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexGer.tex}}
+	\end{minipage}
+	\begin{minipage}[c]{0.5\textwidth}
+		\textbf{Kreis:}\\[3pt]
+		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexKreis.tex}}
+	\end{minipage}
+	
 \subsection{Potenzen und n-te (Einheits-)Wurzeln}
 	\subsubsection{Potenzen}
 		\begin{tabular}{m{7cm}m{7cm}}
@@ -433,6 +442,7 @@
 			\begin{minipage}[t]{0.4\textwidth}
 				
 			\end{minipage}\\[3pt]
+		
 		\subsection{Regeln bei der Kreisspiegelung}
 			\fbox{
 				\begin{tabular}{ll}
@@ -444,26 +454,35 @@
 					\textbf{Kreistreue:} & Die Kreisspiegelung ist kreistreu (Geraden sind Kreise mit $r = \infty$)
 				\end{tabular}
 			}\\[3pt]
-		\begin{minipage}[t]{0.5\textwidth}
-			\subsection{Konstruktion von Bildpunkten}
-				\begin{minipage}[t]{0.5\textwidth}
-					$z$ \textbf{innerhalb des Einheitskreises}:\\[3pt]
-					
-				\end{minipage}
-				\begin{minipage}[t]{0.5\textwidth}
-					$z$ \textbf{ausserhalb des Einheitskreises}:\\[3pt]
-					
-				\end{minipage}
-		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
-			\subsection{Exponentialfunktion $\mathrm{e}^z$}
-				\begin{minipage}[t]{0.3\textwidth}
-					\fbox{$\mathrm{e} = \mathrm{e}^z_1 + \operatorname{cjs}\left( z_2 \right)$}
-				\end{minipage}
-				\begin{minipage}[t]{0.7\textwidth}
-					\begin{tabular}{lcl}
-						\textbf{Waagrechte} & $\rightarrow$ & \textbf{Strahlen}\\[3pt]
-						\textbf{Senktrechte} & $\rightarrow$ & \textbf{Kreise um $\mathrm{O}$}\\[3pt]
-					\end{tabular}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				\textbf{Originalkurve:} & \textbf{Bildkurve:} & & \textbf{Originalkurve:} & \textbf{Bildkurve:}\\
+				\hline
+				%\includegraphics{} & \includegraphics{} & & \includegraphics{} & \includegraphics{}\\
+				\hline
+				%\includegraphics{} & \includegraphics{} & & \includegraphics{} & \includegraphics{}\\
+				\hline
+			\end{tabular}\\[3pt]
+			\begin{minipage}[t]{0.5\textwidth}
+				\subsection{Konstruktion von Bildpunkten}
+					\begin{minipage}[t]{0.5\textwidth}
+						$z$ \textbf{innerhalb des Einheitskreises}:\\[3pt]
+						
+					\end{minipage}
+					\begin{minipage}[t]{0.5\textwidth}
+						$z$ \textbf{ausserhalb des Einheitskreises}:\\[3pt]
+						
+					\end{minipage}
+			\end{minipage}
+			\begin{minipage}[t]{0.5\textwidth}
+				\subsection{Exponentialfunktion $\mathrm{e}^z$}
+					\begin{minipage}[t]{0.3\textwidth}
+						\fbox{$\mathrm{e} = \mathrm{e}^z_1 + \operatorname{cjs}\left( z_2 \right)$}
+					\end{minipage}
+					\begin{minipage}[t]{0.7\textwidth}
+						\begin{tabular}{lcl}
+							\textbf{Waagrechte} & $\rightarrow$ & \textbf{Strahlen}\\[3pt]
+							\textbf{Senktrechte} & $\rightarrow$ & \textbf{Kreise um $\mathrm{O}$}\\[3pt]
+						\end{tabular}
 				\end{minipage}
 		\end{minipage}
