@@ -1,0 +1,16 @@
+\begin{tikzpicture}[xscale=0.75, yscale=0.75]
+	%axis
+	\draw[thick, -] (0, 0) -- (10,0) node[label={[xshift=-3cm, yshift=-0.55cm]\Large $a$}]{};
+	\draw[thick, -] (10, 0) -- (7.5,4.33) node[label={[xshift=1cm, yshift=-1.7cm]\Large $b$}]{};
+	\draw[thick, -] (0, 0) -- (7.5,4.33) node[label={[xshift=-2.7cm, yshift=-1.7cm]\Large $c$}]{};
+	
+	\draw (2,0) arc (0:30:2cm) node[label={[xshift=-0.2cm, yshift=-0.9cm]\Large $\beta$}]{};
+	\draw (8,0) arc (180:120:2cm) node[label={[xshift=0cm, yshift=-1.2cm]\Large $\gamma$}]{};
+	\draw (5.77,3.33) arc (210:300:2cm) node[label={[xshift=-0.8cm, yshift=0cm]\Large $\alpha$}]{};;
+	%
+	
+	%
+	%plots
+	%\draw[red, domain=-4:1.4] plot (\x, {e^\x}) node[right, red] {\Large $e^x$};
+	%\draw[blue, domain=0.03:4] plot (\x, {ln(\x)})node[above, blue] {\Large $ln(x)$};
+\end{tikzpicture}
