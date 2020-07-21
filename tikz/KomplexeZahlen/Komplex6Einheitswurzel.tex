@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 	%\draw[help lines] (0,0) grid (6,4);
 	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
-		\draw[black!70] ([shift=(60:1cm)]178, 83) arc(0:360:2.36cm);
+		\draw (axis cs: 0, 0) circle [black!10, radius=1];
 		% this uses per-patch color data:
 		\addplot[patch, opacity=0.5, table/row sep=\\, patch table={%
 			0 1 2\\

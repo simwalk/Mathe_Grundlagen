@@ -3,7 +3,7 @@
 	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
 		\addplot[->, black!50!green, very thick] coordinates{(0, 0) (0.5, 0.866)} node[above, black!50!green] at (55, 235) {$a$} node[sloped, rotate = 60, above, black!50!green] at (30, 195) {$|a|$};
 		\addplot[->, red, very thick] coordinates{(0, 0) (0.5, -0.866)} node[above, red] at (75, 35) {$b = a^5$} node[sloped, rotate = -60, above, red] at (25, 100) {$\left| b \right| = \left| a^5 \right|$};
-		\draw[black!70] ([shift=(60:1cm)]74.5, 103.5) arc(0:360:1.9cm);
+		\draw (axis cs: 0, 0) circle [black!10, radius=1];
 		\draw[latex-latex, black!50!green]  ([shift=(60:1cm)]25, 105) arc(0:60:1cm) node[midway, right, black!50!green] {$\varphi_{a}$};
 		\draw[latex-latex, red]  ([shift=(60:0.5cm)]12, 128) arc(0:300:0.5cm) node[above, rotate = -60, left, red] at (-10, 90) {$\varphi_{b} = 5 \cdot \varphi_{a}$};
 		\addplot[->, dashed, white] coordinates{(0.8, -1.5) (0.8, 1.5)}; % for axis-scaling

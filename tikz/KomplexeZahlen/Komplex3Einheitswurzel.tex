@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 	%\draw[help lines] (0,0) grid (6,4);
 	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
-		\draw[black!70] ([shift=(60:1cm)]331, 173) arc(0:360:2.3cm);
+		\draw (axis cs: 0, 0) circle [black!10, radius=2];
 		\addplot[patch, patch type=triangle, opacity=0.5] coordinates {(-1.73, 1) (1.73, 1) (0, -2)};
 		\draw[latex-latex, red]  ([shift=(60:1cm)]330, 175) arc(0:60:1cm) node[midway, rotate=30, right, red] {$\varphi_{z} = \dfrac{\pi}{6}$};
 		\addplot[orange, very thick, mark=*] coordinates{(1.73, 1) (1.73, 1)} node[above, red!70] {$z_1 = -\sqrt{3} + \mathrm{j}$};

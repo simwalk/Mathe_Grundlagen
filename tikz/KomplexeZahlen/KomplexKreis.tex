@@ -3,6 +3,6 @@
 	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
 		\addplot[->, dashed, red, very thick] coordinates{(3, 1) (2, 3)} node[above, red] at (750, 350) {$g$} node[sloped, rotate = 25, above, red] at (360, 425) {$z_{2} = \dfrac{1}{2}(z_{1} - 2)$};
 		\addplot[->, dashed, white] coordinates{(0.5, -2) (0.5, 4)};
-		\draw[red] ([shift=(60:1cm)]410, 215) arc(0:360:2.05cm);
+		\draw (axis cs: 3, 1) circle [red, radius=2.2];
 	\end{axis}
 \end{tikzpicture}

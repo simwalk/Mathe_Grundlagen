@@ -1,10 +1,9 @@
 \begin{tikzpicture}
 	%\draw[help lines] (0,0) grid (6,4);
-	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
-		\draw[black!70] ([shift=(60:1cm)]180, 75) arc(0:360:2.58cm);
-		\addplot[->, blue, very thick] coordinates{(0, 0) (-0.71, -0.71)}  node[sloped, above, blue] {$A$};
-		\addplot[->, blue, very thick] coordinates{(0, 0) (0.94, 0.25)}  node[sloped, above, blue] {$A$};
-		\addplot[->, dashed, white] coordinates{(0, 0) (1, -1.1)}; % for axis-scaling
-		\addplot[->, dashed, white] coordinates{(0, 0) (-1, 1.1)}; % for axis-scaling
+	\begin{axis}[axis lines=middle, axis equal, grid=both, xmin=-1, xmax=1, ymin=-1, ymax=1, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
+		\draw (axis cs: 0, 0) circle [black!70, radius=1];
+		\draw[latex-latex, red]  ([shift=(60:1cm)]132, 68) arc(0:25:1cm) node[midway, rotate=15, right, red] {$\varphi$};
+		\addplot[->, red, very thick] coordinates{(0, 0) (-0.71, -0.71)}  node[sloped, above, red, left] {$A$};
+		\addplot[->, red, very thick] coordinates{(0, 0) (0.94, 0.25)}  node[sloped, above, red] at (180, 120) {$A$};
 	\end{axis}
 \end{tikzpicture}

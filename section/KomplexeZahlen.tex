@@ -292,6 +292,7 @@
 					&&&\\
 					\textbf{Hyperbel:} & \fbox{$\sinh (\alpha)=\frac{\mathrm{e}^{\alpha}-\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\cosh (\alpha)=\frac{\mathrm{e}^{\alpha}+\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\tanh (\alpha)=\frac{\sinh (\alpha)}{\cosh (\alpha)}$}\\
 				\end{tabular}
+			
 			\subsection{Komplexe Sinus-Schwingung}
 				\begin{tabular}{ll|ll}
 					\textbf{Reelle Schwingung:} & & \textbf{Komplexe Schwingung} & \\[3pt]
@@ -301,24 +302,27 @@
 					Kreisfrequenz: & $\omega=2 \pi f$ & & \\[5pt]
 					Periodendauer: & $T=\frac{2 \pi}{\omega}$ & & \\[5pt]
 				\end{tabular}
+			
 			\subsubsection{Überlagerung von zwei Seiten}
 				\begin{minipage}[t]{0.4\textwidth}
 					$\begin{aligned} 
 						z(t) &=z_{1}(t)+z_{2}(t) \\ &=A_{1} \cdot \sin \left(\omega t+\varphi_{1}\right)+A_{2} \cdot \sin \left(\omega t+\varphi_{2}\right) \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{j\left(\omega t+\varphi_{1}\right)}\right]+\operatorname{Im}\left[A_{2} \cdot \mathrm{e}^{\mathrm{j}\left(\omega t+\varphi_{2}\right)}\right] \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}} \cdot \mathrm{e}^{\mathrm{j} \omega t}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] \\ &=\operatorname{Im}\left[\left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right) \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] 
 					\end{aligned}$
 				\end{minipage}
-				\begin{minipage}[t]{0.3\textwidth}
-					\scalebox{0.75}{\input{tikz/KomplexeZahlen/SinoidEinheitskreis.tex}}
-				\end{minipage}
-				\begin{minipage}[t]{0.3\textwidth}
-					\scalebox{0.75}{\input{tikz/KomplexeZahlen/Sinus.tex}}
+				\begin{minipage}[t]{0.6\textwidth}
+					\scalebox{0.65}{\input{tikz/KomplexeZahlen/EinheitsKreisDarstellungen.tex}}
 				\end{minipage}
 				\medskip
 				\hrule
 				\medskip
-				\fbox{$\begin{array}{ll}
-						\text { reelle Amplitude } & A=\left|A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right| \\ \text { Nullphasenwinkel } & \varphi=\arg \left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right)
-					\end{array}$}
+				\begin{minipage}[t]{0.5\textwidth}
+					\fbox{$\begin{array}{ll}
+							\text { reelle Amplitude } & A=\left|A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right| \\ \text { Nullphasenwinkel } & \varphi=\arg \left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right)
+						\end{array}$}
+				\end{minipage}
+				\begin{minipage}[t]{0.5\textwidth}
+					\scalebox{0.65}{\input{tikz/KomplexeZahlen/SchwingungsUeberlagerung.tex}}
+				\end{minipage}
 				
 		\section{Komplexe Funktion, Ableitung}
 			\begin{minipage}[t]{0.5\textwidth}
