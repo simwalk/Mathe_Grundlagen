@@ -98,28 +98,30 @@
 \subsection{Planare Geometrie mit komplexen Zahlen}
 	\begin{minipage}[c]{0.5\textwidth}
 		\textbf{Gerade:}\\[3pt]
-		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexGer.tex}}
+		\scalebox{0.8}{\input{tikz/KomplexeZahlen/KomplexGer.tex}}
 	\end{minipage}
 	\begin{minipage}[c]{0.5\textwidth}
 		\textbf{Kreis:}\\[3pt]
-		\scalebox{1}{\input{tikz/KomplexeZahlen/KomplexKreis.tex}}
+		\scalebox{0.8}{\input{tikz/KomplexeZahlen/KomplexKreis.tex}}
 	\end{minipage}
 	
 \subsection{Potenzen und n-te (Einheits-)Wurzeln}
 	\subsubsection{Potenzen}
-		\begin{tabular}{m{7cm}m{7cm}}
-			\fbox{$z^n = \underbrace{z \cdot z \cdot \cdots \cdot z}_{\text{n-Faktoren}}, \quad z^0 = 1, \quad z^-n = \dfrac{1}{z^n}$}
-			&
+		\begin{minipage}[c]{0.5\textwidth}
+			\fbox{$z^n = \underbrace{z \cdot z \cdot \cdots \cdot z}_{\text{n-Faktoren}}, \quad z^0 = 1, \quad z^{-n} = \dfrac{1}{z^n}$}\\[12pt]
 			\fbox{$
 				\begin{array}{lll}
-					z^n & = & \left| z \right|^n \cdot \left[ cos(\varphi) + j \cdot sin(\varphi) \right]^n\\[3pt]
-					& = & r^n \cdot \left[ cos(n\varphi) + j \cdot sin(n\varphi) \right]
+				z^n & = & \left| z \right|^n \cdot \left[ cos(\varphi) + j \cdot sin(\varphi) \right]^n\\[3pt]
+				& = & r^n \cdot \left[ cos(n\varphi) + j \cdot sin(n\varphi) \right]
 				\end{array}
 			$}
-		\end{tabular}
+		\end{minipage}
+		\begin{minipage}[c]{0.5\textwidth}
+			\scalebox{0.8}{\input{tikz/KomplexeZahlen/KomplexEinheitskreis.tex}}
+		\end{minipage}
 		
 	\subsubsection{n-te Wurzeln}
-		\fbox{Di herkömmlichen Wurzelgesetze wie z.B. $\sqrt{a} \cdot \sqrt{b} = \sqrt{a \cdot b}$ gelten nicht mehr!}\\
+		\fbox{Di herkömmlichen Wurzelgesetze wie z.B. $\sqrt{a} \cdot \sqrt{b} = \sqrt{a \cdot b}$ gelten nicht mehr!}\\[1pt]
 		\begin{minipage}[c]{0.2\textwidth}
 			$z = \sqrt[n]{a} = \left| z \right| \cdot cjs(\varphi)$\\[3pt]
 			\fbox{$|z|=\sqrt[n]{|a|}$}\\[3pt]
@@ -141,21 +143,28 @@
 			\right.$
 		\end{minipage}
 		\begin{minipage}[c]{0.2\textwidth}
-			
+			\scalebox{0.65}{\input{tikz/KomplexeZahlen/Komplex3Einheitswurzel.tex}}
 		\end{minipage}
+	
 	\subsubsection{n-te Einheitswurzel}
-		\begin{minipage}[t]{0.4\textwidth}
+		\begin{minipage}[t]{0.32\textwidth}
 			\fbox{$z = \sqrt[n]{1} = \left| z \right| \cdot \operatorname{\varphi_z}$}\\[3pt]
 			$\Rightarrow$ \textbf{n-Lösungen!}\\[3pt]
 			\fbox{$z_n = e_{k}^{(n)} = 1 \cdot \operatorname{cjs\left((k - 1) \cdot \dfrac{2\pi}{n}\right)}$}\\[3pt]
 			mit $k = 1, 2, \cdots, n$
 		\end{minipage}
-		\begin{minipage}[t]{0.6\textwidth}
+		\begin{minipage}[t]{0.12\textwidth}
 			\textbf{Es gilt:}\\[3pt]
 			$e_{1}^{(n)}=1$\\
 			$e_{2}^{(n)}=e_{n}^{(n)}$\\
 			$e_{3}^{(n)}=e_{n-1}^{(n)}$\\
 			$\cdots$
+		\end{minipage}
+		\begin{minipage}[c]{0.28\textwidth}
+			\scalebox{0.65}{\input{tikz/KomplexeZahlen/Komplex5Einheitswurzel.tex}}
+		\end{minipage}
+		\begin{minipage}[c]{0.28\textwidth}
+			\scalebox{0.65}{\input{tikz/KomplexeZahlen/Komplex6Einheitswurzel.tex}}
 		\end{minipage}
 	
 	\subsection{Nullstellen von Polynomen}
@@ -175,19 +184,24 @@
 					\item Für die zwei Faktoren gilt $\Rightarrow \quad\left(z-z_{0}\right)(z-\overline{z_{0}})=z^{2}-2 \operatorname{Re}\left(z_{0}\right) \cdot z+\left|z_{0}\right|^{2}$
 					\item Im reellen zerfällt $\operatorname{p(z)}$ in \textbf{reelle Linear- und Quadratfunktionen}.
 					\item Ist das Polynom von \textbf{ungeradem Grad} $\Rightarrow$ hat es \textbf{mindestens eine reelle Nullstelle}.
-				\end{itemize}\\
+				\end{itemize}\\[1pt]
 				\hline
 			\end{tabular}
 	
 		\subsubsection{Berechnung der Nullstellen}
-			\begin{tabular}{|l|}
-				\hline
-				Alle Nullstellen des Polynoms $p_{n}(z)=a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{0}$\\
-				liegen in der Gauss’schen Zahlenebene in einer Kreisscheibe\\
-				um den Ursprung mit Radius:\\
-				$\displaystyle r=\sum_{k=0}^{n}\left|\frac{a_{k}}{a_{n}}\right|=\left|\frac{a_{0}}{a_{n}}\right|+\left|\frac{a_{1}}{a_{n}}\right|+\ldots+\left|\frac{a_{n}}{a_{n}}\right|$\\
-				\hline
-			\end{tabular}\\[6pt]
+			\begin{minipage}[t]{0.7\textwidth}
+				\begin{tabular}{|l|}
+					\hline
+					Alle Nullstellen des Polynoms $p_{n}(z)=a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{0}$\\
+					liegen in der Gauss’schen Zahlenebene in einer Kreisscheibe\\
+					um den Ursprung mit Radius:\\
+					$\displaystyle r=\sum_{k=0}^{n}\left|\frac{a_{k}}{a_{n}}\right|=\left|\frac{a_{0}}{a_{n}}\right|+\left|\frac{a_{1}}{a_{n}}\right|+\ldots+\left|\frac{a_{n}}{a_{n}}\right|$\\
+					\hline
+				\end{tabular}\\[6pt]
+			\end{minipage}
+			\begin{minipage}[t]{0.3\textwidth}
+				\scalebox{0.8}{\input{tikz/KomplexeZahlen/NullstellenKreis.tex}}
+			\end{minipage}
 			\begin{minipage}[t]{0.3\textwidth}
 				\textbf{Quadratische Polynome:}\\[3pt]
 				$p(z)=a z^{2}+b z+c=0$\\[3pt]
@@ -288,9 +302,17 @@
 					Periodendauer: & $T=\frac{2 \pi}{\omega}$ & & \\[5pt]
 				\end{tabular}
 			\subsubsection{Überlagerung von zwei Seiten}
-				$\begin{aligned} 
-					z(t) &=z_{1}(t)+z_{2}(t) \\ &=A_{1} \cdot \sin \left(\omega t+\varphi_{1}\right)+A_{2} \cdot \sin \left(\omega t+\varphi_{2}\right) \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{j\left(\omega t+\varphi_{1}\right)}\right]+\operatorname{Im}\left[A_{2} \cdot \mathrm{e}^{\mathrm{j}\left(\omega t+\varphi_{2}\right)}\right] \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}} \cdot \mathrm{e}^{\mathrm{j} \omega t}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] \\ &=\operatorname{Im}\left[\left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right) \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] 
-				\end{aligned}$
+				\begin{minipage}[t]{0.4\textwidth}
+					$\begin{aligned} 
+						z(t) &=z_{1}(t)+z_{2}(t) \\ &=A_{1} \cdot \sin \left(\omega t+\varphi_{1}\right)+A_{2} \cdot \sin \left(\omega t+\varphi_{2}\right) \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{j\left(\omega t+\varphi_{1}\right)}\right]+\operatorname{Im}\left[A_{2} \cdot \mathrm{e}^{\mathrm{j}\left(\omega t+\varphi_{2}\right)}\right] \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}} \cdot \mathrm{e}^{\mathrm{j} \omega t}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] \\ &=\operatorname{Im}\left[\left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right) \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] 
+					\end{aligned}$
+				\end{minipage}
+				\begin{minipage}[t]{0.3\textwidth}
+					\scalebox{0.75}{\input{tikz/KomplexeZahlen/SinoidEinheitskreis.tex}}
+				\end{minipage}
+				\begin{minipage}[t]{0.3\textwidth}
+					\scalebox{0.75}{\input{tikz/KomplexeZahlen/Sinus.tex}}
+				\end{minipage}
 				\medskip
 				\hrule
 				\medskip

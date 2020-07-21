@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+	%\draw[help lines] (0,0) grid (6,4);
+	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
+		\addplot[domain=0:2*pi,samples=200,blue]{sin(deg(x))}node[right,pos=0.9]{$f(x)=\sin x$};
+	\end{axis}
+\end{tikzpicture}

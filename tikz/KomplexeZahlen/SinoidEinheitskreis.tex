@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+	%\draw[help lines] (0,0) grid (6,4);
+	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
+		\draw[black!70] ([shift=(60:1cm)]180, 75) arc(0:360:2.58cm);
+		\addplot[->, blue, very thick] coordinates{(0, 0) (-0.71, -0.71)}  node[sloped, above, blue] {$A$};
+		\addplot[->, blue, very thick] coordinates{(0, 0) (0.94, 0.25)}  node[sloped, above, blue] {$A$};
+		\addplot[->, dashed, white] coordinates{(0, 0) (1, -1.1)}; % for axis-scaling
+		\addplot[->, dashed, white] coordinates{(0, 0) (-1, 1.1)}; % for axis-scaling
+	\end{axis}
+\end{tikzpicture}
