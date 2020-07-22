@@ -1,1 +1,51 @@
 \section{Fourier}
+	\subsection{Bausteine}
+		\textbf{Idee:}\\[3pt]
+		$T$-Periodische, mit Limes stückweise stetigen Funktionen, durch Aufsummieren ebenfalls periodischer Basisfunktionen
+		(sin, cos) zu approximieren.\\[3pt]
+		
+		\textbf{Basisfunktionen:}\\[3pt]
+		\begin{minipage}[t]{0.5\textwidth}
+			\begin{tabular}{llll}
+				Konstante: & $cos(0 \cdot \omega_{f} t) = 1$ & &\\[3pt]
+				$1 \times$ Frequenz $f$  & $\cos(1 \cdot \omega_{f} t)$ & ; & $\sin(1 \cdot \omega_{f} t)$\\[3pt]
+				$2 \times$ Frequenz $f$: & $\cos(2 \cdot \omega_{f} t)$ & ; & $\sin(2 \cdot \omega_{f} t)$\\[3pt]
+				$3 \times$ Frequenz $f$: & $\cos(3 \cdot \omega_{f} t)$ & ; & $\sin(3 \cdot \omega_{f} t)$\\[3pt]
+				usw. & & &\\[3pt]
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}[t]{0.2\textwidth}
+			
+		\end{minipage}
+		\begin{minipage}[t]{0.3\textwidth}
+			\fbox{
+				\begin{tabular}{ll}
+					Frequenz: & $f = \dfrac{1}{T}$\\[7pt]
+					Kreisfrequenz: & $\omega_f = 2 \pi f$\\[3pt]
+					Periodendauer: & $T = \dfrac{2 \pi}{\omega_f} = \dfrac{1}{f}$\\[6pt]
+					Nullphasenwinkel: & $\varphi$\\[6pt]
+				\end{tabular}
+			}
+		\end{minipage}
+	
+	\subsection{Berechnung der Fourierkoeffizienten (in $\mathbb{R}$)}
+		\textbf{Die Funktion $f(t)$ soll durch folgende Linearkombination dargestellt werden:}\\[3pt]
+		\fbox{$FR[f(t)] = \dfrac{a_0}{2} + \sum\limits_{n=1}^{\infty} [a_n \cdot \cos(n \omega_f t) + b_n \sin(n \omega_f t)]$}\\[3pt]
+		\begin{minipage}[t]{0.5\textwidth}
+			\textbf{Berechnung von $a_0$, $a_n$ und $b_n$\\[1pt] (Fourierkoeffizienten):}\\[3pt]
+			\begin{tabular}{|lll|l|}
+				\hline
+				$\displaystyle a_0$ & $=$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) dt$ & $\displaystyle n = 0$\\[0.2pt]
+				\hline
+				$\displaystyle b_0$ & $\displaystyle =$ & $\displaystyle 0$ & $\displaystyle n = 0$\\
+				\hline
+				$\displaystyle a_n$ & $\displaystyle =$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt$ & $\displaystyle n = 0, 1, 2, \cdots$\\
+				\hline
+				$\displaystyle b_n$ & $\displaystyle =$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt$ & $\displaystyle n = 1, 2, 3, \cdots$\\
+				\hline
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			\textbf{Orthogonalitätsbeziehungen:}\\[6pt]
+			
+		\end{minipage}
