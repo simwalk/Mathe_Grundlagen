@@ -1,9 +1,9 @@
-\section{Fourier}
+\section{Fourierreihen periodischer Funktionen}
 	\subsection{Bausteine}
 		\textbf{Idee:}\\[3pt]
 		$T$-Periodische, mit Limes stückweise stetigen Funktionen, durch Aufsummieren ebenfalls periodischer Basisfunktionen
 		(sin, cos) zu approximieren.\\[3pt]
-		
+
 		\textbf{Basisfunktionen:}\\[3pt]
 		\begin{minipage}[t]{0.5\textwidth}
 			\begin{tabular}{llll}
@@ -46,6 +46,61 @@
 			\end{tabular}
 		\end{minipage}
 		\begin{minipage}[t]{0.5\textwidth}
-			\textbf{Orthogonalitätsbeziehungen:}\\[6pt]
-			
+			\textbf{Orthogonalitätsbeziehungen:\\[1pt]}\\[3pt]
+			\begin{tabular}{|l|}
+				\hline
+				$\displaystyle \int\limits_{0}^{T} \cos(m \omega_f t) \cdot \cos(n \omega_f t) dt = \left\lbrace 
+					\begin{array}{ll}
+						T & \text{für: } m = n = 0\\
+						\dfrac{T}{2} & \text{für: } m = n > 0\\
+						0 & \text{für: } m \neq n\\
+					\end{array} \right.$\\[3pt]
+				$\displaystyle \int\limits_{0}^{T} \sin(m \omega_f t) \cdot \sin(n \omega_f t) dt = \left\lbrace 
+					\begin{array}{ll}
+						\dfrac{T}{2} & \text{für: } m = n > 0\\
+						0 & \text{für: } m \neq n\\
+					\end{array} \right.$\\[3pt]
+				$\displaystyle \int\limits_{0}^{T} \sin(m \omega_f t) \cdot \sin(n \omega_f t) dt = 0$\\[3pt]
+				\hline
+			\end{tabular}
 		\end{minipage}
+	
+	\subsection{Sätze zur Berechnung der Fourierkoeffizienten}
+		\subsubsection{Symmetrie}
+			\begin{minipage}[t]{0.5\textwidth}
+				\begin{tabular}{|c|c|}
+					\hline
+					\textbf{Gerade Funktion} & \textbf{Ungerade Funktion}\\[3pt]
+					\hline
+					\scalebox{0.45}{\input{tikz/FourierReihe/GeradeFunktion.tex}} & \scalebox{0.45}{\input{tikz/FourierReihe/UngeradeFunktion.tex}}\\[3pt]
+					\hline
+					achsensymmetrisch & punktsymmetrisch\\[3pt]
+					$\displaystyle f(t) = f(-t)$ & $f(t) = -f(-t)$\\[3pt]
+					\hline
+					Beispiel: $\displaystyle \cos$ & Beispiel: $\sin$\\[3pt]
+					\hline
+					$\displaystyle \int\limits_{0}^{T} f(t) dt = 2 \int\limits_{0}^{T/2} f(t) dt$ & $\displaystyle \int\limits_{0}^{T} f(t) dt = 0$\\[3pt]
+					\hline
+				\end{tabular}
+			\end{minipage}
+			\begin{minipage}[t]{0.5\textwidth}
+				\textbf{Rechnen mit geraden und ungeraden Funktionen:}\\[3pt]
+				\begin{tabular}{|lclcl|}
+					\hline
+					gerade & $\cdot$ & gerade & $=$ & gerade\\[3pt]
+					ungerade & $\cdot$ & ungerade & $=$ & gerade\\[3pt]
+					gerade & $\cdot$ & ungerade & $=$ & ungerade\\[3pt]
+					\hline
+				\end{tabular}\\[3pt]
+				\textbf{Fourierkoeffizienten $a_n$, $b_n$:}\\[3pt]
+				\begin{tabular}{|l|ll|}
+					\hline
+					$f(t)$		&  $a_n$, $b_n$ & \\[3pt]
+					\hline
+					gerade		& $b_n = 0$ ; & $\displaystyle a_n = \dfrac{4}{T} \int\limits_{0}^{T/2} f(t) \cdot \cos(n \omega_f t) dt$\\[3pt]
+					\hline
+					ungerade	& $a_n = 0$ ; & $\displaystyle b_n = \dfrac{4}{T} \int\limits_{0}^{T/2} f(t) \cdot \sin(n \omega_f t) dt$\\[3pt]
+					\hline
+				\end{tabular}
+			\end{minipage}
+			
