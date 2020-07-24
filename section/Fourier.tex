@@ -79,7 +79,7 @@
 					\hline
 					Beispiel: $\displaystyle \cos$ & Beispiel: $\sin$\\[3pt]
 					\hline
-					$\displaystyle \int\limits_{0}^{T} f(t) dt = 2 \int\limits_{0}^{T/2} f(t) dt$ & $\displaystyle \int\limits_{0}^{T} f(t) dt = 0$\\[3pt]
+					$\displaystyle \int\limits_{0}^{T} f(t) dt = 2 \cdot \int\limits_{0}^{T/2} f(t) dt$ & $\displaystyle \int\limits_{0}^{T} f(t) dt = 0$\\[3pt]
 					\hline
 				\end{tabular}
 			\end{minipage}
@@ -189,7 +189,7 @@
 				\end{tabular}\\[3pt]
 				\begin{minipage}[t]{0.5\textwidth}
 					\textbf{Parseval’sche Gleichung:}\\[3pt]
-					\fbox{$\dfrac{a_0^2}{2} + \sum\limits_{n=1}^{m} ()a_n^2 + b_n^2) = \dfrac{2}{T} \int\limits_{0}^{T} [f(t)]^2 dt = ||f||^2$}
+					\fbox{$\displaystyle \dfrac{a_0^2}{2} + \sum\limits_{n=1}^{m} (a_n^2 + b_n^2) = \dfrac{2}{T} \cdot \int\limits_{0}^{T} [f(t)]^2 dt = ||f||^2$}
 				\end{minipage}
 				\begin{minipage}[t]{0.5\textwidth}
 					\textbf{Gliedweises Differenzieren und Integrieren:}
@@ -204,8 +204,8 @@
 				\end{minipage}
 				\textbf{Nullfolgen $a_n$ und $b_n$:}\\[3pt]
 				Die Fourierkoeffizienten $a_n$ und $b_n$ bilden eine Nullfolge:\\[3pt]
-				\fbox{$\displaystyle \lim_{n \to \infty} a_n = \lim_{n \to \infty} \dfrac{2}{T} \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt = 0$}
-				\fbox{$\displaystyle \lim_{n \to \infty} b_n = \lim_{n \to \infty} \dfrac{2}{T} \int\limits_{0}^{T} f(t) \cdot \sin(n \omega_f t) dt = 0$}\\[3pt]
+				\fbox{$\displaystyle \lim_{n \to \infty} a_n = \lim_{n \to \infty} \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt = 0$}
+				\fbox{$\displaystyle \lim_{n \to \infty} b_n = \lim_{n \to \infty} \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \sin(n \omega_f t) dt = 0$}\\[3pt]
 				$\Rightarrow$ Je häufiger $f$ stetig differenzierbar ist, desto schneller gehen $a_n$ bzw. $b_n$ gegen $0$!\\[3pt]
 				\begin{minipage}[t]{0.5\textwidth}
 					\fbox{$|a_n| \leq \dfrac{c}{n^{k + 1}}$}
@@ -250,14 +250,14 @@
 		\subsection{Komplexe Darstellung der Fourierreihen (in $\mathbb{C}$)}
 			\begin{minipage}[t]{0.5\textwidth}
 				\textbf{Komplexe Fourierreihe:}\\[3pt]
-				\fbox{$\sum\limits_{k=-\infty}^{\infty} c_k \cdot \mathrm{e}^{\mathrm{j} k \omega_f t}$}\\[3pt]
+				\fbox{$\displaystyle \sum\limits_{k=-\infty}^{\infty} c_k \cdot \mathrm{e}^{\mathrm{j} k \omega_f t}$}\\[3pt]
 				\textbf{Umrechungsformeln ($a_n$, $b_n \rightarrow c_n$):}\\[3pt]
 				\fbox{$c_n = \dfrac{a_n - \mathrm{j} b_n}{2}$} für $n = 0, 1, 2, 3, \cdots (b_0 = 0)$\\[3pt]
-				\fbox{$c_{-n} = \dfrac{a_n + \mathrm{j} b_n}{2} = \overline{c_n}$} für $n = 1, 2, 3, \cdots (b_0 = 0)$\\[3pt]
+				\fbox{$c_{-n} = \overline{c_n} = \dfrac{a_n + \mathrm{j} b_n}{2}$} für $n = 1, 2, 3, \cdots (b_0 = 0)$\\[3pt]
 			\end{minipage}
 			\begin{minipage}[t]{0.5\textwidth}
 				\textbf{Komplexe Fourierkoeffizienten:}\\[3pt]
-				\fbox{$c_n = \overline{c_{-n}} = \dfrac{1}{T} \int\limits_{0}^{T} f(t) \cdot \mathrm{e}^(\mathrm{j} n \omega_f t) dt$} für $n = 0, 1, 2, 3, \cdots$\\[3pt]
+				\fbox{$\displaystyle c_n = \overline{c_{-n}} = \dfrac{1}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \mathrm{e}^{(\mathrm{j} n \omega_f t)} dt$} für $n = 0, 1, 2, 3, \cdots$\\[3pt]
 				\textbf{Umrechnungsformeln ($c_n \rightarrow a_n$, $b_n$):}\\[3pt]
 				\fbox{$a_n = 2 \operatorname{Re}(c_n) = c_n + c_{-n}$} für $n = 0, 1, 2, 3, \cdots$\\[3pt]
 				\fbox{$b_n = -2 \operatorname{Im}(c_n) = \mathrm{j}(c_n + c_{-n})$} für $n = 1, 2, 3, \cdots$\\[3pt]
