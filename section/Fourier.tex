@@ -5,7 +5,7 @@
 		(sin, cos) zu approximieren.\\[3pt]
 
 		\textbf{Basisfunktionen:}\\[3pt]
-		\begin{minipage}[t]{0.5\textwidth}
+		\begin{minipage}[b]{0.5\textwidth}
 			\begin{tabular}{llll}
 				Konstante: & $cos(0 \cdot \omega_{f} t) = 1$ & &\\[3pt]
 				$1 \times$ Frequenz $f$  & $\cos(1 \cdot \omega_{f} t)$ & ; & $\sin(1 \cdot \omega_{f} t)$\\[3pt]
@@ -14,19 +14,17 @@
 				usw. & & &\\[3pt]
 			\end{tabular}
 		\end{minipage}
-		\begin{minipage}[t]{0.2\textwidth}
-			
-		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			\fbox{
-				\begin{tabular}{ll}
-					Frequenz: & $f = \dfrac{1}{T}$\\[7pt]
-					Kreisfrequenz: & $\omega_f = 2 \pi f$\\[3pt]
-					Periodendauer: & $T = \dfrac{2 \pi}{\omega_f} = \dfrac{1}{f}$\\[6pt]
-					Nullphasenwinkel: & $\varphi$\\[6pt]
-				\end{tabular}
-			}
-		\end{minipage}
+		\begin{minipage}[]{0.5\textwidth}
+			\scalebox{0.8}{\input{tikz/FourierReihe/HarmonischeWellen.tex}}
+		\end{minipage}\\[3pt]
+		\fbox{
+			\begin{tabular}{ll}
+				Frequenz: & $f = \dfrac{1}{T}$\\[7pt]
+				Kreisfrequenz: & $\omega_f = 2 \pi f$\\[3pt]
+				Periodendauer: & $T = \dfrac{2 \pi}{\omega_f} = \dfrac{1}{f}$\\[6pt]
+				Nullphasenwinkel: & $\varphi$\\[6pt]
+			\end{tabular}
+		}
 	
 	\subsection{Berechnung der Fourierkoeffizienten (in $\mathbb{R}$)}
 		\textbf{Die Funktion $f(t)$ soll durch folgende Linearkombination dargestellt werden:}\\[3pt]
@@ -222,20 +220,20 @@
 					\end{tabular}
 				\end{minipage}
 			
-			\subsubsection{Punktweise Kovergenz von Fourierreihen}
-				\begin{minipage}[t]{0.65\textwidth}
+			\subsubsection{Punktweise Kovergenz von Fourierreihen (Satz von Dirichlet)}
+				\begin{minipage}[b]{0.65\textwidth}
 					\begin{itemize}
 						\item[$-$] Funktion $f(t)$ ist $T$-periodisch und stückweise stetig mit Limes.
 						\item[$-$] Rechts- und linksseitige Ableitungen $\displaystyle \lim_{t \downarrow t_0} f'(t)$, $\displaystyle \lim_{t \uparrow t_0} f'(t)$ existierten.
 					\end{itemize}
 					$\Rightarrow$ \fbox{$\displaystyle FR[f(t_0)] \xrightarrow[]{n \to \infty} \dfrac{\displaystyle\lim_{t \downarrow t_0} f(t) + \displaystyle\lim_{t \uparrow t_0} f(t)}{2}$}
 				\end{minipage}
-				\begin{minipage}[t]{0.35\textwidth}
-					%\scalebox{0.8}{\input{tikz/FourierReihe/FourierAbstand.tex}}\\[3pt]
+				\begin{minipage}[]{0.35\textwidth}
+					\scalebox{0.8}{\input{tikz/FourierReihe/FourierDirichlet.tex}}\\[3pt]
 				\end{minipage}
 			
 			\subsubsection{Gibbs-Phänomen}
-				\begin{minipage}[t]{0.65\textwidth}
+				\begin{minipage}[b]{0.65\textwidth}
 					\textbf{Gibbs'sches Phänomen:}\\[3pt]
 					''Über- und Unterschiessen'' vor und nach einer Sprungstelle.\\[3pt]
 					\textbf{Höhe der grössten überschwingenden Welle:}\\[3pt]
@@ -243,8 +241,8 @@
 					\textbf{Anzahl Summanden $m \rightarrow \infty$:}\\[3pt]
 					Grösste überschwingende Welle $\approx 9\%$, \textbf{klingt aber schneller aus.}
 				\end{minipage}
-				\begin{minipage}[t]{0.35\textwidth}
-					%\scalebox{0.8}{\input{tikz/FourierReihe/FourierAbstand.tex}}\\[3pt]
+				\begin{minipage}[]{0.35\textwidth}
+					\scalebox{0.8}{\input{tikz/FourierReihe/FourierGibbsPhaenomen.tex}}\\[3pt]
 				\end{minipage}
 		
 		\subsection{Komplexe Darstellung der Fourierreihen (in $\mathbb{C}$)}
@@ -270,7 +268,7 @@
 						\hline
 						$f(t)$ & $c_k$ & $arg(c_k)$\\[3pt]
 						\hline
-						gerade & $\displaystyle \operatorname{Im}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = 0 \text{oder} \pi$\\[3pt]
+						gerade & $\displaystyle \operatorname{Im}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = 0 \text{ oder } \pi$\\[3pt]
 						\hline
 						ungerade & $\displaystyle \operatorname{Re}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = \pm \dfrac{\pi}{2}$\\[3pt]
 						\hline
