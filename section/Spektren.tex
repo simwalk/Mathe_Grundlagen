@@ -1,0 +1,91 @@
+\section{Spektren}
+	\subsection{Spektraldarstellung}
+		\begin{minipage}[t]{0.5\textwidth}
+			%\scalebox{0.8}{\input{tikz/FourierReihe/HarmonischeWellen.tex}}
+			\textbf{Spektrum:} Fourierkoeffizienten einer Funktion.
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			Fourierreihe des abgebildeten Beispiels:\\[3pt]
+			$f(t) = \sum\limits_{k=1}^{\infty} \dfrac{1}{2k - 1} \cdot \sin((2k - 1) \cdot t)$
+		\end{minipage}
+
+	\subsection{(1) Kosinus- und Sinusamplitudendiagramm}
+		\begin{minipage}[t]{0.5\textwidth}
+			\begin{tabular}{|l|l|}
+				\hline
+				\textbf{Kosinus-Amplituden} & \textbf{Sinus-Amplituden}\\[3pt]
+				\hline
+				\scalebox{1}{\input{tikz/Spektren/KosinusAmplituden.tex}} & \scalebox{1}{\input{tikz/Spektren/SinusAmplituden.tex}}\\[3pt]
+				\hline
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			\textbf{Werte der reelen Fourierkoeffizienten $a_n$ und $b_n$ werden als ''Säulen'' dargestellt.}\\[3pt]
+			Reelle Fourierkoeffizienten $(a_n, b_n)$ können direkt abgelesen werden.\\[3pt]
+			\fbox{$a_n = A_n \cdot \cos(\varphi_n) = 2 \cdot \operatorname{Re}(c_n)$}\\[3pt]
+			\fbox{$b_n = -A_n \cdot \sin(\varphi_n) = A_n \sin(-\varphi_n) = -2 \cdot \operatorname{Re}(c_n)$}\\[3pt]
+			\textbf{Nachteil:} Diagramme sind vom Ort des Nullpunktes auf der Zeitachse abhängig.\\[3pt]
+		\end{minipage}
+	
+	\subsection{(2) Einseitiges Amplituden-/Phasendiagramm}
+		\begin{minipage}[t]{0.5\textwidth}
+			\begin{tabular}{|l|l|}
+				\hline
+				\textbf{Amplituden} & \textbf{Phasen}\\[3pt]
+				\hline
+				\scalebox{1}{\input{tikz/Spektren/EinseitigAmplituden.tex}} & \scalebox{1}{\input{tikz/Spektren/EinseitigPhasen.tex}}\\[3pt]
+				\hline
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			\textbf{Gleichfrequente Schwingungen werden zu phasenverschobenen
+				Kosinusschwingungen zusammengefasst: $a_n \cdot \cos(n \omega_f t) + b_n \cdot \sin(n \omega_f t) = A_n \cdot \cos(n \omega_f t + \varphi_n)$}\\[3pt]
+			\fbox{$\varphi_n = \arg(a_n - \mathrm{j} b_n) = \arctan(-\dfrac{b_n}{a_n}) \text{ oder } \varphi_n = \arg(c_n)$}\\[3pt]
+			\fbox{$A_n = |a_n - \mathrm{j} b_n| = \sqrt{a_n^2 + b_n^2} \text{ oder } A_n = 2 \cdot |c_n|$}\\[3pt]
+			\textbf{Spezialfall: $n = 0$}\\[3pt]
+			\fbox{$A_0 = |\dfrac{a_0}{2}|$} \fbox{$\varphi_0 = \left\lbrace 
+				\begin{array}{ll}
+					0\text{,} & a_0 \geq 0\\[3pt]
+					\pi\text{,} & a_0 < 0\\[3pt]
+				\end{array}
+				\right. $}
+		\end{minipage}\\[3pt]
+	
+	\subsection{(3) Zweiseitiges Amplituden-/Phasendiagramm (komplexes Spektrum)}
+		\begin{minipage}[t]{0.5\textwidth}
+			\begin{tabular}{|l|l|}
+				\hline
+				\textbf{Amplituden (I)} & \textbf{Phasen (II)}\\[3pt]
+				\hline
+				\scalebox{1}{\input{tikz/Spektren/ZweiseitigAmplituden.tex}} & \scalebox{1}{\input{tikz/Spektren/ZweiseitigPhasen.tex}}\\[3pt]
+				\hline
+			\end{tabular}
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+			\textbf{Polarkoordinaten der komplexen Fourierkoeffizienten $c_k$ werden in zwei Diagrammen dargestellt:}\\[3pt]
+			\fbox{Amplitude $= |c_k|$} \fbox{Phase $= \arg(c_k)$}\\[3pt]
+			\begin{tabular}{lllll}
+				(I) & Amplituden & $\rightarrow$ & Achensymmetrisch & \fbox{$|c_n| = |c_{-n}|$}\\[3pt]
+				(II) & Phasen & $\rightarrow$ & Punktsymmetrisch & \fbox{$\arg(c_n) = \arg(c_{-n})$}\\[3pt]
+			\end{tabular}\\[3pt]
+			\textbf{Verknüpfung zum Einseitigen Amplituden-/Phasendiagramm: für $n \geq 0$ gilt:}\\[3pt]
+			\fbox{$\varphi_n$ gleich wie (2)} \fbox{$\varphi_n = \arg(c_n)$}\\[3pt]
+			\fbox{$|c_n| = \dfrac{1}{2} \cdot A_n$} \fbox{$A_0 = |\dfrac{a_0}{2}| = |c_0|$}\\[3pt]
+			\textbf{Umrechnung von Sinus- und Kosinusdiagramm (1):}\\[3pt]
+			\fbox{$c_n = \dfrac{a_n - \mathrm{j} b_n}{2}$} \fbox{$\varphi_n = \arg(a_n - \mathrm{j} b_n)$}
+		\end{minipage}\\[3pt]
+		
+	\subsection{Spezialfälle (zu den Phasendiagrammen: 1, 2, 3)}
+		\begin{tabular}{ll}
+			Funktion $f$ gerade & (1) Sinusphasendiagramm überall $0$\\[3pt]
+			 & (2, 3) Phasendiagramm enthält nur die Werte $0$ und $\pi$\\[3pt]
+	 		Funktion $f$ ungerade & (1) Kosinusphasendiagramm überall $0$\\[3pt]
+	 		 & (2, 3) Phasendiagramm enthält nur die Werte $\pm \dfrac{\pi}{2}$ (oder $0$ falls Apmlitudenwert $= 0$)\\[3pt]
+	 		Ähnlichkeit $g(t) = f(r \cdot t)$ & (1, 2, 3) Das Spektrum von $g$ ist das horizontal mit dem Faktor $r$ gestrecktes Spektrum vom $f$\\[3pt]
+	 		Zeitverschiebung $g(t) = f(t + t_0)$ & (1) (siehe auch 3.4.4, Zeitverschiebung (S. 4))\\[3pt]
+	 		 & (2, 3) Amplitudendiagramme sind identisch.\\[3pt]
+	 		 & (2, 3) Phasendiagramme: Die Säule der Frequenz $k \omega_0$ wächst um $k \omega_0 t_0$\\[3pt]
+	 		Weisses Rauschen & Überlagerung von Schwingungen aller möglichen Frequenzen\\[3pt]
+	 		 & mit gleichen Amplituden und zufälligen Phasen.
+		\end{tabular}
+		
