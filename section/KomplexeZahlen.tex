@@ -180,7 +180,13 @@
 		
 		\subsubsection{n-te Einheitswurzel}
 			\begin{minipage}[t]{0.32\textwidth}
-				\fbox{$z = \sqrt[n]{1} = \left| z \right| \cdot \operatorname{cjs}(\varphi_z)$}\\[3pt]
+				\begin{tabular}{|l|}
+					\hline
+					$\displaystyle z = \sqrt[n]{1} = \left| z \right| \cdot \operatorname{cjs}(\varphi_z) = $\\[6pt]
+					$\displaystyle |z| \cdot \operatorname{cjs}\left( \dfrac{\varphi_z + k 2 \pi}{n}\right)  = $\\[6pt]
+					$\displaystyle \sqrt[n]{|a|} \cdot \operatorname{cjs}\left( \dfrac{\varphi_z + k 2 \pi}{n}\right) $\\[6pt]
+					\hline
+				\end{tabular}\\[3pt]
 				$\Rightarrow$ \textbf{n-Lösungen!}\\[3pt]
 				\fbox{$z_n = e_{k}^{(n)} = 1 \cdot \operatorname{cjs\left((k - 1) \cdot \dfrac{2\pi}{n}\right)}$}\\[3pt]
 				mit $k = 1, 2, \cdots, n$
@@ -227,12 +233,12 @@
 						Alle Nullstellen des Polynoms $p_{n}(z)=a_{n} z^{n}+a_{n-1} z^{n-1}+\ldots+a_{0}$\\
 						liegen in der Gauss’schen Zahlenebene in einer Kreisscheibe\\
 						um den Ursprung mit Radius:\\
-						$\displaystyle r=\sum_{k=0}^{n}\left|\frac{a_{k}}{a_{n}}\right|=\left|\frac{a_{0}}{a_{n}}\right|+\left|\frac{a_{1}}{a_{n}}\right|+\ldots+\left|\frac{a_{n}}{a_{n}}\right|$\\
+						$\displaystyle r=\sum_{k=0}^{n}\left|\frac{a_{k}}{a_{n}}\right|=\left|\frac{a_{0}}{a_{n}}\right|+\left|\frac{a_{1}}{a_{n}}\right|+\ldots+\left|\frac{a_{n}}{a_{n}}\right|$\\[3pt]
 						\hline
 					\end{tabular}\\[6pt]
 				\end{minipage}
 				\begin{minipage}[]{0.3\textwidth}
-					\scalebox{0.8}{\input{tikz/KomplexeZahlen/NullstellenKreis.tex}}
+					\scalebox{0.7}{\input{tikz/KomplexeZahlen/NullstellenKreis.tex}}
 				\end{minipage}
 				\begin{minipage}[t]{0.3\textwidth}
 					\textbf{Quadratische Polynome:}\\[3pt]
@@ -280,12 +286,13 @@
 						$z=\operatorname{Ln}(a)=z_{1}+\mathbf{j} z_{2}$\\[3pt]
 						\fbox{$z_{1}=\ln (|a|)$}
 						\fbox{$z_{2}=\varphi_{a}=\arg (a)$}\\[3pt]
-						$\Rightarrow \quad \operatorname{Ln}(a)=\ln (|a|)+j \arg (a)$
+						\fbox{$\Rightarrow \quad \operatorname{Ln}(a)=\ln (|a|)+j \arg (a)$}\\[3pt]
 					\end{minipage}
 					\begin{minipage}[t]{0.6\textwidth}
 						\textbf{Lösungen von $\operatorname{Ln}$ sind $\infty$-wertig:}\\[3pt]
 						\fbox{$\operatorname{Ln}(a)=\ln (|a|)+\mathbf{j}(\arg (a)+2 k \pi)$}
-						mit $k \in \mathbb{Z}$
+						mit $k \in \mathbb{Z}$\\[3pt]
+						\fbox{$a:= z = z_1 + \mathrm{j} z_2 = x + \mathrm{j} y$}\\[3pt]
 					\end{minipage}
 					$\Rightarrow$ \textbf{Logarithmusgesetze sind problematisch, da es 1-viele Lösungen gibt!}\\[3pt]
 					Es können nur noch Kongruenzen aufgestellt werden (stimmen bis auf ganzzahlige Vielfache von $2 \pi \mathbf{j}$\\[3pt]
@@ -316,28 +323,30 @@
 								\!\! \text { keine Lösung }
 							\end{array}
 						\right.$\\
-					\end{tabular}
-				
+					\end{tabular}\\[3pt]
+					\fbox{$\displaystyle z = \mathrm{e}^{\operatorname{Ln}(z)} = \mathrm{e}^{\ln(z) + \mathrm{j} \cdot \operatorname{arg}(z)} = \underbrace{\mathrm{e}^{\ln(z)}}_{|z|} \cdot \underbrace{\mathrm{e}^{\mathrm{j} \cdot \operatorname{arg}(z)}}_{\dfrac{z}{|z|}} = |z| \cdot \dfrac{z}{|z|}$}
+					
 				\subsection{Komplexe Trigonometrische-Funktionen}
-					\begin{tabular}{cccc}
-						\textbf{Trigo:} & \fbox{$\sin (\alpha)=\frac{\mathrm{e}^{\mathrm{j} \alpha}-\mathrm{e}^{-\mathrm{j} \alpha}}{2 \mathrm{j}}$} & \fbox{$\cos (\alpha)=\frac{e^{j \alpha}+e^{-j \alpha}}{2}$} & \fbox{$\tan \alpha=\frac{\sin \alpha}{\cos \alpha}=-j \frac{e^{j \alpha}-e^{-j \alpha}}{e^{j \alpha}+e^{-j \alpha}}$}\\
-						&&&\\
-						\textbf{Hyperbel:} & \fbox{$\sinh (\alpha)=\frac{\mathrm{e}^{\alpha}-\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\cosh (\alpha)=\frac{\mathrm{e}^{\alpha}+\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\tanh (\alpha)=\frac{\sinh (\alpha)}{\cosh (\alpha)}$}\\
+					\begin{tabular}{ccccc}
+						\textbf{Trigo:} & \fbox{$\displaystyle \sin (\alpha)=\frac{\mathrm{e}^{\mathrm{j} \alpha}-\mathrm{e}^{-\mathrm{j} \alpha}}{2 \mathrm{j}}$} & \fbox{$\displaystyle \cos (\alpha)=\frac{e^{j \alpha}+e^{-j \alpha}}{2}$} & \fbox{$\displaystyle \tan \alpha=\frac{\sin \alpha}{\cos \alpha}=-j \frac{e^{j \alpha}-e^{-j \alpha}}{e^{j \alpha}+e^{-j \alpha}}$} & \\[4.5mm]
+						& \fbox{$\displaystyle \sin(\mathrm{j} \alpha) = \mathrm{j} \sinh(\alpha)$}
+						& \fbox{$\displaystyle \cos(\mathrm{j} \alpha) = \cosh(\alpha)$} &&\\[6pt]
+						\textbf{Hyperbel:} & \fbox{$\displaystyle \sinh (\alpha)=\frac{\mathrm{e}^{\alpha}-\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\displaystyle \cosh (\alpha)=\frac{\mathrm{e}^{\alpha}+\mathrm{e}^{-\alpha}}{2}$} & \fbox{$\displaystyle \tanh (\alpha)=\frac{\sinh (\alpha)}{\cosh (\alpha)} = \dfrac{\mathrm{e}^\alpha - \mathrm{e}^{-\alpha}}{\mathrm{e}^\alpha + \mathrm{e}^{-\alpha}}$}&\\
 					\end{tabular}
 				
 				\subsection{Komplexe Sinus-Schwingung}
 					\begin{tabular}{ll|ll}
 						\textbf{Reelle Schwingung:} & & \textbf{Komplexe Schwingung} & \\[3pt]
-						\fbox{$z(t)=A \cdot \sin (\omega t+\varphi)$} & & \fbox{$z(t)=\operatorname{Im}\left[A \cdot \mathrm{e}^{\mathrm{j}(\omega t+\varphi)}\right]=\operatorname{Im}\left[A \cdot \mathrm{e}^{\mathrm{j} \varphi} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right]$} & \\[5pt]
-						Amplitude: & $A$ & Komplexe Amplitude (zeitunabhängig): & $A \cdot \mathrm{e}^{\mathrm{j} \varphi}$\\[5pt]
-						Nullphasenwinkel: & $\varphi$ & Zeitfunktion (zeitabhängig): & $\left|e^{j \omega t}\right|=1$\\[5pt]
-						Kreisfrequenz: & $\omega=2 \pi f$ & & \\[5pt]
-						Periodendauer: & $T=\frac{2 \pi}{\omega}$ & & \\[5pt]
+						\fbox{$\displaystyle z(t)=A \cdot \sin (\omega t+\varphi)$} & & \fbox{$\displaystyle  z(t)=\operatorname{Im}\left[A \cdot \mathrm{e}^{\mathrm{j}(\omega t+\varphi)}\right]=\operatorname{Im}\left[A \cdot \mathrm{e}^{\mathrm{j} \varphi} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right]$} & \\[5pt]
+						Amplitude: & $\displaystyle A$ & Komplexe Amplitude (zeitunabhängig): & $\displaystyle A \cdot \mathrm{e}^{\mathrm{j} \varphi}$\\[5pt]
+						Nullphasenwinkel: & $\displaystyle \varphi$ & Zeitfunktion (zeitabhängig): & $\displaystyle \left|e^{j \omega t}\right|=1$\\[5pt]
+						Kreisfrequenz: & $\displaystyle \omega=2 \pi f$ & & \\[5pt]
+						Periodendauer: & $\displaystyle T=\dfrac{2 \pi}{\omega}$ & & \\[5pt]
 					\end{tabular}
 				
 				\subsubsection{Überlagerung von zwei Seiten}
 					\begin{minipage}[t]{0.4\textwidth}
-						$\begin{aligned} 
+						$\displaystyle \begin{aligned} 
 							z(t) &=z_{1}(t)+z_{2}(t) \\ &=A_{1} \cdot \sin \left(\omega t+\varphi_{1}\right)+A_{2} \cdot \sin \left(\omega t+\varphi_{2}\right) \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{j\left(\omega t+\varphi_{1}\right)}\right]+\operatorname{Im}\left[A_{2} \cdot \mathrm{e}^{\mathrm{j}\left(\omega t+\varphi_{2}\right)}\right] \\ &=\operatorname{Im}\left[A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}} \cdot \mathrm{e}^{\mathrm{j} \omega t}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}} \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] \\ &=\operatorname{Im}\left[\left(A_{1} \cdot \mathrm{e}^{\mathrm{j} \varphi_{1}}+A_{2} \cdot \mathrm{e}^{\mathrm{j} \varphi_{2}}\right) \cdot \mathrm{e}^{\mathrm{j} \omega t}\right] 
 						\end{aligned}$
 					\end{minipage}
