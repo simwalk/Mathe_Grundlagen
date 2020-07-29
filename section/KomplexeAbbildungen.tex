@@ -1,39 +1,42 @@
 \section{Komplexe Funktion, Abbildungen}
 	\begin{minipage}[t]{0.5\textwidth}
 		\subsection{Definition}
-			%\scalebox{0.65}{\input{tikz/KomplexeFunktionen/SchwingungsUeberlagerung.tex}}
+			\hfill\\
+			\scalebox{0.5}{\input{tikz/KomplexeFunktionen/zwEbene.tex}}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\subsection{Winkeltreue}
-			Komplexe Funktion $\operatorname{f}\left( z \right)$ ist in allen Punkten winkeltreu, wo gibt: \fbox{$\operatorname{f}^{\prime}\left( z \right) \neq 0$}\\[6pt]
+			Komplexe Funktion $f\left( z \right)$ ist in allen Punkten winkeltreu, wo gibt: \fbox{$f^{\prime}\left( z \right) \neq 0$}\\[6pt]
 			Sie bewirkt \textbf{lokal eine Drehstreckung:}\\[3pt]
 			\begin{tabular}{ll}
 				Streckungsfaktor: & \fbox{$\left|f^{\prime}(z)\right|$}\\[3pt]
 				Drehwinkel: & \fbox{$\operatorname{\arg}\left( z \right)$}\\[3pt]
+				Verschieben: & \fbox{$f^{\prime}\left( z \right)$}
 			\end{tabular}
 	\end{minipage}
+
 \subsection{Parameter- und Koordinatengleichung}
-	\begin{minipage}[t]{0.2\textwidth}
-		
+	\begin{minipage}[]{0.2\textwidth}
+		\scalebox{0.5}{\input{tikz/KomplexeFunktionen/KoordGl.tex}}
 	\end{minipage}
-	\begin{minipage}[t]{0.8\textwidth}
+	\begin{minipage}[]{0.8\textwidth}
 		\begin{tabular}{llll}
 			\textbf{waagrechte Gitternetzlinien durch Punkt $(0; c_2)$:} & &\\[3pt]
 		\end{tabular}
 		\begin{tabular}{llll}
-			\fbox{$z = \operatorname{z}\left( r \right) = r + \mathrm{j} c_2$} & $\xrightarrow[]{\operatorname{f}\left( z \right)}$ & \fbox{$w = \operatorname{w}\left( r \right) = \operatorname{f}\left( \operatorname{z}\left( r \right) \right) = \operatorname{f}\left( r + \mathrm{j} c_2 \right)$} & mit $r \subset \mathbb{R}$\\[3pt]
+			\fbox{$z = \operatorname{z}\left( r \right) = r + \mathrm{j} c_2$} & $\xrightarrow[]{f\left( z \right)}$ & \fbox{$w = \operatorname{w}\left( r \right) = f\left( \operatorname{z}\left( r \right) \right) = f\left( r + \mathrm{j} c_2 \right)$} & mit $r \subset \mathbb{R}$\\[3pt]
 		\end{tabular}
 		\begin{tabular}{llll}
 			\textbf{senkrechte Gitternetzlinien durch Punkt $(c_1; 0)$:} & & &\\[3pt]
 		\end{tabular}
 		\begin{tabular}{llll}
-			\fbox{$z = \operatorname{z}\left( r \right) = c_1 + \mathrm{j} r$} & $\xrightarrow[]{\operatorname{f}\left( z \right)}$ & \fbox{$w = \operatorname{w}\left( r \right) = \operatorname{f}\left( \operatorname{z}\left( r \right) \right) = \operatorname{f}\left( c_1 + \mathrm{j} r \right)$} & mit $r \subset \mathbb{R}$\\[3pt]
+			\fbox{$z = \operatorname{z}\left( r \right) = c_1 + \mathrm{j} r$} & $\xrightarrow[]{f\left( z \right)}$ & \fbox{$w = \operatorname{w}\left( r \right) = f\left( \operatorname{z}\left( r \right) \right) = f\left( c_1 + \mathrm{j} r \right)$} & mit $r \subset \mathbb{R}$\\[3pt]
 		\end{tabular}
 		\begin{tabular}{llll}
 			\textbf{Koordinatengleichung:} & 
 			\fbox{$\left| \begin{array}{c}
-				w_1 = \operatorname{Re}\left(\left[ \operatorname{f}\left(\operatorname{z}\left(r \right)\right)\right]\right)\\[3pt]
-				w_2 = \operatorname{Re}\left(\left[ \operatorname{f}\left(\operatorname{z}\left(r \right)\right)\right]\right)
+				w_1 = \operatorname{Re}\left(\left[ f\left(\operatorname{z}\left(r \right)\right)\right]\right)\\[3pt]
+				w_2 = \operatorname{Re}\left(\left[ f\left(\operatorname{z}\left(r \right)\right)\right]\right)
 				\end{array} \right|$} &
 			$\Rightarrow$ & 
 			$\begin{array}{l}
@@ -45,11 +48,11 @@
 	\end{minipage}
 
 \subsection{Lineare Funktion}
-	\begin{minipage}[t]{0.5\textwidth}
-		
+	\begin{minipage}[]{0.5\textwidth}
+		\scalebox{0.5}{\input{tikz/KomplexeFunktionen/LinFun.tex}}
 	\end{minipage}
-	\begin{minipage}[t]{0.5\textwidth}
-		Die lineare Funktion $w = \operatorname{f}\left( z \right) = a z + b$ bewirkt:\\[3pt]
+	\begin{minipage}[]{0.5\textwidth}
+		Die lineare Funktion $w = f\left( z \right) = a z + b$ bewirkt:\\[3pt]
 		\renewcommand{\arraystretch}{1.7}
 		\begin{tabular}{|lll|}
 			\hline
@@ -67,15 +70,15 @@
 	\begin{minipage}[t]{0.7\textwidth}
 		\textbf{Parametergleichung:}\\[3pt]
 		\begin{tabular}{lcl}
-			Waagrechte & $\xrightarrow[]{\operatorname{f}\left( z \right)}$ & $w = w(r) = \underbrace{\left( \mathrm{j} a c_2 + b \right)}_{Startvektor} + \hspace{25pt} r \cdot \hspace{-28pt} \underbrace{a}_{Richtungsvektor}$\\[3pt]
-			Senkrechte & $\xrightarrow[]{\operatorname{f}\left( z \right)}$ & $w = w(r) = \underbrace{\left( a c_1 + b \right)}_{Startvektor} + \hspace{25pt} r \cdot \hspace{-25pt} \underbrace{\mathrm{j}a}_{Richtungsvektor}$\\[3pt]
+			Waagrechte & $\xrightarrow[]{f\left( z \right)}$ & $w = w(r) = \underbrace{\left( \mathrm{j} a c_2 + b \right)}_{Startvektor} + \hspace{25pt} r \cdot \hspace{-28pt} \underbrace{a}_{Richtungsvektor}$\\[3pt]
+			Senkrechte & $\xrightarrow[]{f\left( z \right)}$ & $w = w(r) = \underbrace{\left( a c_1 + b \right)}_{Startvektor} + \hspace{25pt} r \cdot \hspace{-25pt} \underbrace{\mathrm{j}a}_{Richtungsvektor}$\\[3pt]
 		\end{tabular}
 	\end{minipage}
 	\begin{minipage}[t]{0.3\textwidth}
 		\textbf{Parametergleichung:}\\[3pt]
-		$\operatorname{f}^{\prime}\left( z \right) = a$\\[3pt]
+		$f^{\prime}\left( z \right) = a$\\[3pt]
 		\begin{tabular}{ll}
-			$\Rightarrow$ & für $a \neq 0$ ist $\operatorname{f}\left( z \right) = a z + b$\\[3pt]
+			$\Rightarrow$ & für $a \neq 0$ ist $f\left( z \right) = a z + b$\\[3pt]
 	 & \textbf{überall winkeltreu!}
 		\end{tabular}
 	\end{minipage}
@@ -86,32 +89,37 @@
 		
 		\begin{minipage}[t]{0.5\textwidth}
 			\begin{framed}
-				Die Quadratfunktion $w = \operatorname{f}\left( z \right) = z^2$ bildet die\\[3pt]
+				Die Quadratfunktion $w = f\left( z \right) = z^2$ bildet die\\[3pt]
 				$z$-Ebene bijektiv \textbf{auf eine zweiblättrige\\[3pt] Riemann'sche Fläche ab}.
 			\end{framed}
 		\end{minipage}
 		\begin{minipage}[t]{0.5\textwidth}
 			
 		\end{minipage}\\[3pt]
-		\begin{minipage}[t]{0.2\textwidth}
+		\begin{minipage}[]{0.15\textwidth}
 			\textbf{Winkeltreue:}
 		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
+		\begin{minipage}[]{0.5\textwidth}
 			\begin{framed}
 				\begin{tabular}{lll}
-					$\operatorname{f}^{\prime}\left( z \right) = 2 z$ & $\Rightarrow$ & \textbf{winkeltreu} ausser bei $z = 0$\\[3pt]
-					$\operatorname{f}^{-1}\left( w \right) = \sqrt{w}$ & $\Rightarrow$ & \textbf{winkeltreu} ausser bei $w = 0$\\[3pt]
+					$f^{\prime}\left( z \right) = 2 z$ & $\Rightarrow$ & \textbf{winkeltreu} ausser bei $z = 0$\\[3pt]
+					$f^{-1}\left( w \right) = \sqrt{w}$ & $\Rightarrow$ & \textbf{winkeltreu} ausser bei $w = 0$\\[3pt]
 				\end{tabular}
 			\end{framed}
 		\end{minipage}
-		\begin{minipage}[t]{0.3\textwidth}
-			
+		\begin{minipage}[]{0.35\textwidth}
+			\underline{\textbf{Winkeltreu $\rightarrow$ Vorgehen:}}
+			\begin{enumerate}
+				\item $\frac{d}{dz} (f(z))$
+				\item $f^{\prime}\left( z \right) = 0$
+				\item umformen $\Rightarrow$ Lösung: \underline{nicht} winkeltreu
+			\end{enumerate}
 		\end{minipage}\\[3pt]
 	
 	\subsection{Potenzfunktion $z^n$ und Wurzelfunktion $\sqrt[n]{z}$}
 		\begin{minipage}[t]{0.5\textwidth}
 			\begin{framed}
-				Die Potenzfunktion $w = \operatorname{f}\left( z \right) = z^n$ bildet die\\[3pt]
+				Die Potenzfunktion $w = f\left( z \right) = z^n$ bildet die\\[3pt]
 				$z$-Ebene bijektiv \textbf{auf eine n-blättrige\\[3pt] Riemann'sche Fläche ab}.
 			\end{framed}
 		\end{minipage}
@@ -121,9 +129,9 @@
 \section{Kreisspiegelung}
 	\begin{minipage}[t]{0.5\textwidth}
 		\begin{tabular}{lll}
-			\fbox{$w = \overline{\operatorname{f}}\left( z \right) = \dfrac{1}{\overline{z}}$} &
+			\fbox{$w = \overline{f}\left( z \right) = \dfrac{1}{\overline{z}}$} &
 			mit: $|w| = \dfrac{1}{\left| z \right|}$; &
-			$\operatorname{arg}\left( w \right) = \operatorname{arg}\left( z \right)$\\[3pt]
+			$-\operatorname{arg}\left( w \right) = \operatorname{arg}\left( z \right)$\\[3pt]
 		\end{tabular}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}

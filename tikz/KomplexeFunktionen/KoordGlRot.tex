@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines=middle,
+		axis equal,
+		xmin=-4,
+		xmax=4,
+		ymin=-4,
+		ymax=4,
+		xlabel=$z_1$,
+		ylabel=$z_2$,
+		xticklabels={,,},
+		yticklabels={,,}
+	]
+		\addplot[-, yellow, very thick, rotate=40] coordinates {(-2.5, 2) (2.5, 2)};
+		\addplot[-, black!70!green, very thick, rotate=40] coordinates {(-2.5, 1) (2.5, 1)};
+		\addplot[-, cyan, very thick, rotate=40] coordinates {(-2.5, 0) (2.5, 0)};
+		\addplot[-, black!50!blue, very thick, rotate=40] coordinates {(-2.5, -1) (2.5, -1)};
+		\addplot[-, blue, very thick, rotate=40] coordinates {(-2.5, -2) (2.5, -2)};
+		
+		\addplot[-, purple, very thick, rotate=40] coordinates {(-2, -2.5) (-2, 2.5)};
+		\addplot[-, pink, very thick, rotate=40] coordinates {(-1, -2.5) (-1, 2.5)};
+		\addplot[-, black!50!red, very thick, rotate=40] coordinates {(0, -2.5) (0, 2.5)};
+		\addplot[-, orange, very thick, rotate=40] coordinates {(1, -2.5) (1, 2.5)};
+		\addplot[-, red, very thick, rotate=40] coordinates {(2, -2.5) (2, 2.5)};
+	\end{axis}
+\end{tikzpicture}
