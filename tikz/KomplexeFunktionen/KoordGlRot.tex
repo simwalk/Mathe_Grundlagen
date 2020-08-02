@@ -6,23 +6,23 @@
 		xmax=4,
 		ymin=-4,
 		ymax=4,
-		xlabel=$z_1$,
-		ylabel=$z_2$,
+		xlabel=$w_1$,
+		ylabel=$w_2$,
 		xticklabels={,,},
 		yticklabels={,,}
 	]
-		\addplot[-, yellow, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-3.75, 3) (3.75, 3)};
-		\addplot[-, black!70!green, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-3.75, 1.5) (3.75, 1.5)};
-		\addplot[-, cyan, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-3.75, 0) (3.75, 0)};
-		\addplot[-, black!50!blue, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-3.75, -1.5) (3.75, -1.5)};
-		\addplot[-, blue, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-3.75, -3) (3.75, -3)};
+		\addplot[-, yellow, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-3.75, 3) (3.75, 3)};
+		\addplot[-, black!70!green, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-3.75, 1.5) (3.75, 1.5)};
+		\addplot[-, cyan, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-3.75, 0) (3.75, 0)};
+		\addplot[-, black!50!blue, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-3.75, -1.5) (3.75, -1.5)};
+		\addplot[-, blue, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-3.75, -3) (3.75, -3)};
 		
-		\addplot[-, purple, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-3, -3.75) (-3, 3.75)};
-		\addplot[-, pink, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(-1.5, -3.75) (-1.5, 3.75)};
-		\addplot[-, black!50!red, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(0, -3.75) (0, 3.75)};
-		\addplot[-, orange, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(1.5, -3.75) (1.5, 3.75)};
-		\addplot[-, red, very thick, rotate=40, xshift=1.2cm, yshift=-2.5cm] coordinates {(3, -3.75) (3, 3.75)};
+		\addplot[-, purple, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-3, -3.75) (-3, 3.75)};
+		\addplot[-, pink, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(-1.5, -3.75) (-1.5, 3.75)};
+		\addplot[-, black!50!red, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(0, -3.75) (0, 3.75)};
+		\addplot[-, orange, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(1.5, -3.75) (1.5, 3.75)};
+		\addplot[-, red, very thick, rotate=20, xshift= 0.8cm, yshift= -1.15cm] coordinates {(3, -3.75) (3, 3.75)};
 		
-		\addplot[-latex, very thick] coordinates {(0, 0) (0.25, 2.2)};
+		\addplot[-latex, very thick] coordinates {(0, 0) ({2*cos(deg(20))}, {2*sin(deg(20))})} node[below] {$\overrightarrow{b}$};
 	\end{axis}
 \end{tikzpicture}
