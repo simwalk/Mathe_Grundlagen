@@ -92,14 +92,14 @@
 		\begin{minipage}[t]{0.5\textwidth}
 			\scalebox{0.5}{\input{tikz/KomplexeFunktionen/QuadKreis.tex}}
 		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
+		\begin{minipage}[]{0.5\textwidth}
 			\begin{framed}
 				Die Quadratfunktion $w = f\left( z \right) = z^2$ bildet die\\[3pt]
 				$z$-Ebene bijektiv \textbf{auf eine zweiblättrige\\[3pt] Riemann'sche Fläche ab}.
 			\end{framed}
 		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
-			
+		\begin{minipage}[]{0.5\textwidth}
+			\scalebox{1.7}{\includegraphics[width=0.5\textwidth]{pics/KomplexeZahlen/QuadratFunktion.png}}
 		\end{minipage}\\[3pt]
 		\begin{minipage}[]{0.15\textwidth}
 			\textbf{Winkeltreue:}
@@ -122,14 +122,14 @@
 		\end{minipage}\\[3pt]
 	
 	\subsection{Potenzfunktion $z^n$ und Wurzelfunktion $\sqrt[n]{z}$}
-		\begin{minipage}[t]{0.5\textwidth}
+		\begin{minipage}[]{0.5\textwidth}
 			\begin{framed}
 				Die Potenzfunktion $w = f\left( z \right) = z^n$ bildet die\\[3pt]
 				$z$-Ebene bijektiv \textbf{auf eine n-blättrige\\[3pt] Riemann'sche Fläche ab}.
 			\end{framed}
 		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
-			
+		\begin{minipage}[]{0.5\textwidth}
+			\scalebox{1.7}{\includegraphics[width=0.5\textwidth]{pics/KomplexeZahlen/PotenzFunktion.png}}
 		\end{minipage}\\[3pt]
 	
 \section{Kreisspiegelung}
@@ -166,21 +166,17 @@
 		\hline
 		\textbf{Originalkurve:} & \textbf{Bildkurve:} & & \textbf{Originalkurve:} & \textbf{Bildkurve:}\\
 		\hline
-		%\includegraphics{} & \includegraphics{} & & \includegraphics{} & \includegraphics{}\\
+		\scalebox{0.5}{\input{tikz/KomplexeFunktionen/GeradeDurchOOrg.tex}} & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/GeradeDurchOBild.tex}} & & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/KreisDurchOOrg.tex}} & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/GeradeNDurchOBild.tex}}\\
 		\hline
-		%\includegraphics{} & \includegraphics{} & & \includegraphics{} & \includegraphics{}\\
+		\scalebox{0.5}{\input{tikz/KomplexeFunktionen/GeradeNDurchOOrg.tex}} & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/KreisDurchOBild.tex}} & & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/KreisNDurchOOrg.tex}} & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/KreisNDurchOBild.tex}}\\
 		\hline
 	\end{tabular}\\[3pt]
 	\begin{minipage}[t]{0.5\textwidth}
 		\subsection{Konstruktion von Bildpunkten}
-			\begin{minipage}[t]{0.5\textwidth}
-				$z$ \textbf{innerhalb des Einheitskreises}:\\[3pt]
-				
-			\end{minipage}
-			\begin{minipage}[t]{0.5\textwidth}
-				$z$ \textbf{ausserhalb des Einheitskreises}:\\[3pt]
-				
-			\end{minipage}
+			\begin{tabular}{ll}
+				$z$ \textbf{innerhalb des } & $z$ \textbf{ausserhalb des }\\[1pt] \textbf{Einheitskreises}: & \textbf{Einheitskreises}:\\[3pt]
+				\scalebox{0.5}{\input{tikz/KomplexeFunktionen/BildpunktKonstrInEinheitskreis.tex}} & \scalebox{0.5}{\input{tikz/KomplexeFunktionen/BildpunktKonstrAusEinheitskreis.tex}}
+			\end{tabular}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\subsection{Exponentialfunktion $\mathrm{e}^z$}
@@ -192,5 +188,6 @@
 					\textbf{Waagrechte} & $\rightarrow$ & \textbf{Strahlen}\\[3pt]
 					\textbf{Senktrechte} & $\rightarrow$ & \textbf{Kreise um $\mathrm{O}$}\\[3pt]
 				\end{tabular}
-		\end{minipage}
-		\end{minipage}
+			\end{minipage}
+			\scalebox{0.5}{\input{tikz/KomplexeFunktionen/ExpFunktion.tex}}
+	\end{minipage}
