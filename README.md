@@ -1,2 +1,2 @@
 # Mathe_Grundlagen
-Mathematik Grundlagen für das 3-6 Semester
+Mathematik Grundlagen für 3. bis 6. Semester
