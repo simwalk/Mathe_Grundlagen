@@ -1,0 +1,27 @@
+%Autor: Simon Walker
+%Version: 1.5
+%Datum: 06.07.2020
+%Lizenz: CC BY-NC-SA
+%Quelle WarStat ZF HS19 https://github.com/RostBau/WrStat oder https://github.com/HSR-Stud/WrStat
+
+\begin{tikzpicture}[xscale=0.4, yscale=0.4]
+	\fill[white, fill opacity=0] (-0.5,0) rectangle (5, 3.5); % Weisser rand um Grafik
+	
+	
+	%\fill[white] (0,0) rectangle (5,3);
+	\draw (0,0) rectangle (5,3);
+	\node[red] at (0.7,2.3) {$S$};
+	
+	\begin{scope} %Schnittmenge färben
+		\clip (2,1.5) circle[radius=1];
+		\fill[gray!20] (3,1.5) circle[radius=1];
+	\end{scope}
+	
+	\draw (2,1.5) circle[radius=1]; %Kreise Zeichnen
+	\draw (3,1.5) circle[radius=1];
+	
+	\node[red] at (1.5, 1.5) {\footnotesize$A$};
+	\node[red] at (3.5, 1.5) {\footnotesize$B$};
+	
+	%\draw[help lines] (0,0) grid (5,3);
+\end{tikzpicture}

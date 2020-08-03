@@ -1,1 +1,296 @@
 \section{Lineare Algebra}
+
+\subsection{Wichtige Matrizen}
+\textbf{Einheitsmatrix}\\
+$
+\left(\begin{array}{ccc}
+	1 & 0 & 0\\
+	0 & 1 & 0\\
+	0 & 0 & 1
+\end{array}\right)
+$
+
+\subsection{Matrizenprodukt}
+Die \textbf{Bedingung} für ein Matrixmultiplikation ist, das die Spaltenzahl der ersten Matrix mit der Zeilenzahl der zweiten Matrix übereinstimmen muss.\\[10pt]
+\fbox{Zeile mal Spalte}\\[10pt]
+%
+\textbf{Rechenregeln:}
+\begin{compactitem}
+	\item Die Faktoren dürfen nicht Vertauscht werden denn \\
+	$A\cdot B \ne B\cdot A$
+	\item $(A + B) \cdot C = A \cdot C + B \cdot C$
+	\item $A \cdot(B \cdot C)=(A \cdot B) \cdot C$
+	\item $(A \cdot B)^{T}=B^{T} \cdot A^{T} \qquad$ (Transponieren)
+	\item $(A \cdot B)^{H}=B^{H} \cdot A^{H}$
+	\item $\operatorname{det}(A \cdot B)=\operatorname{det}(A) \cdot \operatorname{det}(B)=\operatorname{det}(B) \cdot \operatorname{det}(A)=\operatorname{det}(B \cdot A)$
+\end{compactitem}
+
+\subsection{Skalarprodukt}
+$\overrightarrow{v_{1}} \cdot \overrightarrow{v_{2}}=\left(\begin{array}{l}
+x_{1} \\
+y_{1} \\
+z_{1}
+\end{array}\right) \cdot\left(\begin{array}{l}
+x_{2} \\
+y_{2} \\
+z_{2}
+\end{array}\right)=x_{1} \cdot x_{2}+y_{1} \cdot y_{2}+z_{1} \cdot z_{2}$\\[10pt]
+
+Der \textbf{Winkel} zwischen den Vektoren lässt sich mit folgender Formel bestimmen:\\
+\fbox{$\vec{a} \cdot \vec{v}= |\vec{a}| \cdot |\vec{v}| \cdot \cos( \alpha$}\\[5pt]
+Sind die Vektoren \textbf{Orthogonal} zueinander dann ist das Skalarprodukt gleich $\mathbf{0}$.
+
+
+% TODO Vektorprodukt
+
+\subsection{Gauss}
+\begin{compactenum}
+	\item Variable Isolieren $\circledr{*}$ (Zeile dividieren dass eine 1 heraus kommt)
+	\item Variable Eliminieren $\circledb{*}$ (ein Vielfaches der Zeile von den Anderen Abziehen damit eine 0 heraus kommt.)
+	\item weitermachen bis Einheitsmatrix heraus kommt.
+\end{compactenum}
+
+\textbf{Beispiel}
+\begin{equation*}
+	\begin{array}{rcrcrcr}
+		 x &+& 2y &+& 3z &=& 10\\
+		6x &+& 5y &+& 4z &=& 32\\
+		 x &-&  y &+&  z &=& 2
+	\end{array}
+\end{equation*}
+\begin{equation*}
+\small
+\renewcommand{\arraystretch}{1.25}
+	\begin{array}{|ccc|c|}
+		\hline
+		\circledr{1}  &  2 & 3  & 10\\
+		\circledb{6}  &  5 & 4  & 32\\
+		\circledb{1}  & -1 & 1  & 2 \\
+		\hline
+	\end{array}
+	\rightarrow
+	\begin{array}{|ccc|c|}
+		\hline
+		1  & 2             & 3   & 10 \\
+		0  & \circledr{-7} & -14 & -28\\
+		0  & \circledb{-3} & -2  & -8 \\
+		\hline
+	\end{array}
+	\rightarrow
+	\begin{array}{|ccc|c|}
+		\hline
+		1  & 2  & \circledb{3} & 10\\
+		0  & 1  & \circledb{2} & 4 \\
+		0  & 0  & \circledr{4} & 4 \\
+		\hline
+	\end{array}
+	\rightarrow
+	\begin{array}{|ccc|c|}
+		\hline
+		1 & \circledb{2} & 0 & 7\\
+		0 & 1            & 0 & 2 \\
+		0 & 0            & 1 & 1 \\
+		\hline
+	\end{array}
+	\rightarrow
+	\begin{array}{|ccc|c|}
+		\hline
+		1 & 0 & 0 & 3\\
+		0 & 1 & 0 & 2 \\
+		0 & 0 & 1 & 1 \\
+		\hline
+	\end{array}
+\end{equation*}
+Die Lösung ist somit $x = 3 $,$ y = 2 $ und $ z = 1$.
+\subsection{Determinante}
+
+\subsubsection{Eigenschaften}
+
+\begin{compactitem}
+	\item Hat die Matrix $A$ eine Nullzeile/Nullspalte, dann ist die $\operatorname{det}(A) = 0$
+	\item Hat $A$ zwei gleiche Zeilen/Spalten, dann ist $\operatorname{det}(A) = 0$
+	\item Ist $A$ regulär, $det(A) \neq 0$\\
+	Ist $A$ singulär, $det(A) = 0$
+	\item Vertauscht man zwei Zeilen/Spalten, dann ändert sich das Vorzeichen der Determinante.
+	\item Beschreibt eine Fläche eines Parallelogrammes (2D) bzw. ein Volumen eines Parallelepipeds (3D).
+	\item Kann nur ermittelt werden, wenn die Matrix exkl. Lösungen quadratisch ist.
+\end{compactitem}
+
+\subsubsection{Wichtige Determinanten}
+\begin{multicols}{2}
+	\begin{equation*}
+		\operatorname{det}\left(\begin{array}{ll}
+		a & b \\
+		c & d
+		\end{array}\right)=a d-b c
+	\end{equation*}
+	
+	\columnbreak
+	
+	\begin{equation*}
+		\operatorname{det}\left(\begin{array}{ccc}
+		a & b & c \\
+		d & e & f \\
+		g & h & i
+		\end{array}\right)=\underbrace{a e i+b f g+c d h-c e g-a f h-b d i}_{\text {Sarrus'sche Formel }}
+	\end{equation*}
+\end{multicols}
+
+\subsubsection{Determinante mit Gauss-Verfahren}
+Die Determinante wird berechnet indem einfach die Pivot-Elemente multipliziert werden:
+\begin{equation*}
+	\left|\begin{array}{ccc}
+	\circledr{2} & 2 & 4 \\
+	4 & 5 & 6 \\
+	7 & 8 & 5 \\
+	\end{array}\right| 
+	\rightarrow %^{Gauss} \rightarrow \; $$2{\;}* $$ {\;}
+	2*
+	\left|\begin{array}{ccc}	
+	1 & 1 & 2 \\
+	\circledb{4} & 5 & 6 \\
+	\circledb{7} & 8 & 5 \\
+	\end{array}\right|
+	\rightarrow
+	2*
+	\left|\begin{array}{ccc}	
+	1 & 1 & 2 \\
+	0 & \circledr{1} & -2 \\
+	0 & \circledb{1} & -9 \\
+	\end{array}\right|
+	\rightarrow
+	2*1*
+	\left|\begin{array}{ccc}	
+	\circledr{1} & 1 & 2 \\
+	0 & \circledr{1} & -2 \\
+	0 & 0 & \circledr{-7} \\
+	\end{array}\right|
+	\rightarrow
+	2*1*(-7)*1*1=-14
+\end{equation*}
+Als erstes muss die erste Zeile durch die eingekreiste Zahl dividiert werden.
+Danach werden die 1. Zeile soviel mal von den Anderen abgezogen, dass überall eine 0 steht.
+
+\subsection{Inverse}
+Eine Matrix kann nur Invertiert werden wenn $\operatorname{det}(A) \ne 0$.
+\subsubsection{Eigenschaften}
+\begin{itemize}
+	\item $A\cdot A^{-1} = E \qquad$ $E $ ist dabei die Einheitsmatrix
+	\item $(A \cdot B)^{-1}=B^{-1} \cdot A^{-1}$
+	\item $\left(A^{k}\right)^{-1}=\left(A^{-1}\right)^{k}$
+	\item $(c A)^{-1}=c^{-1} A^{-1} \qquad c \in \mathbb{R}$
+	\item $\operatorname{det}\left(A^{-1}\right)=(\operatorname{det} A)^{-1}$
+\end{itemize}
+\subsubsection{Formeln}
+\begin{tabular}{lcl}
+	\textbf{2x2 Matrix} & $\qquad$ &
+		$A=\left(\begin{array}{cc}
+		a & b \\
+		c & d
+		\end{array}\right) \rightarrow A^{-1}=\dfrac{1}{\operatorname{det}(A)}\left(\begin{array}{cc}
+		d & -b \\
+		-c & a
+		\end{array}\right)=\dfrac{1}{a d-b c}\left(\begin{array}{cc}
+		d & -b \\
+		-c & a
+		\end{array}\right)$\\
+		
+	$\quad$ & &\\
+		
+	\textbf{3x3 Matrix} & &
+		$\left(\begin{array}{lll}
+		a & b & c \\
+		d & e & f \\
+		g & h & i
+		\end{array}\right)^{-1}=\frac{1}{\operatorname{det} A} \cdot\left(\begin{array}{ccc}
+		e i-f h & c h-b i & b f-c e \\
+		f g-d i & a i-c g & c d-a f \\
+		d h-e g & b g-a h & a e-b d
+		\end{array}\right)$\\
+	
+	$\quad$ & &\\
+	
+	\textbf{Dreiecksmatrix} & &
+		$\left(\begin{array}{cccc}
+		d_{11} & 0 & \cdots & 0 \\
+		0 & d_{22} & \ddots & \vdots \\
+		\vdots & \ddots & \ddots & 0 \\
+		0 & \cdots & 0 & d_{n n}
+		\end{array}\right)^{-1} = 
+		\left(\begin{array}{cccc}
+		d_{11}^{-1} & 0 & \cdots & 0 \\
+		0 & d_{22^{-1}} & \ddots & \vdots \\
+		\vdots & \ddots & \ddots & 0 \\
+		0 & \cdots & 0 & d_{n n}^{-1}
+		\end{array}\right)
+		$
+\end{tabular}
+
+\subsection{Eigenwerte und Eigenvektoren}
+Wenn eine Abbildung auf denselben Punkt fällt ($\vec{v}={\vec{v}}'$), nennt man dies Eigenfixpunkt. Der Eigenvektor $\vec{v}$ zeigt nun in
+diese Richtung (als Gerade) und der Eigenwert $\lambda$ gibt den Faktor an, mit der in diese Richtung gezeigt wird.
+
+\subsubsection{Eigenwerte berechnen}
+Um die Eigenwerte zu berechnen muss die folgende Gleichung gelöst werden: $det(A-\lambda E) = 0$.\\
+Die Lösung der Gleichung ($\lambda$) sind die Eigenwerte.
+
+\textbf{Beispiel:}\\
+\begin{tabular}{lcl}
+	$A=\left(\begin{array}{ll}
+	3 & 2 \\
+	1 & 2
+	\end{array}\right)$ & \quad &
+	$det(A-\lambda E) = 
+	\left|\begin{array}{cc}
+	3-\lambda & 2 \\
+	1 & 2-\lambda
+	\end{array}\right| = 
+	(3-\lambda)(2-\lambda)-1 \cdot 2=0$\\
+	&& $=\lambda^{2}-5 \lambda+4=0 \rightarrow(\lambda-1)(\lambda-4)=0 \rightarrow \lambda_{1}=1 \rightarrow \lambda_{2}=4$
+	
+\end{tabular}
+
+\subsubsection{Eigenvektoren berechnen}
+Für jeden Eigenwert $\lambda_{i}$ Gleichungssystem aufstellen ($(A-\lambda_{i} E) \vec{v}_{i}=0$) und mit Gauss auflösen $\Rightarrow$ eine Zeile verschwindet $\Rightarrow \infty$ Lösungen $\Rightarrow$ Wert von verschwundener Zeile frei wählbar.\\
+\textbf{Beispiel:}\\
+$A=\left(\begin{array}{ll}
+3 & 2 \\
+1 & 2
+\end{array}\right)$
+\qquad
+$\lambda_{1} = 1 \quad \lambda_{2} = 4$\\[5pt]
+
+$\left( \begin{array}{cc}
+	3-1 & 2\\
+	1 & 2-1
+\end{array} \right) \vec{v_1} = \vec{0}
+\quad \rightarrow \quad
+\left| \begin{array}{ccccc}
+2 \cdot x_1 & + & 2 \cdot y_1 & = & 0 \\
+1 \cdot x_1 & + & 1 \cdot y_1 & = & 0
+\end{array} \right|
+\quad \rightarrow \quad
+\vec{v_1} = \left(\begin{array}{c}
+	-1\\
+	1
+\end{array}\right)$\\[5pt]
+
+$\left( \begin{array}{cc}
+3-4 & 2\\
+1 & 2-4
+\end{array} \right) \vec{v_2} = \vec{0}
+\quad \rightarrow \quad
+\left| \begin{array}{ccccc}
+-1 \cdot x_2 & + & 2 \cdot y_2 & = & 0 \\
+1 \cdot x_2 & + & -2 \cdot y_2 & = & 0
+\end{array} \right|
+\quad \rightarrow \quad
+\vec{v_2} = \left(\begin{array}{c}
+2\\
+1
+\end{array}\right)$\\
+
+
+
+
+
