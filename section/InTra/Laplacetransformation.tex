@@ -1,5 +1,4 @@
 Gegenüber j$\omega$ bei der Fourier-Transformation ist bei der Laplace-Transformation $s$ verallgemeinert zu $s=\sigma + j\omega$. Das bedeutet, dass die Fourier-Transformierte $F(j\omega)$ durch die Laplace-Transformation $F(s)$ ausgedrückt werden kann.
-\subsubsection{Laplacetransformation}
 \begin{minipage}{0.35\textwidth}
 	\begin{framed}
 		\centering
@@ -26,14 +25,13 @@ Gegenüber j$\omega$ bei der Fourier-Transformation ist bei der Laplace-Transfor
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|l|}
 	\hline Linearität	& $\alpha\cdot f(t) + \beta\cdot g(t) \laplace \alpha\cdot F(s) + \beta\cdot G(s)$\\
-	\hline Ähnlichkeit / Streckung im Zeitbereich & $f(\alpha t) \laplace \frac{1}{\alpha}F(\frac{s}{\alpha})\quad (\alpha \in \mathbb{R})$\\
-	\hline Faltung im Zeitbereich & $f(t) * g(t) \laplace G(s) \cdot F(s)$\\
-	\hline Faltung im Frequenzbereich & \\
-	\hline 1te Ableitung im Zeitbereich & $\frac{\partial}{\partial t}f(t) \laplace sF(s) - f(0^{+})$\\
-	\hline 2te Ableitung im Zeitbereich & $\frac{\partial^{2}}{\partial t^{2}}f(t) \laplace s^{2}F(s) - sf(0^{+}) - f'(0^{+})$\\
-	\hline nte Ableitung im Zeitbereich & $\frac{\partial^{n}f(t)}{\partial t^{n}} \laplace s^{n}F(s) - s^{n-1}f(0^{+}) - s^{n-1}\frac{\partial f(0^{+})}{\partial t}- \ldots - s^{0}\frac{\partial^{n-1}f(0^{+})}{\partial t^{n-1}}$\\
-	\hline Multiplikation mit t & $t \cdot f(t) \laplace \frac{-\partial F(s)}{\partial s}$\\
-	\hline Ableitung im Frequenzbereich & $(-t)^{n} f(t) \laplace \frac{\partial^{n} F(s)}{(\partial s)^{n}}$\\
+	\hline Ähnlichkeit / Streckung im Zeitbereich & $f(\alpha t) \; \laplace \; \frac{1}{\alpha}F(\frac{s}{\alpha})\quad (\alpha \in \mathbb{R})$\\
+	\hline Faltung im Zeitbereich & $f(t) * g(t) \; \laplace \; G(s) \cdot F(s)$\\
+	\hline 1te Ableitung im Zeitbereich & $\frac{\partial}{\partial t}f(t) \; \laplace \; sF(s) - f(0^{+})$\\
+	\hline 2te Ableitung im Zeitbereich & $\frac{\partial^{2}}{\partial t^{2}}f(t) \; \laplace \; s^{2}F(s) - sf(0^{+}) - f'(0^{+})$\\
+	\hline nte Ableitung im Zeitbereich & $\frac{\partial^{n}f(t)}{\partial t^{n}} \; \laplace \; s^{n}F(s) - s^{n-1}f(0^{+}) - s^{n-1}\frac{\partial f(0^{+})}{\partial t}- \ldots - s^{0}\frac{\partial^{n-1}f(0^{+})}{\partial t^{n-1}}$\\
+	\hline Multiplikation mit t & $t \cdot f(t) \; \laplace \; \frac{-\partial F(s)}{\partial s}$\\
+	\hline Ableitung im Frequenzbereich & $(-t)^{n} f(t) \; \laplace \; \frac{\partial^{n} F(s)}{(\partial s)^{n}}$\\
 	\hline Verschiebung im Zeitbereich nach rechts & $\sigma(t-a)f(t - a) \; \laplace \; F(s)*e^{-as}$ \\
 	\hline Verschiebung im Zeitbereich nach links & $\sigma(t-a)f(t + a) \; \laplace \; e^{as} \cdot [F(s) - \int\limits_0^{a} f(t) \cdot e^{-st} dt]$\\
 	\hline Verschiebung im Frequenzbereich (Dämpfungssatz) & $f(t)e^{\pm\alpha t} \; \laplace \; F(s\mp\alpha)$ \\
