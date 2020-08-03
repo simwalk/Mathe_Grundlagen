@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	%\draw[help lines] (0,0) grid (6,4);
+	\begin{axis}[axis lines=middle, axis equal, grid=both, xlabel = $\operatorname{Re}$, ylabel = $\operatorname{Im}$]
+		\addplot[->, red, very thick] coordinates{(0, 0) (1, 2)} node[above, red] at (175, 300) {$c = 1 + 2\mathrm{j}$} node[sloped, rotate = 62.5, above, red] at (65, 225) {$\left|k\right| = \dfrac{a}{b}$};
+		\addplot[->, black!50!green, very thick] coordinates{(0, 0) (4, 3)} node[above, black!50!green] at (290, 360) {$a = 4 + 3\mathrm{j}$} node[sloped, rotate = 35, above, black!50!green] at (180, 235) {$|a|$};
+		\addplot[->, blue, very thick] coordinates{(0, 0) (2, -1)} node[above, blue] at (260, -10) {$b=2-\mathrm{j}$} node[sloped, rotate = -20, above, blue] at (80, 10) {$|b|$};
+		\draw[latex-latex, red]  ([shift=(60:1cm)]20, 40) arc(0:50:1cm) node[midway, right, red]{$\varphi_{1}$};
+		\draw[latex-latex, black!50!green]  ([shift=(60:1cm)]100, 40) arc(0:50:100) node[midway, right, black!50!green] {$\varphi_{2}$};
+		\draw[latex-latex, blue]  ([shift=(60:1cm)]100, 40) arc(0:-37.5:100) node[midway, right, blue] {$\varphi_{3}$};
+	\end{axis}
+\end{tikzpicture}

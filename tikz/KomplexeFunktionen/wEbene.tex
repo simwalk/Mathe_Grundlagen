@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines=middle,
+		axis equal,
+		xmin=-2,
+		xmax=2,
+		ymin=-2,
+		ymax=2,
+		xlabel=$w_1$,
+		ylabel=$w_2$,
+		xticklabels={,,},
+		yticklabels={,,}
+	]
+		\addplot[draw=none] coordinates {(1,1)};
+		\addplot[mark=*, blue] coordinates {(0.5, -0.5)} node[below, blue] {$w$} node[above, blue] {Bildpunkt};
+		\node at (axis cs:1.5, 1) {\scalebox{2.5}{\rom{1}}};
+		\node at (axis cs:-1.5, 1) {\scalebox{2.5}{\rom{2}}};
+		\node at (axis cs:-1.5, -1) {\scalebox{2.5}{\rom{3}}};
+		\node at (axis cs:1.5, -1) {\scalebox{2.5}{\rom{4}}};
+	\end{axis}
+\end{tikzpicture}

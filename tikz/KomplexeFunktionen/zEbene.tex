@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines=middle,
+		axis equal,
+		xmin=-2,
+		xmax=2,
+		ymin=-2,
+		ymax=2,
+		xlabel=$z_1$,
+		ylabel=$z_2$,
+		xticklabels={,,},
+		yticklabels={,,}
+	]
+		\addplot[draw=none] coordinates {(1, 1)};
+		\addplot[mark=*, black!70!green] coordinates {(-0.5, 0.5)} node[below, black!70!green] {$z$} node[above, black!70!green] {Orginalpunkt};
+		\node at (axis cs:1.5, 1) {\scalebox{2.5}{\rom{1}}};
+		\node at (axis cs:-1.5, 1) {\scalebox{2.5}{\rom{2}}};
+		\node at (axis cs:-1.5, -1) {\scalebox{2.5}{\rom{3}}};
+		\node at (axis cs:1.5, -1) {\scalebox{2.5}{\rom{4}}};
+	\end{axis}
+\end{tikzpicture}\hspace{2.7cm}%
