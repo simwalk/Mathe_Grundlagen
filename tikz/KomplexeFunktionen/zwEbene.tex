@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+	\node[black!70!green] at (0.5, 5.7) {$z_1$};
+	\node[black!70!green] at (0.5, 5) {$z_2$};
+	\draw[->, black!70!green, very thick] (0.7, 5.7) -- (1, 5.4);
+	\draw[->, black!70!green, very thick] (0.7, 5) -- (1, 5.3);
+	\node[black!70!green] at (2.3, 5.35) {$z = z_1 + \mathrm{j} z_2$};
+	\draw[->, black!70!green, very thick] (3.5, 5.35) -- (7, 5.35);
+	
+	\node[blue] at (16, 5.7) {$w_1$};
+	\node[blue] at (16, 5) {$w_2$};
+	\draw[->, blue, very thick] (15.3, 5.4) -- (15.6, 5.7);
+	\draw[->, blue, very thick] (15.3, 5.3) -- (15.6, 5);
+	\node[blue] at (14, 5.35) {$w = w_1 + \mathrm{j} w_2$};
+	\draw[->, blue, very thick] (9.5, 5.35) -- (12.5, 5.35);
+	
+	\node[minimum size=2cm, draw] at (8.3, 5.35) {\scalebox{3}{$\textcolor{red}{f}$}};
+	
+	\draw[->, very thick, red] (22:8cm) arc[radius=1, start angle=140, end angle=40] node[above, red] at (8.3, 3.3) {$f$};
+	\node[above, red] at (8.3, 3.8) {$z \rightarrowtail w = f(z)$};
+	
+	\node[above, font=\large\bfseries] at (1, 5.8) {$\underline{\text{z-Ebene:}}$};
+	\input{tikz/KomplexeFunktionen/zEbene.tex}
+	
+	\node[above, font=\large\bfseries] at (1.2, 5.8) {$\underline{\text{w-Ebene:}}$};
+	\input{tikz/KomplexeFunktionen/wEbene.tex}
+\end{tikzpicture}

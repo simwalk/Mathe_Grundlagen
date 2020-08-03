@@ -1,7 +1,7 @@
 \documentclass[10pt, a4paper]{article}
 \title{\fontsize{60}{20} \textbf{Mathe Grundlagen}}
 \newcommand{\versioninfo}{v1.0}
-\author{P.Häusermann, J.Hösli, N.Selvarajah, S.Walker}
+\author{P. Häusermann, J. Hösli, N. Selvarajah, S. Walker}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,12 +29,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amssymb} %Mathematische Bibliotheken
 \usepackage{amsmath}
+
 \usepackage{trfsigns} %Zeichen für Laplacetranformation etc.
+\usepackage{mathtools}
 \usepackage{bm}
 
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{framed}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+\usepgfplotslibrary{fillbetween}
 
-\usepackage{framed}   % für mehrzeilige fbox
+\usepackage{rotating}
+\usepackage{array} % für m-Spalten
 \usepackage{multicol} % für \multicols
 \usepackage{paralist} % für \compactitem und \compactenum
 \usepackage{hyperref} % Erstellt Verweise innerhalb und nach außerhalb eines PDF
@@ -66,6 +74,9 @@
 	}
 }
 
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
 
 \begin{document}
 	%Titel mit Inhaltsverzeichniss
@@ -87,6 +98,8 @@
 	\newpage
 	\input{section/KomplexeZahlen.tex} %Nithu
 	\newpage
+	\input{section/KomplexeAbbildungen.tex} %Nithu
+	\newpage
 	\input{section/LinAlg.tex} %Simon
 	\newpage
 	\input{section/WarStat.tex} %Simon
@@ -94,6 +107,8 @@
 	\input{section/Fourier.tex} %Nithu
 	\newpage
 	\input{section/InTra.tex} %Nithu
+	\newpage
+	\input{section/Spektren.tex}
 	%Erst später
 	%\newpage
 	%\input{section/FuVar.tex} 
