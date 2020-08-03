@@ -1,5 +1,25 @@
-\section{Trigonometrie}
-
+\section{Trigonometrie und Hyperbelfunktionen}
+	\begin{minipage}[t]{0.55\textwidth}
+		\textbf{Kosinussatz}:\quad $c^{2}=a^{2}+b^{2}-2ab\cos(\gamma)$\\
+		\textbf{Sinussatz}:\qquad $\frac{a}{\sin(\alpha)}=\frac{b}{\sin(\beta)}=\frac{c}{\sin(\gamma)}$\\[8pt]
+		\textbf{Rechtwinkliges Dreieck}:
+		\begin{tabbing}
+			xxxxxxxxxxxxxxxxxxxxxxxxxx \= \kill
+			$\sin(\beta)=\frac{b}{a}=\frac{Gegenkathete}{Hypotenuse}$\> $\tan(\beta)=\frac{b}{c}=\frac{Gegenkathete}{Ankathete}$\\
+			$\cos(\beta)=\frac{c}{a}=\frac{Ankathete}{Hypotenuse}$\>
+			$\cot(\beta)=\frac{c}{b}=\frac{Ankathete}{Gegenkathete}$\\
+			\\
+			$\sin^{2}(x)+\cos^{2}(x)=1$ \> $\tan(x)=\frac{\sin(x)}{\cos(x)}$
+		\end{tabbing}
+	\end{minipage}
+%
+	\begin{minipage}[t]{0.45\textwidth}
+		\begin{flushright}
+			\strut\vspace*{-\baselineskip}\newline
+			\input{tikz/Trigo/Plot1.tex}
+		\end{flushright}
+	\end{minipage}
+%
 \subsection{Quadrantenbeziehungen}
 \begin{tabbing}
 	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \= \kill
@@ -7,73 +27,69 @@
 	$\sin(\pi - a)=\sin(a)$ \> $\cos(\pi - a)=-\cos(a)$\\
 	$\sin(\pi + a)=-\sin(a)$ \> $\cos(\pi +a)=-\cos(a)$\\
 	$\sin\left(\frac{\pi}{2}-a \right)=\sin\left(\frac{\pi}{2}+a \right)=\cos(a)$ \>
-	$\cos\left(\frac{\pi}{2}-a \right)=-\cos\left(\frac{\pi}{2}+a \right)=\sin(a)$  
+	$\cos\left(\frac{\pi}{2}-a \right)=-\cos\left(\frac{\pi}{2}+a \right)=\sin(a)$\\
+	$\sinh(a)=-\sinh(-a)$ \> $\cosh(-a)=\cosh(a)$
 \end{tabbing}
 
-\subsection{Ableitungen}
-
-\begin{tikzpicture}
-	[	inner sep = 2mm,
-	sin/.style={rectangle,minimum width=1.2cm,minimum height=1cm,rounded corners=5pt,draw=black,top color=green!20!black!50},
-	abl/.style={rectangle}
-	]
-	\node at (1.5,0) (sin1) [sin] {$\sin$};
-	\node at (0,-1.5) (cos2) [sin] {$-\cos$};
-	\node at (1.5,-3) (sin2) [sin] {$-\sin$};
-	\node at (3,-1.5) (cos1) [sin] {$\cos$};
-	
-	\draw[thick,black,->] (sin1.east) .. controls +(right:1cm) and +(up:1cm) ..  (cos1.north)
-	node [pos=0.5,above](abl) {$\frac{d}{dx}$};
-	\draw[thick,black,->] (cos1.south) .. controls +(down:1cm) and +(right:1cm) .. (sin2.east)
-	node [pos=0.5,below](abl) {$\frac{d}{dx}$};
-	\draw[thick,black,->] (sin2.west) .. controls +(left:1cm) and +(down:1cm) .. (cos2.south)
-	node [pos=0.5,below](abl) {$\frac{d}{dx}$};
-	\draw[thick,black,->] (cos2.north) .. controls +(up:1cm) and +(left:1cm) .. (sin1.west)
-	node [pos=0.5,above](abl) {$\frac{d}{dx}$};
-\end{tikzpicture}
-
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}[t]{0.5\textwidth}
 \subsection{Additionstheoreme}
 	$\sin(a \pm b)=\sin(a) \cdot \cos(b) \pm \cos(a) \cdot \sin(b)$\\
 	$\cos(a \pm b)=\cos(a) \cdot \cos(b) \mp \sin(a) \cdot \sin(b)$\\	
-	$\tan(a \pm b)=\dfrac{\tan(a) \pm \tan(b)}{1 \mp \tan(a) \cdot \tan(b)}$
+	$\tan(a \pm b)=\dfrac{\tan(a) \pm \tan(b)}{1 \mp \tan(a) \cdot \tan(b)}$\\
+	$\sinh(a \pm b)=\sinh(a) \cdot \cosh(b) \pm \cosh(a) \cdot \sinh(b)$\\
+	$\cosh(a \pm b)=\cosh(a) \cdot \cosh(b) \mp \sinh(a) \cdot \sinh(b)$\\	
+	$\tanh(a \pm b)=\dfrac{\tanh(a) \pm \tanh(b)}{1 \pm \tanh(a) \cdot \tanh(b)}$\\
 \end{minipage}
 %
-\begin{minipage}{0.5\textwidth}
-\subsection{Doppel- und Halbwinkel}	
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Euler-Formeln} 
+	$\sin(x) = \frac{1}{2j} \left(e^{jx} - e^{-jx}\right)$ \\
+	$\cos(x) = \frac{1}{2} \left(e^{jx} + e^{-jx}\right)$ \\
+	$\sinh(x) = \frac{1}{2} \left(e^{x} - e^{-x}\right)$ \\
+	$\cosh(x) = \frac{1}{2} \left(e^{x} + e^{-x}\right)$ \\
+	$e^{x+jy} = e^x \cdot e^{jy} = e^x \cdot \left(\cos(y) + j\sin(y)\right)$ \\
+	$e^{j\pi} = e^{-j\pi} = -1$ \\
+\end{minipage}
+\\[10pt]
+%
+\begin{minipage}[t]{0.5\textwidth}
+\subsection{Periodizität}
+	\begin{tabbing}
+		xxxxxxxxxxxxxxxxxxxxxxxx \= \kill
+		$\cos(a+k\cdot2\pi)=\cos(a)$ \> $(k \in \mathbb{Z})$\\
+		$\sin(a+k\cdot2\pi)=\sin(a)$ \> $(k \in \mathbb{Z})$
+	\end{tabbing}	
+\end{minipage}
+%
+\begin{minipage}[t]{0.5\textwidth}
+	\subsection{Doppel- und Halbwinkel}	
 	$\sin(2a)=2\sin(a)\cos(a)$\\
 	$\cos(2a)=\cos^2(a)-\sin^2(a)=2\cos^2(a)-1=1-2\sin^2(a)$\\
 	$\cos^2 \left(\frac{a}{2}\right)=\frac{1+\cos(a)}{2} \qquad
 	\sin^2 \left(\dfrac{a}{2}\right)=\frac{1-\cos(a)}{2}$
 \end{minipage}
+\\[10pt]
 %
-
-\subsection{Euler-Formeln} 
-	$\sin(x) = \frac{1}{2j} \left(e^{jx} - e^{-jx}\right)$ \\
-	$\cos(x) = \frac{1}{2} \left(e^{jx} + e^{-jx}\right)$ \\
-	$e^{x+jy} = e^x \cdot e^{jy} = e^x \cdot \left(\cos(y) + j\sin(y)\right)$ \\
-	$e^{j\pi} = e^{-j\pi} = -1$ \\
-
-\subsection{Periodizität}
-	$\cos(a+k\cdot2\pi)=\cos(a) \qquad \sin(a+k\cdot2\pi)=\sin(a) \qquad
-	(k \in \mathbb{Z})$
-
-\subsection{Produkte}
-	$\sin(a)\sin(b)=\frac{1}{2}(\cos(a-b)-\cos(a+b))$\\
-	$\cos(a)\cos(b)=\frac{1}{2}(\cos(a-b)+\cos(a+b))$\\
-	$\sin(a)\cos(b)=\frac{1}{2}(\sin(a-b)+\sin(a+b))$\\
-
+\begin{minipage}[t]{0.5\textwidth}
 \subsection{Summe und Differenz}
 	$\sin(a)+\sin(b)=2 \cdot \sin \left(\frac{a+b}{2}\right) \cdot
 	\cos\left(\frac{a-b}{2}\right)$\\
-	$\sin(a)-\sin(b)=2 \cdot \sin \left(\frac{a-b}{2}\right) \cdot
-	\cos\left(\frac{a+b}{2}\right)$\\
+	$\sin(a)-\sin(b)=2 \cdot \sin \left(\frac{a-b}{2}\right) \cdot \cos\left(\frac{a+b}{2}\right)$\\
 	$\cos(a)+\cos(b)=2 \cdot \cos \left(\frac{a+b}{2}\right) \cdot
 	\cos\left(\frac{a-b}{2}\right)$\\
 	$\cos(a)-\cos(b)=-2 \cdot \sin \left(\frac{a+b}{2}\right) \cdot
 	\sin\left(\frac{a-b}{2}\right)$\\
-	$\tan(a) \pm \tan(b)=\dfrac{\sin(a \pm b)}{\cos(a)\cos(b)}$\\
+	$\tan(a) \pm \tan(b)=\dfrac{\sin(a \pm b)}{\cos(a)\cos(b)}$
+\end{minipage}
+%
+\begin{minipage}[t]{0.5\textwidth}
+\subsection{Produkte}
+$\sin(a)\sin(b)=\frac{1}{2}(\cos(a-b)-\cos(a+b))$\\
+$\cos(a)\cos(b)=\frac{1}{2}(\cos(a-b)+\cos(a+b))$\\
+$\sin(a)\cos(b)=\frac{1}{2}(\sin(a-b)+\sin(a+b))$
+\end{minipage}
 
+%
 \subsection{Funktionswerte für Winkelargumente}
 \begin{multicols}{4}	
 	\begin{tabular}[c]{|p{0.5cm}|p{0.4cm}||p{0.4cm}|p{0.4cm}|p{0.4cm}|}
@@ -135,3 +151,4 @@
 		\hline
 	\end{tabular}					
 \end{multicols}
+$\sinh(0)=\tanh(0)=0 \qquad \cosh(0)=1$
