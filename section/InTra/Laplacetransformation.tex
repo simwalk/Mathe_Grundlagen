@@ -1,0 +1,44 @@
+Gegenüber j$\omega$ bei der Fourier-Transformation ist bei der Laplace-Transformation $s$ verallgemeinert zu $s=\sigma + j\omega$. Das bedeutet, dass die Fourier-Transformierte $F(j\omega)$ durch die Laplace-Transformation $F(s)$ ausgedrückt werden kann.
+\subsubsection{Laplacetransformation}
+\begin{minipage}{0.35\textwidth}
+	\begin{framed}
+		\centering
+		$f(t)\laplace F(s) = \int_{0}^{\infty}f(t)e^{-st}dt$
+	\end{framed}
+\end{minipage}
+\begin{minipage}{0.13\textwidth}
+	\fbox{\centering$s=\sigma+j\omega$}
+\end{minipage}
+\begin{minipage}{0.52\textwidth}
+	$\left\lbrace
+		\begin{array}{l}
+			\sigma=0 \rightarrow$Amplitude bleibt gleich$\\
+			\sigma> 0 \rightarrow$Amplitude explodiert für $0<t\rightarrow\infty\\
+			\sigma< 0 \rightarrow$Amplitude klingt für $0<t\rightarrow\infty$ auf $0$ ab$
+		\end{array}
+	\right.$
+\end{minipage}
+\begin{itemize}
+	\item Definitionsbereich nur für kausale Systeme $t\ge0$
+	\item Wachstum kleiner als der von einer Exponentialfunktion
+\end{itemize}
+\subsubsection{Eigenschaften der Fouriertransformation}
+\begin{tabular}{|l|l|}
+	\hline Linearität	& $\alpha\cdot f(t) + \beta\cdot g(t) \laplace \alpha\cdot F(s) + \beta\cdot G(s)$\\
+	\hline Ähnlichkeit / Streckung im Zeitbereich & $f(\alpha t) \laplace \frac{1}{\alpha}F(\frac{s}{\alpha})\quad (\alpha \in \mathbb{R})$\\
+	\hline Faltung im Zeitbereich & $f(t) * g(t) \laplace G(s) \cdot F(s)$\\
+	\hline Faltung im Frequenzbereich & \\
+	\hline 1te Ableitung im Zeitbereich & $\frac{\partial}{\partial t}f(t) \laplace sF(s) - f(0^{+})$\\
+	\hline 2te Ableitung im Zeitbereich & $\frac{\partial^{2}}{\partial t^{2}}f(t) \laplace s^{2}F(s) - sf(0^{+}) - f'(0^{+})$\\
+	\hline nte Ableitung im Zeitbereich & $\frac{\partial^{n}f(t)}{\partial t^{n}} \laplace s^{n}F(s) - s^{n-1}f(0^{+}) - s^{n-1}\frac{\partial f(0^{+})}{\partial t}- \ldots - s^{0}\frac{\partial^{n-1}f(0^{+})}{\partial t^{n-1}}$\\
+	\hline Multiplikation mit t & \\
+	\hline Ableitung im Frequenzbereich & \\
+	\hline Verschiebung im Zeitbereich nach rechts & \\
+	\hline Verschiebung im Zeitbereich nach links & \\
+	\hline Verschiebung im Bildbereich (Dämpfungssatz) & \\
+	\hline Integration in Zeitbereich (Sprungantwort) & \\
+	\hline Anfangswert & \\
+	\hline Endwert & \\
+	\hline
+\end{tabular}
+\subsubsection{Laplace-Tabelle}
