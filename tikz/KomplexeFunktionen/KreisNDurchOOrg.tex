@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines=middle,
+		axis equal,
+		xmin=-1.5,
+		xmax=2.5,
+		ymin=-1,
+		ymax=2,
+		xlabel=$z_1$,
+		ylabel=$z_2$,
+	]	
+		\draw (axis cs: 0, 0) circle [radius=1];
+		\addplot[domain=-180:180, samples=100, color=black!70!green, very thick] ({0.15*cos(x) + 0.5}, {0.15*sin(x) + 0.25}) node[above, left, black!70!green, pos=0.65] {Kreis nicht durch $\circ$};
+		\addplot[-, blue, very thick, dashed] {0.5*x};
+		\addplot[mark=*, black!70!green] coordinates {(0.625, 0.3125)};
+		\addplot[mark=*, black!70!green] coordinates {(0.375, 0.1875)};
+	\end{axis}
+\end{tikzpicture}

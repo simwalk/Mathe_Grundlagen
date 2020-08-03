@@ -1,0 +1,57 @@
+Die Fouriertransformation kann als Verallgemeinerung der Fourierreihe angesehen werden. Sie soll möglichst beliebige Funktionen in den Frequenzbereich übersetzen können um diese so  zu analysieren.
+\subsubsection{Fouriertransformation und Rücktransformation}
+\begin{minipage}{0.5\textwidth}
+		\begin{framed}
+			\centering
+			$F(\omega)=\int_{-\infty}^{\infty} f(t) \cdot e^{-\mathrm{j} \omega t} d t$
+		\end{framed}
+\end{minipage}
+%
+\begin{minipage}{0.5\textwidth}
+	\begin{framed}
+		\centering
+		$f(t)=\frac{1}{2 \pi} \cdot \int_{-\infty}^{\infty} F(\omega) \cdot e^{j \omega t} d \omega$
+	\end{framed}
+\end{minipage}\\
+%
+\subsubsection{Wichtige Begriffe}
+\begin{tabular}{|l|l|l|}
+	\hline
+	Spektraldichte /-darstellung		& $F(\omega)$ & KEINE absoluten Werte für Amplitude \& Phase \\
+	\hline Amplitudendichte					& $|F(\omega)|$ & f reell $\rightarrow|F(\omega)|$ symetrisch zur Y-Achse \\
+	\hline Phasendichte						& $\arg (F(\omega))$ & f reell $\rightarrow \arg (F(\omega))$ punktsymetrisch zum Ursprung \\
+	\hline Kosinusamplitudendichte			& $R(\omega)$ & f reell $\rightarrow R(\omega)$ gerade \\
+	\hline Sinusamplitudendichte			& $X(\omega)$ & f reell $\rightarrow X(\omega)$ ungerade \\
+	\hline Amplitudengang					& $A(\omega)=|H(\omega)|$ & $=\sqrt{H(\omega) \cdot \overline{H(\omega)}}\left\{\begin{array}{l}<1 \text { Dämpfung } \\
+	>1 \text { Verstärkung }\end{array}\right.$ \\ & & $\overline{H(\omega)}$ bilden durch $+/$ - Tausch vor j-Term\\
+	\hline Dämpfung							& $\frac{1}{A(\omega)}=\vert \frac{1}{H(\omega)}\vert$ &  \\
+	\hline Phasenverschiebung				& $\Phi(\omega)=\arg (H(\omega))$ & $=\arctan \left(\frac{\operatorname{Im}(H(\omega))} {\operatorname{Re}(H(\omega))}\right)$\\
+	\hline Systemantwort 					& $H(\omega)=A(\omega) \cdot e^{\jmath \Phi(\omega)}$ &  \\
+	\hline
+\end{tabular}
+%
+\subsubsection{Eigenschaften der Fouriertransformation}
+\begin{tabular}{|l|l|}
+	\hline Linearität	&	$\alpha \cdot f(t)+\beta \cdot g(t) \laplace \alpha \cdot F(\omega)+\beta \cdot G(\omega)$\\
+	\hline Zeitumkehrung (Spiegelung an der Y-Achse) & $f(-t) \laplace F(-\omega)=F^{*}(w)$\\ 
+	\hline Ähnlichkeit / Zeitskalierung & $f(\alpha t) \laplace \frac{1}{|\alpha|} F\left(\frac{\omega}{\alpha}\right) \quad\left(\alpha \in \mathbb{R} \backslash\{0\}\right)$\\
+	& $F(\alpha \omega) \Laplace \frac{1}{|\alpha|} f\left(\frac{t}{\alpha}\right)$\\
+	\hline Verschiebung im Zeitbereich	& $f\left(t \pm t_{0}\right) \laplace F(\omega) e^{\pm j \omega t_{0}}$\\
+	\hline Verschiebung im Frequenzbereich (Modulationstheorem)	& $f(t) e^{\pm j \omega_{0} t} \laplace F\left(\omega \mp \omega_{0}\right)$\\
+	\hline Ableitung im Zeitbereich		& $\frac{\partial^{n} f(t)}{\partial t^{n}} \laplace (j \omega)^{n} F(\omega) \quad\left(n \in \mathbb{N}_{0}\right)$\\
+	\hline Integration im Zeitbereich	& $\int_{-\infty}^{t} f(\tau) d \tau \laplace \frac{F(\omega)}{j \omega}+F(0) \pi \delta(\omega)$\\
+	\hline Ableitung im Frequenzbereich	& $t^{n}f(t) \laplace j^{n}\frac{\partial F(\omega)}{\partial \omega^{n}}$\\
+	\hline Faltung im Zeitbereich		& $f(t)*g(t) \laplace F(\omega) \cdot G(\omega)$\\
+	\hline Faltung im Frequenzbereich	& $f(t) \cdot g(t) \laplace \dfrac{1}{2 \pi}F(\omega) * G(\omega)$\\
+	\hline Vertauschungssatz (Dualität)	& $f(t) \laplace F(\omega)$\\
+	& $F(t) \laplace 2 \pi \cdot f(-\omega)$\\
+	\hline Modulation					& $\cos(\alpha t)\cdot f(t) \laplace \frac{1}{2} \cdot \left[F(\omega-\alpha)+F(\omega+\alpha)\right]$\\
+	& $\sin(\alpha t)\cdot f(t) \laplace \frac{1}{2j} \cdot \left[F(\omega-\alpha)-F(\omega+\alpha)\right]$\\
+	%
+	%\hline Parseval's Theorem			& \\
+	%\hline Bessel's Theorem				& \\
+	%\hline Anfangswerte					& \\
+	%\hline $\infty$ lange Folge von $\delta$ Impulsen	& \\
+	%
+	\hline
+\end{tabular}

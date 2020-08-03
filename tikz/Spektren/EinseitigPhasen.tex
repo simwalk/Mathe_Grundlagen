@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\begin{axis}[axis lines=middle, grid=both, height=12cm, width=8cm, xmin=0, xmax=10, ymin=-pi, ymax=pi, xlabel = $\omega$, ylabel = $\varphi_n$]
+		\foreach \x in {0,...,5}{
+			\addplot[mark=none, red, very thick] coordinates { ({\x * 2 - 1}, 0) ({\x * 2 - 1}, {-pi/2}) };
+			\addplot[only marks, red] coordinates{ ({\x * 2 - 1}, {-pi/2}) };
+			\addplot[only marks, red] coordinates{ ({\x * 2}, {0}) };
+		}
+	\end{axis}
+\end{tikzpicture}
