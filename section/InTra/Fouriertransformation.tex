@@ -15,6 +15,7 @@ Die Fouriertransformation kann als Verallgemeinerung der Fourierreihe angesehen 
 \end{minipage}\\
 %
 \subsubsection{Wichtige Begriffe}
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|l|l|}
 	\hline
 	Spektraldichte /-darstellung		& $F(\omega)$ & KEINE absoluten Werte für Amplitude \& Phase \\
@@ -32,21 +33,21 @@ Die Fouriertransformation kann als Verallgemeinerung der Fourierreihe angesehen 
 %
 \subsubsection{Eigenschaften der Fouriertransformation}
 \begin{tabular}{|l|l|}
-	\hline Linearität	&	$\alpha \cdot f(t)+\beta \cdot g(t) \laplace \alpha \cdot F(\omega)+\beta \cdot G(\omega)$\\
-	\hline Zeitumkehrung (Spiegelung an der Y-Achse) & $f(-t) \laplace F(-\omega)=F^{*}(w)$\\ 
-	\hline Ähnlichkeit / Zeitskalierung & $f(\alpha t) \laplace \frac{1}{|\alpha|} F\left(\frac{\omega}{\alpha}\right) \quad\left(\alpha \in \mathbb{R} \backslash\{0\}\right)$\\
-	& $F(\alpha \omega) \Laplace \frac{1}{|\alpha|} f\left(\frac{t}{\alpha}\right)$\\
-	\hline Verschiebung im Zeitbereich	& $f\left(t \pm t_{0}\right) \laplace F(\omega) e^{\pm j \omega t_{0}}$\\
-	\hline Verschiebung im Frequenzbereich (Modulationstheorem)	& $f(t) e^{\pm j \omega_{0} t} \laplace F\left(\omega \mp \omega_{0}\right)$\\
-	\hline Ableitung im Zeitbereich		& $\frac{\partial^{n} f(t)}{\partial t^{n}} \laplace (j \omega)^{n} F(\omega) \quad\left(n \in \mathbb{N}_{0}\right)$\\
-	\hline Integration im Zeitbereich	& $\int_{-\infty}^{t} f(\tau) d \tau \laplace \frac{F(\omega)}{j \omega}+F(0) \pi \delta(\omega)$\\
-	\hline Ableitung im Frequenzbereich	& $t^{n}f(t) \laplace j^{n}\frac{\partial F(\omega)}{\partial \omega^{n}}$\\
-	\hline Faltung im Zeitbereich		& $f(t)*g(t) \laplace F(\omega) \cdot G(\omega)$\\
-	\hline Faltung im Frequenzbereich	& $f(t) \cdot g(t) \laplace \dfrac{1}{2 \pi}F(\omega) * G(\omega)$\\
-	\hline Vertauschungssatz (Dualität)	& $f(t) \laplace F(\omega)$\\
-	& $F(t) \laplace 2 \pi \cdot f(-\omega)$\\
-	\hline Modulation					& $\cos(\alpha t)\cdot f(t) \laplace \frac{1}{2} \cdot \left[F(\omega-\alpha)+F(\omega+\alpha)\right]$\\
-	& $\sin(\alpha t)\cdot f(t) \laplace \frac{1}{2j} \cdot \left[F(\omega-\alpha)-F(\omega+\alpha)\right]$\\
+	\hline Linearität	&	$\alpha \cdot f(t)+\beta \cdot g(t) \; \laplace \; \alpha \cdot F(\omega)+\beta \cdot G(\omega)$\\
+	\hline Zeitumkehrung (Spiegelung an der Y-Achse) & $f(-t) \; \laplace \; F(-\omega)=F^{*}(w)$\\ 
+	\hline Ähnlichkeit / Zeitskalierung & $f(\alpha t) \; \laplace \; \frac{1}{|\alpha|} F\left(\frac{\omega}{\alpha}\right) \quad\left(\alpha \in \mathbb{R} \backslash\{0\}\right)$\\
+	& $F(\alpha \omega) \; \Laplace \; \frac{1}{|\alpha|} f\left(\frac{t}{\alpha}\right)$\\
+	\hline Verschiebung im Zeitbereich	& $f\left(t \pm t_{0}\right) \; \laplace \; F(\omega) e^{\pm j \omega t_{0}}$\\
+	\hline Verschiebung im Frequenzbereich (Modulationstheorem)	& $f(t) e^{\pm j \omega_{0} t} \; \laplace \; F\left(\omega \mp \omega_{0}\right)$\\
+	\hline Ableitung im Zeitbereich		& $\frac{\partial^{n} f(t)}{\partial t^{n}} \; \laplace \; (j \omega)^{n} F(\omega) \quad\left(n \in \mathbb{N}_{0}\right)$\\
+	\hline Integration im Zeitbereich	& $\int_{-\infty}^{t} f(\tau) d \tau \; \laplace \; \frac{F(\omega)}{j \omega}+F(0) \pi \delta(\omega)$\\
+	\hline Ableitung im Frequenzbereich	& $t^{n}f(t) \; \laplace \; j^{n}\frac{\partial F(\omega)}{\partial \omega^{n}}$\\
+	\hline Faltung im Zeitbereich		& $f(t)*g(t) \; \laplace \; F(\omega) \cdot G(\omega)$\\
+	\hline Faltung im Frequenzbereich	& $f(t) \cdot g(t) \; \laplace \; \dfrac{1}{2 \pi}F(\omega) * G(\omega)$\\
+	\hline Vertauschungssatz (Dualität)	& $f(t) \; \laplace \; F(\omega)$\\
+	& $F(t) \; \laplace \; 2 \pi \cdot f(-\omega)$\\
+	\hline Modulation					& $\cos(\alpha t)\cdot f(t) \; \laplace \; \frac{1}{2} \cdot \left[F(\omega-\alpha)+F(\omega+\alpha)\right]$\\
+	& $\sin(\alpha t)\cdot f(t) \; \laplace \; \frac{1}{2j} \cdot \left[F(\omega-\alpha)-F(\omega+\alpha)\right]$\\
 	%
 	%\hline Parseval's Theorem			& \\
 	%\hline Bessel's Theorem				& \\
@@ -55,3 +56,4 @@ Die Fouriertransformation kann als Verallgemeinerung der Fourierreihe angesehen 
 	%
 	\hline
 \end{tabular}
+\renewcommand{\arraystretch}{1}

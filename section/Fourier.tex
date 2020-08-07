@@ -6,12 +6,14 @@
 
 		\textbf{Basisfunktionen:}\\[3pt]
 		\begin{minipage}[b]{0.5\textwidth}
-			\begin{tabular}{llll}
+			\begin{tabular}{|llll|}
+				\hline
 				Konstante: & $cos(0 \cdot \omega_{f} t) = 1$ & &\\[3pt]
-				$1 \times$ Frequenz $f$  & $\cos(1 \cdot \omega_{f} t)$ & ; & $\sin(1 \cdot \omega_{f} t)$\\[3pt]
+				$1 \times$ Frequenz $f$: & $\cos(1 \cdot \omega_{f} t)$ & ; & $\sin(1 \cdot \omega_{f} t)$\\[3pt]
 				$2 \times$ Frequenz $f$: & $\cos(2 \cdot \omega_{f} t)$ & ; & $\sin(2 \cdot \omega_{f} t)$\\[3pt]
 				$3 \times$ Frequenz $f$: & $\cos(3 \cdot \omega_{f} t)$ & ; & $\sin(3 \cdot \omega_{f} t)$\\[3pt]
 				usw. & & &\\[3pt]
+				\hline
 			\end{tabular}
 		\end{minipage}
 		\begin{minipage}[]{0.5\textwidth}
@@ -31,36 +33,40 @@
 		\fbox{$FR[f(t)] = \dfrac{a_0}{2} + \sum\limits_{n=1}^{\infty} [a_n \cdot \cos(n \omega_f t) + b_n \sin(n \omega_f t)]$}\\[3pt]
 		\begin{minipage}[t]{0.5\textwidth}
 			\textbf{Berechnung von $a_0$, $a_n$ und $b_n$\\[1pt] (Fourierkoeffizienten):}\\[3pt]
-			\begin{tabular}{|lll|l|}
-				\hline
-				$\displaystyle a_0$ & $=$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) dt$ & $\displaystyle n = 0$\\[0.2pt]
-				\hline
-				$\displaystyle b_0$ & $\displaystyle =$ & $\displaystyle 0$ & $\displaystyle n = 0$\\
-				\hline
-				$\displaystyle a_n$ & $\displaystyle =$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt$ & $\displaystyle n = 0, 1, 2, \cdots$\\
-				\hline
-				$\displaystyle b_n$ & $\displaystyle =$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt$ & $\displaystyle n = 1, 2, 3, \cdots$\\
-				\hline
-			\end{tabular}
+			\renewcommand{\arraystretch}{2}
+				\begin{tabular}{|lll|l|}
+					\hline
+					$\displaystyle a_0$ & $=$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) dt$ & $\displaystyle n = 0$\\[0.2pt]
+					\hline
+					$\displaystyle b_0$ & $\displaystyle =$ & $\displaystyle 0$ & $\displaystyle n = 0$\\
+					\hline
+					$\displaystyle a_n$ & $\displaystyle =$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt$ & $\displaystyle n = 0, 1, 2, \cdots$\\
+					\hline
+					$\displaystyle b_n$ & $\displaystyle =$ & $\displaystyle \dfrac{2}{T} \cdot \int\limits_{0}^{T} f(t) \cdot \cos(n \omega_f t) dt$ & $\displaystyle n = 1, 2, 3, \cdots$\\
+					\hline
+				\end{tabular}
+			\renewcommand{\arraystretch}{1}
 		\end{minipage}
 		\begin{minipage}[t]{0.5\textwidth}
 			\textbf{Orthogonalitätsbeziehungen:\\[1pt]}\\[3pt]
-			\begin{tabular}{|l|}
-				\hline
-				$\displaystyle \int\limits_{0}^{T} \cos(m \omega_f t) \cdot \cos(n \omega_f t) dt = \left\lbrace 
-					\begin{array}{ll}
-						T & \text{für: } m = n = 0\\
-						\dfrac{T}{2} & \text{für: } m = n > 0\\
-						0 & \text{für: } m \neq n\\
-					\end{array} \right.$\\[3pt]
-				$\displaystyle \int\limits_{0}^{T} \sin(m \omega_f t) \cdot \sin(n \omega_f t) dt = \left\lbrace 
-					\begin{array}{ll}
-						\dfrac{T}{2} & \text{für: } m = n > 0\\
-						0 & \text{für: } m \neq n\\
-					\end{array} \right.$\\[3pt]
-				$\displaystyle \int\limits_{0}^{T} \sin(m \omega_f t) \cdot \sin(n \omega_f t) dt = 0$\\[3pt]
-				\hline
-			\end{tabular}
+			\renewcommand{\arraystretch}{1.7}
+				\begin{tabular}{|l|}
+					\hline
+					$\displaystyle \int\limits_{0}^{T} \cos(m \omega_f t) \cdot \cos(n \omega_f t) dt = \left\lbrace 
+						\begin{array}{ll}
+							T & \text{für: } m = n = 0\\
+							\dfrac{T}{2} & \text{für: } m = n > 0\\
+							0 & \text{für: } m \neq n\\
+						\end{array} \right.$\\[3pt]
+					$\displaystyle \int\limits_{0}^{T} \sin(m \omega_f t) \cdot \sin(n \omega_f t) dt = \left\lbrace 
+						\begin{array}{ll}
+							\dfrac{T}{2} & \text{für: } m = n > 0\\
+							0 & \text{für: } m \neq n\\
+						\end{array} \right.$\\[3pt]
+					$\displaystyle \int\limits_{0}^{T} \sin(m \omega_f t) \cdot \sin(n \omega_f t) dt = 0$\\[3pt]
+					\hline
+				\end{tabular}
+			\renewcommand{\arraystretch}{1}
 		\end{minipage}
 	
 	\subsection{Sätze zur Berechnung der Fourierkoeffizienten}
@@ -170,7 +176,7 @@
 			\subsubsection{Optimalität der Fourierreihe (Approximation)}
 				\begin{minipage}[b]{0.55\textwidth}
 					\textbf{Abstand zwischen zwei Funktionen $f$ und $g$:}\\[3pt]
-					\fbox{$\displaystyle||f - g|| = \sqrt{\dfrac{2}{T} \int\limits_{0}^{T} \left[ f(t) - g(t) \right]^2 dt}$}\\[3pt]
+					\fbox{$\displaystyle \left|\left|f - g\right|\right| = \sqrt{\dfrac{2}{T} \int\limits_{0}^{T} \left[ f(t) - g(t) \right]^2 dt}$}\\[3pt]
 					Abstand $||f - g||$ zweier Funktionen kann klein sein, obschon sich die Funktionswerte stellenweise stark unterscheiden!
 				\end{minipage}
 				\begin{minipage}[]{0.45\textwidth}
@@ -180,9 +186,9 @@
 				Die abbrechende Fourierreihe $s_m(t)$ approximiert $f$ hinsichtlich des Abstandes am besten!\\[3pt]
 				\begin{tabular}{|lll|}
 					\hline
-					$\Rightarrow \quad \displaystyle ||s_m(t) - f(t)|| = ||\dfrac{a_0}{2} + \sum\limits_{n=1}^{m} [a_n \cdot \cos(n \omega_f t) + b_n \cdot \sin(n \omega_f t)] - f(t)||$ & $\rightarrow$ & wird minimal!\\[3pt]
+					$\Rightarrow \quad \displaystyle \left|\left|s_m(t) - f(t)\right|\right| = \left|\left|\dfrac{a_0}{2} + \sum\limits_{n=1}^{m} [a_n \cdot \cos(n \omega_f t) + b_n \cdot \sin(n \omega_f t)] - f(t)\right|\right|$ & $\rightarrow$ & wird minimal!\\[3pt]
 					\textbf{Es gilt sogar:} & &\\[3pt]
-					$\displaystyle \lim_{n \to \infty} ||\dfrac{a_0}{2} + \sum\limits_{n=1}^{m} [a_n \cdot \cos(n \omega_f t) + b_n \cdot \sin(n \omega_f t)] - f(t)|| = 0$ & &\\[3pt]
+					$\displaystyle \lim_{n \to \infty} \left|\left|\dfrac{a_0}{2} + \sum\limits_{n=1}^{m} [a_n \cdot \cos(n \omega_f t) + b_n \cdot \sin(n \omega_f t)] - f(t)\right|\right| = 0$ & &\\[3pt]
 					\hline
 				\end{tabular}\\[3pt]
 				\begin{minipage}[t]{0.5\textwidth}
@@ -237,7 +243,7 @@
 					\textbf{Gibbs'sches Phänomen:}\\[3pt]
 					''Über- und Unterschiessen'' vor und nach einer Sprungstelle.\\[3pt]
 					\textbf{Höhe der grössten überschwingenden Welle:}\\[3pt]
-					Etwa $9\% (8.94\%)$ der gesamten Sprunghöhe.\\[3pt]
+					Etwa $9\%$ $(8.94\%)$ der gesamten Sprunghöhe.\\[3pt]
 					\textbf{Anzahl Summanden $m \rightarrow \infty$:}\\[3pt]
 					Grösste überschwingende Welle $\approx 9\%$, \textbf{klingt aber schneller aus.}
 				\end{minipage}
@@ -264,15 +270,17 @@
 			\subsubsection{Sätze zur Berechnung komplexer Fourierkoeffizienten}
 				\begin{minipage}[t]{0.5\textwidth}
 					\textbf{Symmetrie:}\\[3pt]
-					\begin{tabular}{|l|l|l|}
-						\hline
-						$f(t)$ & $c_k$ & $arg(c_k)$\\[3pt]
-						\hline
-						gerade & $\displaystyle \operatorname{Im}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = 0 \text{ oder } \pi$\\[3pt]
-						\hline
-						ungerade & $\displaystyle \operatorname{Re}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = \pm \dfrac{\pi}{2}$\\[3pt]
-						\hline
-					\end{tabular}\\[6pt]
+					\renewcommand{\arraystretch}{1.5}
+						\begin{tabular}{|l|l|l|}
+							\hline
+							$f(t)$ & $c_k$ & $arg(c_k)$\\[3pt]
+							\hline
+							gerade & $\displaystyle \operatorname{Im}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = 0 \text{ oder } \pi$\\[3pt]
+							\hline
+							ungerade & $\displaystyle \operatorname{Re}[c_k] = 0 ;$ & $\displaystyle arg(c_k) = \pm \dfrac{\pi}{2}$\\[3pt]
+							\hline
+						\end{tabular}\\[6pt]
+					\renewcommand{\arraystretch}{1}
 				\end{minipage}
 				\begin{minipage}[t]{0.5\textwidth}
 					\textbf{Linearität:}\\[3pt]

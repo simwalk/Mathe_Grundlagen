@@ -1,5 +1,91 @@
 \section{Differenzieren}
 
-\subsection{Produktregel}
+\subsection{Wozu brauche ich die Ableitung?}
+Die Differenzialrechnung(Ableitung) ist ein wesentlicher Bestandteil der Analysis. Sie ist eng mit der Integralrechnung verwandt, mit der sie gemeinsam unter der Bezeichnung \textbf{\grqq Infinitesimalrechnung\grqq}  zusammengefasst wird. Zentrales Thema der Differenzialrechnung ist die Berechnung lokaler Veränderungen von Funktionen. (Tangenten\textbf{steigung})
 
-\subsection{Quotientenregel}
+\subsection{Wichtige Ableitungen}
+\renewcommand{\arraystretch}{2.0}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	\boldmath${f(x)}$ & \boldmath${f'(x)}$ &\qquad\qquad\qquad& \boldmath${f(x)}$ & \boldmath${f'(x)}$ &\qquad\qquad\qquad& \boldmath${f(x)}$ & \boldmath${f'(x)}$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	$c=const$ & $0$ && $ln(x)$ & $\dfrac{1}{x}$ && $sin(x)$ & $cos(x)$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	$x$ & $1$ && $e^x$ & $e^x$ && $cos(x)$ & $-sin(x)$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+	$x^n$ & $n\cdot x^{n-1}$ && $\sqrt{x}$ & $\dfrac{1}{2\sqrt{x}}$ && $tan(x)$ & $\dfrac{1}{(cos(x))^2}$\\
+	\cline{1-2}\cline{4-5}\cline{7-8}
+\end{tabular}
+
+\subsection{Wichtige Regeln}
+\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{Regel} & \textbf{Funktion} & \textbf{Ableitung}\\
+	\hline
+	Ableitung eine Summe & $f(x)+g(x)$ & $f'(x)+g'(x)$\\
+	\hline
+	Produktregel & $f(x)g(x)$ & $f'(x)g(x)+f(x)g'(x)$\\
+	\hline
+	Quotientenregel & $\dfrac{f(x)}{g(x)}$ & $\dfrac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}$\\
+	\hline
+	Kettenregel & $f(g(x))$ & $f'(g(x))g'(x)$\\
+	\hline
+\end{tabular}
+
+\subsection{Partielle Ableitung}
+In der Differentialrechnung ist eine partielle Ableitung die Ableitung einer Funktion mit mehreren Argumenten nach einem dieser Argumente. Die Werte der übrigen Argumente werden als konstant gehalten.\\\\
+\begin{minipage}[t]{1cm}
+	\textbf{Bsp.:}
+\end{minipage}
+\begin{minipage}[t]{16cm}
+	$f(x,y,z) = cos(x) \cdot y + sin(z) \cdot x\\\\
+	\dfrac{\partial f}{\partial x} = -sin(x) \cdot y + sin(z) \qquad \rightarrow$ partiell nach x abgeleitet\\\\
+	$\dfrac{\partial f}{\partial y} = cos(x) \qquad \rightarrow$ partiell nach y abgeleitet\\\\
+	$\dfrac{\partial f}{\partial z} = x \cdot cos(z) \qquad \rightarrow$ partiell nach z abgeleitet
+\end{minipage}
+
+\subsection{Taylor-Polynom}
+Dieses Polynom kann verwendet werden, um Funktionen in der Umgebung eines Punktes anzunähern. Es ist aufgrund seiner einfachen Anwendbarkeit und Nützlichkeit ein Hilfsmittel in vielen Ingenieur-, Sozial- und Naturwissenschaften geworden.\\\\
+($x_0$ = Entwicklungspunkt)$\quad f(x_0+h)= \sum\limits_{k=0}^{n} \dfrac{f^{(n)}}{n!} h^n=f(x_0) + f'(x_0)h + \frac{f''(x_0)}{2!}h^2 + \frac{f'''(x_0)}{3!}h^3 + \ldots + \frac{f^{(n)}(x_0)}{n!}h^n$\\
+$ h = x-x_0$
+
+\subsection{Bernoulli-de l'Hospital}
+Die Regel von \textbf{\grqq de L'Hopital\grqq}  erlaubt es in vielen Fällen, den Grenzwert von Funktionen selbst dann noch zu bestimmen, wenn deren Funktionsterm beim Erreichen der betreffenden Grenze einen unbestimmten Ausdruck (bspw. $\dfrac{0}{0}$, $\dfrac{\infty}{\infty}$) liefert.\\
+${lim} _{x\downarrow x_{0}} \frac{f_{1}(x)}{f_{2}(x)} = {lim} _{x\downarrow x_{0}} \frac{f'_{1}(x)}{f'_{2}(x)} $, dies gilt f"ur: "`$\frac{0}{0}$"' 1. Regel, oder "`$\frac{\pm\infty}{\pm\infty}$"' 2. Regel;   Z"ahler und Nenner separat ableiten!
+
+\subsection{Kurvenuntersuchungen}
+\subsubsection{Monotonie}
+\begin{tabular}{|c|c|c|c|c|l|}
+	\hline $f'(x)$ & $f''(x)$ & $f'''(x)$ & $f^{(n-1)}(x)$ & $f^{(n)}$ & Funktion $f$ \\
+	\hline $\geq 0$ & & & & & monoton wachsend\\
+	\hline $\leq 0$ & & & & & monoton fallend \\
+	\hline $= 0$ & $= 0$ & $= 0$ & $\dots = 0$ & $> 0$ & streng monoton wachsend (falls $n$ ungerade)\\
+	\hline $= 0$ & $= 0$ & $= 0$ & $\dots = 0$ & $< 0$ & streng monoton falls (falls $n$ ungerade) \\\hline
+\end{tabular}
+
+\subsubsection{Extremstelle}
+\begin{tabular}{|c|c|c|c|c|l|}
+	\hline $f'(x)$ & $f''(x)$ & $f'''(x)$ & $f^{(n-1)}(x)$ & $f^{(n)}$ & Funktion $f$ \\
+	\hline $= 0$ & $> 0$ & & & & relatives Minimum, \textbf{Randstellen beachten}\\
+	\hline $= 0$ & $< 0$ & & & & relatives Maximum, \textbf{Randstellen beachten}\\
+	\hline $= 0$ & $= 0$ & $= 0$ & $\dots = 0$ & $> 0$ & relatives Minimum (falls $n$ gerade), \textbf{Randstellen beachten}\\
+	\hline $= 0$ & $= 0$ & $= 0$ & $\dots = 0$ & $< 0$ & relatives Maximum (falls $n$ gerade), \textbf{Randstellen beachten}\\
+	\hline\multicolumn{6}{|l|}{\textbf{Zweite Variante}  Falls bei $f'(x)$ an der Stelle $x_0$ ein Vorzeichenwechsel besteht, existiert dort eine Extremstelle} \\\hline
+\end{tabular}
+
+\subsubsection{Konvexit"at - Kr"ummungsverhalten}
+\begin{tabular}{|c|c|c|c|c|l|}
+	\hline $f'(x)$ & $f''(x)$ & $f'''(x)$ & $f^{(n-1)}(x)$ & $f^{(n)}$ & Funktion $f$ \\
+	\hline & $\geq 0$ & & & & konvex (linksgekr"ummt)\\
+	\hline & $> 0$ & & & & streng konvex (linksgekr"ummt)\\
+	\hline & $\leq 0$ & & & & konkav (rechtsgekr"ummt)\\
+	\hline & $< 0$ & & & & streng konkav (rechtsgekr"ummt)\\\hline
+\end{tabular}
+
+\subsubsection{Wendepunkte (Terassenpunkt)}
+\begin{tabular}{|c|c|c|c|c|l|}
+	\hline $f'(x)$ & $f''(x)$ & $f'''(x)$ & $f^{(n-1)}(x)$ & $f^{(n)}$ & Funktion $f$ \\
+	\hline\ & $= 0$ & $\neq 0$ & & & Wendepunkt\\
+	\hline $= 0$ & $= 0$ & $\neq 0$ & & & Terassen- oder Sattelpunkt\\
+	\hline\multicolumn{6}{|l|}{\textbf{Zweite Variante}  Falls bei $f''(x)$ an der Stelle $x_0$ ein Vorzeichenwechsel besteht, existiert dort ein Wendepunkt} \\\hline
+\end{tabular}
