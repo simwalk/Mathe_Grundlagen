@@ -14,31 +14,30 @@
 		\end{minipage}\\[3pt]
 		\textbf{Umrechnung Normal $\rightarrow$ Polar: ($Z_1 \in \mathbb{R}$, $Z_2 \in \mathbb{I}$)}\\
 		\begin{tabular}{l}
-			\fbox{$|z| = r = \sqrt{z_{1}^2 + z_{2}^2}$}\\[6pt]
-			\fbox{$|z| = r = \sqrt{z \cdot \overline{z}}$}\\[6pt]
+			\fbox{$\displaystyle |z| = r = \sqrt{z_{1}^2 + z_{2}^2}$}\\[6pt]
+			\fbox{$\displaystyle |z| = r = \sqrt{z \cdot \overline{z}}$}\\[6pt]
 		\end{tabular}
-		\fbox{$\varphi = \left\{
+		\fbox{$\displaystyle \varphi = \left\{
 				\begin{array}{ll}
-					arctan\left(\dfrac{z_{2}}{z_{1}}\right) & \text{für: } z_{1} \geq 0\\
+					arctan\left(\dfrac{z_{2}}{z_{1}}\right) & \text{für: } z_{1} \geq 0\\[3pt]
 					arctan\left(\dfrac{z_{2}}{z_{1}}\right) + \pi & \text{für: } z_{1} < 0
 				\end{array}
-				\right. = \left\{
-					\begin{array}{ll}
-						\; \; \: arctan\left(\dfrac{z_{1}}{r}\right) & \text{für: } z_{2} \geq 0\\
-						-arctan\left(\dfrac{z_{1}}{r}\right) & \text{für: } z_{2} < 0
-					\end{array}
+				\right. 
+				= 
+				\left\{
+				\begin{array}{ll}
+					\; \; \: arctan\left(\dfrac{z_{1}}{r_{}}\right) & \text{für: } z_{2} \geq 0\\[3pt]
+					-arctan\left(\dfrac{z_{1}}{r_{}}\right) & \text{für: } z_{2} < 0
+				\end{array}
 				\right.
 			$}\\[3pt]
-		\begin{center}
-			\scalebox{1}{\input{tikz/KomplexeZahlen/Polar.tex}}\\[3pt]
-		\end{center}
-		\begin{minipage}[t]{0.5\textwidth}
+		\begin{minipage}[]{0.3\textwidth}
 			\textbf{Umrechnung Polar $\rightarrow$ Normal:}\\[3pt]
 			\fbox{$z_{1} = r \cdot cos(\varphi)$}
 			\fbox{$z_{2} = r \cdot sin(\varphi)$}
 		\end{minipage}
-		\begin{minipage}[t]{0.5\textwidth}
-			\fbox{$\varphi = \left\{
+		\begin{minipage}[]{0.3\textwidth}
+			\fbox{$\displaystyle \varphi = \left\{
 				\begin{array}{ll}
 				arctan\left(\dfrac{\mathbb{I}}{\mathbb{R}}\right) & \text{für: } \mathbb{R} \geq 0\\
 				arctan\left(\dfrac{\mathbb{I}}{\mathbb{R}}\right) + \pi & \text{für: } \mathbb{R} < 0
@@ -46,28 +45,50 @@
 				\right.
 				$}\\[3pt]
 		\end{minipage}
+		\begin{minipage}[]{0.4\textwidth}
+			\scalebox{1}{\input{tikz/KomplexeZahlen/Polar.tex}}\\[3pt]
+		\end{minipage}
 		\textbf{Sonstige Formeln:}\\[3pt]
 		\begin{tabular}{|l|l|}
 			\hline
-			Moivre'sche Formel & $cjs^n(\varphi) = (cos(\varphi) + j \cdot sin(\varphi))^n = cos(n\varphi) + j \cdot sin(n\varphi) \quad (n \in \mathbb{R})$\\
+			Moivre'sche Formel & $\displaystyle cjs^n(\varphi) = (cos(\varphi) + j \cdot sin(\varphi))^n = cos(n\varphi) + j \cdot sin(n\varphi) \quad (n \in \mathbb{R})$\\
 			\hline
 		\end{tabular}\\[3pt]
 		\renewcommand{\arraystretch}{1.5}
-			\begin{tabular}{|l|l|l|l|l|}
+			\begin{tabular}{|l|l|l|l|l|l|}
 				\hline
+				Euler Formel &
 				$\begin{array}{l}
-					\mathrm{e}^{\mathrm{j} \pi} = \mathrm{e}^{-\mathrm{j} \pi} = (-1)\\[3pt]
-					\mathrm{e}{\mathrm{j} n \pi} = \mathrm{e}{-\mathrm{j} n \pi} = (-1)^n\\[3pt]
-				\end{array}$ & $\mathrm{e}^{\mathrm{j} 2 \pi} = \mathrm{e}^{-\mathrm{j} 2 \pi} = 1$ & $\mathrm{e}^{\mathrm{j}\dfrac{\pi}{2}}$ & $\mathrm{j}^{\mathrm{j}} = \mathrm{e}^{-\dfrac{\pi}{2}} + 2 \pi k$ & \\[3pt]
+					\mathrm{e}^{\mathrm{j} \pi} = \mathrm{e}^{-\mathrm{j} \pi} = -1\\[3pt]
+					\mathrm{e}^{\mathrm{j} n \pi} = \mathrm{e}^{-\mathrm{j} n \pi} = (-1)^n\\[3pt]
+				\end{array}$ & 
+				$\begin{array}{l}
+					\mathrm{e}^{\mathrm{j} 2 \pi} = \mathrm{e}^{-\mathrm{j} 2 \pi} = 1\\[3pt]
+					\mathrm{e}^{\mathrm{j} 3 \pi} = \mathrm{e}^{-\mathrm{j} 3 \pi} = -1\\[3pt]
+				\end{array}$ & 
+				$\mathrm{e}^{\mathrm{j}\dfrac{\pi}{2}} = \mathrm{j}$ & $\mathrm{j}^{\mathrm{j}} = \mathrm{e}^{-\dfrac{\pi}{2}} + 2 \pi k$ & \\[3pt]
 				\hline
-				\rotatebox[origin=c]{90}{Potenz}
-				\rotatebox[origin=c]{90}{von}
-				$\left\lbrace \begin{array}{l}
-					\mathrm{j} = \sqrt{-1} = j\\[3pt]
-					\mathrm{j}^{-1} = -\mathrm{j}\\[3pt]
-				\end{array} \right. $ & $(-\mathrm{j})^2 = \mathrm{j}^2 = (-1) \Leftrightarrow \mathrm{j} = \sqrt{-1}$ & $\mathrm{j}^3 = -\mathrm{j}$ & $(-\mathrm{j})^4 = \mathrm{j}^4 = 1$ & $\mathrm{j}^5 = \mathrm{j}^1 \cdots$\\[3pt]
-				\hline
-				 & $\mathrm{j}^{-2} = -1$ & $\mathrm{j}^{-3} = \mathrm{j}$ & $\mathrm{j}^{-4} = 1$ & $\mathrm{j}^{-5} = \mathrm{j}^{-1}$\\[3pt]		
+				Potenzen von $\mathrm{j}$ & 
+					$\begin{array}{l}
+						\mathrm{j} = \sqrt{-1}\\[3pt]
+						\mathrm{j}^{-1} = -\mathrm{j}\\[3pt]
+					\end{array}$ & 
+					$\begin{array}{l}
+						(-\mathrm{j})^2 = \mathrm{j}^2 = -1\\[3pt]
+						\mathrm{j}^{-2} = -1\\[3pt]
+					\end{array}$ & 
+					$\begin{array}{l}
+						\mathrm{j}^3 = -\mathrm{j}\\[3pt]
+						\mathrm{j}^{-3} = \mathrm{j}\\[3pt]
+					\end{array}$ & 
+					$\begin{array}{l}
+						(-\mathrm{j})^4 = \mathrm{j}^4 = 1\\[3pt]
+						\mathrm{j}^{-4} = 1\\[3pt]
+					\end{array}$ & 
+					$\begin{array}{l}
+						\mathrm{j}^5 = \mathrm{j}^1\\[3pt]
+						\mathrm{j}^{-5} = \mathrm{j}^{-1}\\[3pt]
+					\end{array}$\\[3pt]	
 				\hline
 			\end{tabular}\\
 		\renewcommand{\arraystretch}{1}
@@ -79,21 +100,21 @@
 			\renewcommand{\arraystretch}{1.7}
 				\begin{tabular}{|lcl|lcl|}
 					\hline
-					$\overline{\overline{a}}$ & $=$ & $a$ & $\overline{-a}$ & $=$ & $-\overline{a}$\\
+					$\overline{\overline{a}}$ & $=$ & $a$ & $\overline{-a}$ & $=$ & $-\overline{a}$\\[3pt]
 					\hline
-					$\overline{a + b}$ & $=$ & $\overline{a} + \overline{b}$ & $\overline{a - b}$ & $=$ & $\overline{a} - \overline{b}$\\
+					$\overline{a + b}$ & $=$ & $\overline{a} + \overline{b}$ & $\overline{a - b}$ & $=$ & $\overline{a} - \overline{b}$\\[3pt]
 					\hline
-					$\overline{a \cdot+ b}$ & $=$ & $\overline{a} \cdot \overline{b}$ & $\overline{a : b}$ & $=$ & $\overline{a} : \overline{b}$\\
+					$\overline{a \cdot b}$ & $=$ & $\overline{a} \cdot \overline{b}$ & $\overline{a : b}$ & $=$ & $\overline{a} : \overline{b}$\\[3pt]
 					\hline
-					$\dfrac{a + \overline{a}}{2}$ & $=$ & $ Re(a)$ & $\dfrac{a - \overline{a}}{2j}$ & $=$ & $Im(a)$\\
+					$\dfrac{a + \overline{a}}{2}$ & $=$ & $ Re(a)$ & $\dfrac{a - \overline{a}}{2j}$ & $=$ & $Im(a)$\\[3pt]
+					\hline
+					$z \cdot \overline{z}$ & $=$ & $|z|^2$ & $(x + \mathrm{j} y) \cdot (x - \mathrm{j} y)$ & $=$ & $x^2 + y^2$\\[3pt]
 					\hline
 				\end{tabular}
 			\renewcommand{\arraystretch}{1}
 			\begin{tabular}{c}
 				\scalebox{1}{\input{tikz/KomplexeZahlen/KonjugiertKomplex.tex}}\\[3pt]
 			\end{tabular}\\[3pt]
-			\fbox{$z \cdot \overline{z} = |z|^2$}\\[3pt]
-			\fbox{$(x + \mathrm{j} y) \cdot (x - \mathrm{j} y) = x^2 + y^2$}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\subsection{Addition, Subtraktion}
@@ -297,12 +318,12 @@
 					\end{minipage}
 					\begin{minipage}[t]{0.6\textwidth}
 						\textbf{Lösungen von $\operatorname{Ln}$ sind $\infty$-wertig:}\\[3pt]
-						\fbox{$\operatorname{Ln}(a)=\ln (|a|)+\mathbf{j}(\arg (a)+2 k \pi)$}
+						\fbox{$\operatorname{Ln}(a)=\ln (|a|)+\mathrm{j}(\arg (a)+2 k \pi)$}
 						mit $k \in \mathbb{Z}$\\[3pt]
 						\fbox{$a:= z = z_1 + \mathrm{j} z_2 = x + \mathrm{j} y$}\\[3pt]
 					\end{minipage}
 					$\Rightarrow$ \textbf{Logarithmusgesetze sind problematisch, da es 1-viele Lösungen gibt!}\\[3pt]
-					Es können nur noch Kongruenzen aufgestellt werden (stimmen bis auf ganzzahlige Vielfache von $2 \pi \mathbf{j}$\\[3pt]
+					Es können nur noch Kongruenzen aufgestellt werden (stimmen bis auf ganzzahlige Vielfache von $2 \pi \mathrm{j}$\\[3pt]
 					$\operatorname{Ln}(a \cdot b) \stackrel{\bmod 2 \pi \mathrm{j}}{\equiv} \operatorname{Ln}(a)+\operatorname{Ln}(b) \quad|\quad \operatorname{Ln}(a: b) \stackrel{\bmod 2 \pi \mathrm{j}}{=} \operatorname{Ln}(a)-\operatorname{Ln}(b) \quad| \quad \operatorname{Ln}\left(a^{k}\right) \stackrel{\bmod 2 \pi \mathrm{j}}{=} k \cdot \operatorname{Ln}(a)$
 				
 				\subsubsection{Allgemeine Potenzen}
